@@ -1,10 +1,6 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Linkedin, Twitter, Mail } from "lucide-react"
@@ -54,13 +50,9 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-8">
-          <Breadcrumbs items={[{ label: "Team", href: "/team" }, { label: member.name }]} />
-
           <div className="mt-8 grid lg:grid-cols-2 gap-12 items-start">
             {/* Photo */}
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden">
@@ -117,9 +109,9 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                 <h2 className="text-lg font-semibold text-foreground mb-3">Skills</h2>
                 <div className="flex flex-wrap gap-2">
                   {member.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary">
+                    <div key={skill} className="bg-secondary text-primary rounded px-2 py-1">
                       {skill}
-                    </Badge>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -174,8 +166,6 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

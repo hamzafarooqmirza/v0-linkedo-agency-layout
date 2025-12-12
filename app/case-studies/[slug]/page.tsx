@@ -1,10 +1,7 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { StatCard } from "@/components/ui/stat-card"
 import { TestimonialCard } from "@/components/ui/testimonial-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
@@ -60,134 +57,126 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
-      <main className="pt-24">
-        {/* Hero */}
-        <Section className="pt-8">
-          <Breadcrumbs items={[{ label: "Case Studies", href: "/case-studies" }, { label: study.client }]} />
-
-          <div className="mt-8 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center gap-2 mb-4 flex-wrap">
-                {study.services.map((service) => (
-                  <Badge key={service} variant="secondary">
-                    {service}
-                  </Badge>
-                ))}
-              </div>
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">{study.title}</h1>
-              <p className="text-primary font-medium text-lg mb-6">{study.client}</p>
-
-              <div className="flex flex-wrap gap-6 text-sm text-muted-foreground mb-8">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  {study.location}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Building2 className="w-4 h-4" />
-                  {study.industry}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  {study.duration}
-                </div>
-              </div>
-
-              {/* Headline stat */}
-              <div className="inline-block p-6 rounded-xl bg-primary/10 border border-primary/30">
-                <div className="text-4xl font-bold text-primary">
-                  {study.headlineStat.value}
-                  {study.headlineStat.suffix}
-                </div>
-                <div className="text-sm text-muted-foreground">{study.headlineStat.label}</div>
-              </div>
-            </div>
-
-            <div className="relative aspect-video rounded-2xl overflow-hidden">
-              <Image src={study.heroImage || "/placeholder.svg"} alt={study.title} fill className="object-cover" />
-            </div>
-          </div>
-        </Section>
-
-        {/* About the Client */}
-        <Section eyebrow="About the Client" title={study.client}>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">{study.about}</p>
-          </div>
-        </Section>
-
-        {/* Challenge */}
-        <Section eyebrow="The Challenge" title="What They Were Facing" gradient>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">{study.challenge}</p>
-          </div>
-        </Section>
-
-        {/* Approach */}
-        <Section eyebrow="Our Approach" title="How We Solved It">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">{study.approach}</p>
-          </div>
-        </Section>
-
-        {/* Implementation */}
-        <Section eyebrow="Implementation" title="What We Did">
-          <div className="max-w-3xl mx-auto">
-            <ul className="space-y-4">
-              {study.implementation.map((item, i) => (
-                <li key={i} className="flex items-start gap-4 p-4 rounded-xl bg-card/50 border border-border/50">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <span className="text-primary font-semibold">{i + 1}</span>
-                  </div>
-                  <p className="text-foreground">{item}</p>
-                </li>
+      {/* Hero */}
+      <Section className="pt-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4 flex-wrap">
+              {study.services.map((service) => (
+                <Badge key={service} variant="secondary">
+                  {service}
+                </Badge>
               ))}
-            </ul>
-          </div>
-        </Section>
+            </div>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">{study.title}</h1>
+            <p className="text-primary font-medium text-lg mb-6">{study.client}</p>
 
-        {/* Results */}
-        <Section eyebrow="Results" title="The Outcome" gradient>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {study.results.map((result, i) => (
-              <StatCard key={i} {...result} />
-            ))}
-          </div>
-        </Section>
+            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground mb-8">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                {study.location}
+              </div>
+              <div className="flex items-center gap-2">
+                <Building2 className="w-4 h-4" />
+                {study.industry}
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                {study.duration}
+              </div>
+            </div>
 
-        {/* Testimonial */}
-        <Section eyebrow="Testimonial" title="What They Said">
-          <div className="max-w-2xl mx-auto">
-            <TestimonialCard {...study.testimonial} />
-          </div>
-        </Section>
-
-        {/* CTA */}
-        <Section>
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Ready to Achieve Similar Results?</h2>
-            <p className="text-muted-foreground mb-8">
-              Let's discuss how we can help your business grow with a customized strategy.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
-                <AnimatedButton size="lg">
-                  Book a Strategy Call
-                  <ArrowRight className="w-4 h-4" />
-                </AnimatedButton>
-              </Link>
-              <Link href="/case-studies">
-                <AnimatedButton variant="secondary" size="lg">
-                  View More Case Studies
-                </AnimatedButton>
-              </Link>
+            {/* Headline stat */}
+            <div className="inline-block p-6 rounded-xl bg-primary/10 border border-primary/30">
+              <div className="text-4xl font-bold text-primary">
+                {study.headlineStat.value}
+                {study.headlineStat.suffix}
+              </div>
+              <div className="text-sm text-muted-foreground">{study.headlineStat.label}</div>
             </div>
           </div>
-        </Section>
-      </main>
 
-      <Footer />
+          <div className="relative aspect-video rounded-2xl overflow-hidden">
+            <Image src={study.heroImage || "/placeholder.svg"} alt={study.title} fill className="object-cover" />
+          </div>
+        </div>
+      </Section>
+
+      {/* About the Client */}
+      <Section eyebrow="About the Client" title={study.client}>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground leading-relaxed">{study.about}</p>
+        </div>
+      </Section>
+
+      {/* Challenge */}
+      <Section eyebrow="The Challenge" title="What They Were Facing" gradient>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground leading-relaxed">{study.challenge}</p>
+        </div>
+      </Section>
+
+      {/* Approach */}
+      <Section eyebrow="Our Approach" title="How We Solved It">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground leading-relaxed">{study.approach}</p>
+        </div>
+      </Section>
+
+      {/* Implementation */}
+      <Section eyebrow="Implementation" title="What We Did">
+        <div className="max-w-3xl mx-auto">
+          <ul className="space-y-4">
+            {study.implementation.map((item, i) => (
+              <li key={i} className="flex items-start gap-4 p-4 rounded-xl bg-card/50 border border-border/50">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <span className="text-primary font-semibold">{i + 1}</span>
+                </div>
+                <p className="text-foreground">{item}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* Results */}
+      <Section eyebrow="Results" title="The Outcome" gradient>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {study.results.map((result, i) => (
+            <StatCard key={i} {...result} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Testimonial */}
+      <Section eyebrow="Testimonial" title="What They Said">
+        <div className="max-w-2xl mx-auto">
+          <TestimonialCard {...study.testimonial} />
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section>
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Ready to Achieve Similar Results?</h2>
+          <p className="text-muted-foreground mb-8">
+            Let's discuss how we can help your business grow with a customized strategy.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/contact">
+              <AnimatedButton size="lg">
+                Book a Strategy Call
+                <ArrowRight className="w-4 h-4" />
+              </AnimatedButton>
+            </Link>
+            <Link href="/case-studies">
+              <AnimatedButton variant="secondary" size="lg">
+                View More Case Studies
+              </AnimatedButton>
+            </Link>
+          </div>
+        </div>
+      </Section>
     </div>
   )
 }

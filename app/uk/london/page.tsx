@@ -1,10 +1,7 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
 
@@ -69,13 +66,10 @@ const caseStudy = {
 export default function LondonPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-8">
-          <Breadcrumbs items={[{ label: "UK", href: "/uk" }, { label: "London" }]} />
-          <div className="max-w-4xl mt-8">
+          <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">🇬🇧</span>
               <span className="text-sm font-medium text-primary uppercase tracking-wider">United Kingdom</span>
@@ -199,8 +193,6 @@ export default function LondonPage() {
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

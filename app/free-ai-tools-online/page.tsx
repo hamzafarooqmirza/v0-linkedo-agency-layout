@@ -6,7 +6,6 @@ import { Section } from "@/components/ui/section"
 import { AIToolCard } from "@/components/ui/ai-tool-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
 import { ParticleBackground } from "@/components/ui/particle-background"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Free AI Tools Online | Linkedo Agency",
@@ -117,8 +116,6 @@ export default function FreeAIToolsPage() {
         />
 
         <MainShell className="relative z-10">
-          <Breadcrumbs items={[{ label: "Free AI Tools" }]} />
-
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
               Free Tools

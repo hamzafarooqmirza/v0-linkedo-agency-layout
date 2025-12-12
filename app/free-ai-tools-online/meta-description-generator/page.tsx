@@ -9,7 +9,6 @@ import { AIToolPanel } from "@/components/ui/ai-tool-panel"
 import { AIToolCard } from "@/components/ui/ai-tool-card"
 import { CodeBox } from "@/components/ui/code-box"
 import { AnimatedButton } from "@/components/ui/animated-button"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { ParticleBackground } from "@/components/ui/particle-background"
 import { FormInput } from "@/components/ui/form-input"
 import { FormSelect } from "@/components/ui/form-select"
@@ -91,10 +90,6 @@ export default function MetaDescriptionGeneratorPage() {
         <ParticleBackground className="opacity-40" />
 
         <MainShell className="relative z-10">
-          <Breadcrumbs
-            items={[{ label: "Free AI Tools", href: "/free-ai-tools-online" }, { label: "Meta Description Generator" }]}
-          />
-
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-cyan-400/10 border border-primary/30 flex items-center justify-center">

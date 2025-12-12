@@ -1,7 +1,5 @@
 "use client"
 
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { StatCard } from "@/components/ui/stat-card"
@@ -9,7 +7,6 @@ import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
 import { ProcessTimeline } from "@/components/ui/process-timeline"
 import { AnimatedButton } from "@/components/ui/animated-button"
-import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Check } from "lucide-react"
@@ -129,196 +126,189 @@ const faqs = [
 export default function SEOServicePage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
-      <main className="pt-24">
-        {/* Hero */}
-        <Section className="pt-8">
-          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "SEO" }]} />
-          <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
-            <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-                SEO Services
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Search Engine Optimization <span className="text-gradient-primary">(SEO)</span>
-              </h1>
-              <p className="text-lg text-muted-foreground mb-8">
-                Data-driven SEO strategies that improve your search rankings, drive organic traffic, and generate
-                qualified leads for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
-                  <AnimatedButton size="lg">
-                    Get a Free SEO Audit
-                    <ArrowRight className="w-4 h-4" />
-                  </AnimatedButton>
-                </Link>
-                <Link href="/case-studies">
-                  <AnimatedButton variant="secondary" size="lg">
-                    View Case Studies
-                  </AnimatedButton>
-                </Link>
-              </div>
-            </div>
-
-            {/* Stats preview */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              <StatCard value="300" suffix="%" label="Average Traffic Increase" />
-              <StatCard value="50" suffix="+" label="Keywords Page 1" />
-              <StatCard value="2.5x" label="Lead Generation Lift" />
-              <StatCard value="6" label="Months to Results" />
-            </motion.div>
-          </div>
-        </Section>
-
-        {/* Who This Is For */}
-        <Section eyebrow="Who This Is For" title="Is SEO Right for Your Business?">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto bg-card/50 border border-border/50 rounded-2xl p-8"
-          >
-            <ul className="space-y-4">
-              {whoIsFor.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </Section>
-
-        {/* What We Do */}
-        <Section
-          eyebrow="What We Do"
-          title="Comprehensive SEO Services"
-          description="Everything you need to dominate search results in your industry."
-          gradient
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {seoServices.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-        </Section>
-
-        {/* Visual Analytics Section */}
-        <Section>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-                Data-Driven Results
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Track Your Growth with Real-Time Analytics
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Our custom dashboards give you complete visibility into your SEO performance, including keyword
-                rankings, traffic trends, and conversion metrics.
-              </p>
-              <ul className="space-y-3">
-                {["Real-time ranking tracking", "Competitor analysis", "Traffic source breakdown", "ROI reporting"].map(
-                  (item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground">
-                      <Check className="w-4 h-4 text-primary" />
-                      {item}
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl bg-card/50 border border-border/50 p-6 overflow-hidden"
-            >
-              {/* Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-
-              <div className="relative space-y-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Organic Traffic Growth</span>
-                  <span className="text-primary font-semibold">+156%</span>
-                </div>
-                <div className="h-40 flex items-end justify-around gap-2 px-2">
-                  {[30, 35, 42, 38, 55, 62, 58, 75, 82, 78, 90, 95].map((height, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ height: 0 }}
-                      whileInView={{ height: `${height}%` }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.05, duration: 0.4 }}
-                      className="flex-1 rounded-t bg-gradient-to-t from-primary to-cyan-400"
-                    />
-                  ))}
-                </div>
-                <div className="flex justify-between text-xs text-muted-foreground">
-                  <span>Jan</span>
-                  <span>Dec</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </Section>
-
-        {/* Process */}
-        <Section
-          eyebrow="Our Process"
-          title="How We Deliver SEO Results"
-          description="A proven methodology refined over hundreds of successful campaigns."
-        >
-          <ProcessTimeline steps={processSteps} />
-        </Section>
-
-        {/* Case Studies */}
-        <Section
-          eyebrow="Results"
-          title="SEO Success Stories"
-          description="See how we've helped businesses like yours achieve remarkable growth."
-          gradient
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.title} {...study} />
-            ))}
-          </div>
-        </Section>
-
-        {/* FAQ */}
-        <Section eyebrow="FAQ" title="SEO Questions Answered">
-          <div className="max-w-3xl mx-auto">
-            <FAQAccordion items={faqs} />
-          </div>
-        </Section>
-
-        {/* CTA */}
-        <Section gradient>
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Ready to Improve Your Rankings?</h2>
-            <p className="text-muted-foreground mb-8">
-              Get a free SEO audit and discover exactly what's holding your website back from ranking higher.
+      {/* Hero */}
+      <Section className="pt-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              SEO Services
+            </span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Search Engine Optimization <span className="text-gradient-primary">(SEO)</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Data-driven SEO strategies that improve your search rankings, drive organic traffic, and generate
+              qualified leads for your business.
             </p>
-            <Link href="/contact">
-              <AnimatedButton size="lg">
-                Get Your Free SEO Audit
-                <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/contact">
+                <AnimatedButton size="lg">
+                  Get a Free SEO Audit
+                  <ArrowRight className="w-4 h-4" />
+                </AnimatedButton>
+              </Link>
+              <Link href="/case-studies">
+                <AnimatedButton variant="secondary" size="lg">
+                  View Case Studies
+                </AnimatedButton>
+              </Link>
+            </div>
           </div>
-        </Section>
-      </main>
 
-      <Footer />
+          {/* Stats preview */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            <StatCard value="300" suffix="%" label="Average Traffic Increase" />
+            <StatCard value="50" suffix="+" label="Keywords Page 1" />
+            <StatCard value="2.5x" label="Lead Generation Lift" />
+            <StatCard value="6" label="Months to Results" />
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Who This Is For */}
+      <Section eyebrow="Who This Is For" title="Is SEO Right for Your Business?">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto bg-card/50 border border-border/50 rounded-2xl p-8"
+        >
+          <ul className="space-y-4">
+            {whoIsFor.map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <span className="text-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </Section>
+
+      {/* What We Do */}
+      <Section
+        eyebrow="What We Do"
+        title="Comprehensive SEO Services"
+        description="Everything you need to dominate search results in your industry."
+        gradient
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {seoServices.map((service) => (
+            <ServiceCard key={service.title} {...service} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Visual Analytics Section */}
+      <Section>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Data-Driven Results
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Track Your Growth with Real-Time Analytics
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              Our custom dashboards give you complete visibility into your SEO performance, including keyword rankings,
+              traffic trends, and conversion metrics.
+            </p>
+            <ul className="space-y-3">
+              {["Real-time ranking tracking", "Competitor analysis", "Traffic source breakdown", "ROI reporting"].map(
+                (item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-foreground">
+                    <Check className="w-4 h-4 text-primary" />
+                    {item}
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative rounded-2xl bg-card/50 border border-border/50 p-6 overflow-hidden"
+          >
+            {/* Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
+
+            <div className="relative space-y-4">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-muted-foreground">Organic Traffic Growth</span>
+                <span className="text-primary font-semibold">+156%</span>
+              </div>
+              <div className="h-40 flex items-end justify-around gap-2 px-2">
+                {[30, 35, 42, 38, 55, 62, 58, 75, 82, 78, 90, 95].map((height, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ height: 0 }}
+                    whileInView={{ height: `${height}%` }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05, duration: 0.4 }}
+                    className="flex-1 rounded-t bg-gradient-to-t from-primary to-cyan-400"
+                  />
+                ))}
+              </div>
+              <div className="flex justify-between text-xs text-muted-foreground">
+                <span>Jan</span>
+                <span>Dec</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Process */}
+      <Section
+        eyebrow="Our Process"
+        title="How We Deliver SEO Results"
+        description="A proven methodology refined over hundreds of successful campaigns."
+      >
+        <ProcessTimeline steps={processSteps} />
+      </Section>
+
+      {/* Case Studies */}
+      <Section
+        eyebrow="Results"
+        title="SEO Success Stories"
+        description="See how we've helped businesses like yours achieve remarkable growth."
+        gradient
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {caseStudies.map((study) => (
+            <CaseStudyCard key={study.title} {...study} />
+          ))}
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section eyebrow="FAQ" title="SEO Questions Answered">
+        <div className="max-w-3xl mx-auto">
+          <FAQAccordion items={faqs} />
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section gradient>
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Ready to Improve Your Rankings?</h2>
+          <p className="text-muted-foreground mb-8">
+            Get a free SEO audit and discover exactly what's holding your website back from ranking higher.
+          </p>
+          <Link href="/contact">
+            <AnimatedButton size="lg">
+              Get Your Free SEO Audit
+              <ArrowRight className="w-4 h-4" />
+            </AnimatedButton>
+          </Link>
+        </div>
+      </Section>
     </div>
   )
 }
