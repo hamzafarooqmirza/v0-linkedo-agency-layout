@@ -11,7 +11,7 @@ export function Chip({ children, variant = "default", className }: ChipProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border",
+        "inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border mx-2.5 my-0 mt-[]",
         variant === "default" && "bg-secondary/50 text-foreground border-border",
         variant === "primary" && "bg-primary/10 text-primary border-primary/30",
         variant === "accent" && "bg-accent/10 text-accent border-accent/30",

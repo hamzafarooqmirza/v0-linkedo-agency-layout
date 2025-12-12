@@ -1,3 +1,5 @@
+"use client"
+
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
@@ -5,6 +7,8 @@ import { ProcessTimeline } from "@/components/ui/process-timeline"
 import { AnimatedButton } from "@/components/ui/animated-button"
 import { StatCard } from "@/components/ui/stat-card"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 const serviceFeatures = [
   {
@@ -100,12 +104,37 @@ const faqs = [
 export default function GoogleAdsPage() {
   return (
     <MainShell>
-      <Section
-        eyebrow="Google Ads Management"
-        title="Drive Qualified Leads with Google Ads"
-        description="Expert Google Ads management that delivers measurable results and maximizes your advertising budget."
-        className="mb-16"
-      />
+      {/* Hero Image Section */}
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Google Ads Management
+            </span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Drive Qualified Leads with <span className="text-gradient-primary">Google Ads</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Expert Google Ads management that delivers measurable results and maximizes your advertising budget.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image
+              src="/google-ads-dashboard-with-campaign-metrics-and-per.jpg"
+              alt="Google Ads Dashboard"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+          </motion.div>
+        </div>
+      </Section>
 
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -113,6 +142,127 @@ export default function GoogleAdsPage() {
           <StatCard key={stat.label} {...stat} />
         ))}
       </div>
+
+      {/* Campaign Performance Visualization */}
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative aspect-square rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image
+              src="/google-ads-campaign-structure-diagram-with-ad-grou.jpg"
+              alt="Campaign Structure"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Strategic Approach
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Data-Driven Campaign Management</h2>
+            <p className="text-muted-foreground mb-6">
+              Our Google Ads experts use advanced strategies and continuous optimization to maximize your return on ad
+              spend.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Smart bidding strategies",
+                "A/B testing for ad copy",
+                "Landing page optimization",
+                "Negative keyword refinement",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* High-Converting Ad Copy Section */}
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              High-Converting Ad Copy
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Words That Drive Clicks & Conversions
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              Our expert copywriters create compelling ad copy that stops searchers in their tracks and drives qualified
+              clicks to your site.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Persuasive headlines that grab attention",
+                "Benefit-focused descriptions",
+                "Strong call-to-actions",
+                "A/B testing for continuous improvement",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image src="/google-ads-interface-showing-multiple-ad-variation.jpg" alt="Ad Copy Performance" fill className="object-cover" />
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Conversion Tracking Visualization Section */}
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image src="/conversion-tracking-dashboard-with-funnel-visualiz.jpg" alt="Conversion Tracking" fill className="object-cover" />
+          </motion.div>
+
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Transparent Reporting
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Track Every Dollar You Spend</h2>
+            <p className="text-muted-foreground mb-6">
+              Get complete visibility into campaign performance with custom dashboards that show exactly how your budget
+              drives revenue.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Real-time performance tracking",
+                "Conversion funnel analysis",
+                "Cost per acquisition monitoring",
+                "ROAS optimization insights",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
 
       {/* Who This Is For */}
       <Section title="Who This Is For" className="mb-16">

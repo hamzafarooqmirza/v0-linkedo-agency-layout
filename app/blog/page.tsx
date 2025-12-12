@@ -67,94 +67,98 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <MainShell>
-      <Section
-        eyebrow="Blog"
-        title="Insights & Strategies"
-        description="Expert advice, industry insights, and proven strategies to grow your business online."
-        className="mb-12"
-      />
+      <div className="pt-20 pb-12 md:pt-24 md:pb-16">
+        <Section
+          eyebrow="Blog"
+          title="Insights & Strategies"
+          description="Expert advice, industry insights, and proven strategies to grow your business online."
+          className="mb-12 md:mb-16"
+        />
 
-      {/* Category filters can be added later with client component wrapper */}
-
-      {/* Featured Post */}
-      {blogPosts[0].featured && (
-        <Link
-          href={`/blog/${blogPosts[0].slug}`}
-          className="block mb-16 group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300"
-        >
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative h-64 lg:h-full overflow-hidden">
-              <img
-                src={blogPosts[0].image || "/placeholder.svg"}
-                alt={blogPosts[0].title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <Chip variant="primary" className="absolute top-4 left-4">
-                Featured
-              </Chip>
-            </div>
-            <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <Chip variant="secondary" className="mb-4 w-fit">
-                {blogPosts[0].category}
-              </Chip>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                {blogPosts[0].title}
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">{blogPosts[0].excerpt}</p>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-                <div className="flex items-center gap-1.5">
-                  <Calendar size={14} />
-                  <span>{new Date(blogPosts[0].date).toLocaleDateString()}</span>
+        {/* Featured Post */}
+        {blogPosts[0].featured && (
+          <div className="mb-12 md:mb-16">
+            <Link
+              href={`/blog/${blogPosts[0].slug}`}
+              className="block group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+            >
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative h-64 sm:h-80 lg:h-full min-h-[300px] overflow-hidden">
+                  <img
+                    src={blogPosts[0].image || "/placeholder.svg"}
+                    alt={blogPosts[0].title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <Chip variant="primary" className="absolute top-4 left-4">
+                    Featured
+                  </Chip>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock size={14} />
-                  <span>{blogPosts[0].readTime}</span>
+                <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                  <Chip variant="secondary" className="mb-4 w-fit">
+                    {blogPosts[0].category}
+                  </Chip>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors text-balance">
+                    {blogPosts[0].title}
+                  </h2>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed line-clamp-3">
+                    {blogPosts[0].excerpt}
+                  </p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar size={14} />
+                      <span>{new Date(blogPosts[0].date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Clock size={14} />
+                      <span>{blogPosts[0].readTime}</span>
+                    </div>
+                  </div>
+                  <span className="flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+                    Read Article <ArrowRight size={16} />
+                  </span>
                 </div>
               </div>
-              <span className="flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
-                Read Article <ArrowRight size={16} />
-              </span>
-            </div>
+            </Link>
           </div>
-        </Link>
-      )}
+        )}
 
-      {/* Blog Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.slice(1).map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300"
-          >
-            <div className="relative h-48 overflow-hidden">
-              <img
-                src={post.image || "/placeholder.svg"}
-                alt={post.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-6">
-              <Chip variant="secondary" className="mb-3">
-                {post.category}
-              </Chip>
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-muted-foreground text-sm mb-4 line-clamp-2 leading-relaxed">{post.excerpt}</p>
-              <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <div className="flex items-center gap-1.5">
-                  <Calendar size={12} />
-                  <span>{new Date(post.date).toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock size={12} />
-                  <span>{post.readTime}</span>
+        {/* Blog Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {blogPosts.slice(1).map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
+            >
+              <div className="relative h-48 sm:h-52 overflow-hidden bg-muted">
+                <img
+                  src={post.image || "/placeholder.svg"}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 sm:p-6">
+                <Chip variant="secondary" className="mb-3">
+                  {post.category}
+                </Chip>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 text-balance">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2 leading-relaxed">{post.excerpt}</p>
+                <div className="flex items-center gap-3 sm:gap-4 text-xs text-muted-foreground flex-wrap">
+                  <div className="flex items-center gap-1.5">
+                    <Calendar size={12} />
+                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Clock size={12} />
+                    <span>{post.readTime}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </MainShell>
   )

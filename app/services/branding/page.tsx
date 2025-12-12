@@ -1,7 +1,11 @@
+"use client"
+
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 const services = [
   {
@@ -29,12 +33,151 @@ const services = [
 export default function BrandingPage() {
   return (
     <MainShell>
-      <Section
-        eyebrow="Branding Services"
-        title="Build a Brand That Stands Out"
-        description="Strategic branding that creates memorable impressions and builds lasting connections with your audience."
-        className="mb-16"
-      />
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Branding Services
+            </span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Build a Brand <span className="text-gradient-primary">That Stands Out</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Strategic branding that creates memorable impressions and builds lasting connections with your audience.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative aspect-square rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image
+              src="/brand-identity-design-showcase-with-logo--colors--.jpg"
+              alt="Brand Identity Showcase"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+          </motion.div>
+        </div>
+      </Section>
+
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image
+              src="/brand-guidelines-book-with-color-palette-and-logo-.jpg"
+              alt="Brand Guidelines"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Comprehensive Identity
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Every Detail Matters</h2>
+            <p className="text-muted-foreground mb-6">
+              We craft cohesive brand identities that work seamlessly across all touchpoints, from digital to print.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Logo design & variations",
+                "Color palette & typography",
+                "Brand voice & messaging",
+                "Visual asset library",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Brand Applications
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Consistency Across All Touchpoints</h2>
+            <p className="text-muted-foreground mb-6">
+              Your brand identity should work seamlessly across every medium—from digital to print, from web to
+              packaging.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Business cards & stationery",
+                "Social media templates",
+                "Email signatures & templates",
+                "Presentation decks",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image src="/brand-identity-mockup-showing-business-cards--lett.jpg" alt="Brand Applications" fill className="object-cover" />
+          </motion.div>
+        </div>
+      </Section>
+
+      <Section className="mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative aspect-square rounded-2xl overflow-hidden border border-border/50"
+          >
+            <Image src="/brand-strategy-framework-diagram-with-positioning-.jpg" alt="Brand Strategy Framework" fill className="object-cover" />
+          </motion.div>
+
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Strategic Foundation
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">More Than Just a Logo</h2>
+            <p className="text-muted-foreground mb-6">
+              Great brands start with strategy. We define your positioning, messaging, and unique value proposition
+              before designing visuals.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Brand positioning workshops",
+                "Competitor analysis",
+                "Target audience research",
+                "Messaging framework development",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
 
       <Section title="Our Branding Services" className="mb-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

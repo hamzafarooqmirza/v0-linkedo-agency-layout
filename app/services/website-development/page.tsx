@@ -118,7 +118,7 @@ const faqs = [
   },
 ]
 
-export default function WebDevelopmentPage() {
+export default function WebsiteDevelopmentPage() {
   return (
     <MainShell>
       {/* Hero Image Section */}
@@ -126,7 +126,7 @@ export default function WebDevelopmentPage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-              Web Development
+              Website Development
             </span>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Custom Websites <span className="text-gradient-primary">That Drive Results</span>

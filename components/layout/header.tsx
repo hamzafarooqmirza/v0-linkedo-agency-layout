@@ -36,13 +36,24 @@ export function Header() {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden"
+      document.body.style.paddingRight = "0px"
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = ""
+      document.body.style.paddingRight = ""
     }
     return () => {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = ""
+      document.body.style.paddingRight = ""
     }
   }, [isMobileMenuOpen])
+
+  const handleMenuToggle = () => {
+    setIsMobileMenuOpen((prev) => !prev)
+  }
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <header
@@ -87,18 +98,39 @@ export function Header() {
           </div>
 
           <button
-            className="lg:hidden p-2 text-foreground relative z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-foreground relative z-50 hover:bg-secondary/50 rounded-lg transition-colors"
+            onClick={handleMenuToggle}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
-            <motion.div animate={isMobileMenuOpen ? { rotate: 180 } : { rotate: 0 }} transition={{ duration: 0.3 }}>
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.div>
+            <AnimatePresence mode="wait" initial={false}>
+              {isMobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ opacity: 0, rotate: -180, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 180, scale: 0.5 }}
+                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  <X size={24} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ opacity: 0, rotate: 180, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: -180, scale: 0.5 }}
+                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  <Menu size={24} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </nav>
       </MainShell>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <>
             {/* Backdrop with blur */}
@@ -106,17 +138,23 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
               className="fixed inset-0 bg-background/95 backdrop-blur-2xl lg:hidden z-40"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleLinkClick}
             />
 
             {/* Menu content */}
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 200,
+                mass: 0.8,
+                opacity: { duration: 0.2 },
+              }}
               className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-gradient-to-br from-card/95 via-card/90 to-background/95 backdrop-blur-2xl lg:hidden z-40 border-l border-border/50 shadow-2xl"
             >
               {/* Gradient overlay for depth */}
@@ -132,7 +170,7 @@ export function Header() {
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
+                    transition={{ delay: 0.1, duration: 0.3 }}
                     className="flex items-center gap-2 mb-2"
                   >
                     <Sparkles className="w-5 h-5 text-primary" />
@@ -141,7 +179,7 @@ export function Header() {
                   <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 }}
+                    transition={{ delay: 0.15, duration: 0.3 }}
                     className="text-2xl font-bold text-foreground"
                   >
                     Explore Linkedo
@@ -155,11 +193,15 @@ export function Header() {
                       key={link.href}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 + index * 0.05 }}
+                      transition={{
+                        delay: 0.1 + index * 0.04,
+                        duration: 0.3,
+                        ease: "easeOut",
+                      }}
                     >
                       <Link
                         href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={handleLinkClick}
                         className="group flex items-center justify-between px-5 py-4 rounded-xl bg-secondary/30 hover:bg-secondary/60 border border-border/30 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
                       >
                         <span className="text-foreground font-medium group-hover:text-primary transition-colors">
@@ -175,10 +217,10 @@ export function Header() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
+                  transition={{ delay: 0.5, duration: 0.3 }}
                   className="mt-8 pt-6 border-t border-border/50"
                 >
-                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href="/contact" onClick={handleLinkClick}>
                     <Button className="w-full relative overflow-hidden bg-gradient-to-r from-primary via-cyan-400 to-primary text-primary-foreground font-semibold py-6 rounded-xl hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 bg-[length:200%] hover:bg-right group">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         Book a Call
