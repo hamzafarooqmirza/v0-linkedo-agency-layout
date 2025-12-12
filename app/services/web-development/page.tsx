@@ -69,24 +69,18 @@ const processSteps = [
 
 const caseStudies = [
   {
-    slug: "ecommerce-redesign",
     title: "E-commerce Platform Redesign",
+    client: "Fashion Retailer",
     description: "300% increase in online sales with modern design and optimized checkout flow.",
-    metrics: [
-      { label: "Sales Increase", value: "+300%" },
-      { label: "Page Speed", value: "95/100" },
-    ],
+    href: "/case-studies/ecommerce-redesign",
     tags: ["E-commerce", "Redesign", "Shopify"],
-    image: "/ecommerce-website-mockup.png",
+    image: "/modern-ecommerce-website.png",
   },
   {
-    slug: "saas-platform",
     title: "SaaS Platform Development",
+    client: "Tech Startup",
     description: "Custom web application serving 10,000+ users with enterprise features.",
-    metrics: [
-      { label: "Users", value: "10,000+" },
-      { label: "Uptime", value: "99.9%" },
-    ],
+    href: "/case-studies/saas-platform",
     tags: ["SaaS", "Web App", "React"],
     image: "/modern-saas-dashboard.png",
   },
@@ -177,7 +171,7 @@ export default function WebDevelopmentPage() {
       <Section eyebrow="Case Studies" title="Recent Projects" className="mb-16">
         <div className="grid md:grid-cols-2 gap-8">
           {caseStudies.map((study) => (
-            <CaseStudyCard key={study.slug} {...study} />
+            <CaseStudyCard key={study.title} {...study} />
           ))}
         </div>
       </Section>
