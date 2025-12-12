@@ -4,7 +4,6 @@ import type React from "react"
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { MainShell } from "@/components/layout/main-shell"
 
 interface SectionProps {
   children: React.ReactNode
@@ -36,7 +35,7 @@ export function Section({
         className,
       )}
     >
-      <MainShell fullWidth={fullWidth}>
+      <div className={cn("w-full", !fullWidth && "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8")}>
         {(eyebrow || title || description) && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +56,7 @@ export function Section({
           </motion.div>
         )}
         {children}
-      </MainShell>
+      </div>
     </section>
   )
 }

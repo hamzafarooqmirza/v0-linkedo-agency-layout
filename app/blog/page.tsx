@@ -1,7 +1,6 @@
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 import { Chip } from "@/components/ui/chip"
-import { FilterBar } from "@/components/ui/filter-bar"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 
@@ -75,8 +74,7 @@ export default function BlogPage() {
         className="mb-12"
       />
 
-      {/* Filter Bar */}
-      <FilterBar categories={categories} className="mb-12" />
+      {/* Category filters can be added later with client component wrapper */}
 
       {/* Featured Post */}
       {blogPosts[0].featured && (
