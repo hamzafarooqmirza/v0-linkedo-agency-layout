@@ -1,9 +1,10 @@
 import { Section } from "@/components/ui/section"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { PricingCalculator } from "@/components/forms/pricing-calculator"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Linkedin, Twitter, Mail } from "lucide-react"
+import { ArrowRight, Linkedin, Twitter, Mail, Facebook, Instagram } from "lucide-react"
 
 const teamData = {
   "alex-thompson": {
@@ -31,6 +32,44 @@ const teamData = {
       },
     ],
   },
+  "sarmad-shabir": {
+    name: "Sarmad Shabir",
+    role: "Senior Google Ads Expert & Account Manager",
+    image: "/placeholder.svg?height=500&width=500",
+    bio: "Sarmad Shabir is a Senior Google Ads specialist with hands-on experience managing and scaling paid advertising campaigns for businesses, primarily across the UK market. Since starting his career in Google Ads in 2022, Sarmad has worked with a wide range of clients, focusing on lead generation, eCommerce growth, and high-intent search campaigns.\n\nHe specialises in building structured, data-driven Google Ads accounts that prioritise return on ad spend, cost efficiency, and long-term account stability. As both an ads expert and account manager, Sarmad works closely with clients to understand business goals, optimise performance, and deliver measurable results through continuous testing and optimisation.",
+    skills: [
+      "Google Ads Strategy",
+      "Search & Performance Max Campaigns",
+      "Lead Generation Funnels",
+      "Conversion Tracking & GA4",
+      "Budget & ROAS Management",
+      "Client Account Management",
+    ],
+    experience: [{ company: "Linkedo Agency", role: "Senior Google Ads Expert & Manager", years: "2022 - Present" }],
+    facebook: "https://www.facebook.com/share/17ocekwB1v/",
+    instagram: "https://www.instagram.com/onlinemarketinghub2025?igsh=YTlueXd3OGh6ZzRt",
+    portfolioTitle: "Google Ads Campaigns Managed by Sarmad",
+    portfolioDescription:
+      "A selection of Google Ads campaigns planned, managed, and optimised by Sarmad for UK-based clients, focused on lead generation, scalability, and measurable performance improvements.",
+    featuredProjects: [
+      {
+        title: "Lead Generation Campaign",
+        client: "UK Business Services",
+        description: "Optimized Google Ads campaign for lead generation",
+        image: "/placeholder.svg?height=400&width=600",
+        tags: ["Google Ads", "Lead Gen"],
+        href: "#",
+      },
+      {
+        title: "eCommerce Growth Strategy",
+        client: "UK Online Retailer",
+        description: "Performance Max campaign driving eCommerce sales",
+        image: "/placeholder.svg?height=400&width=600",
+        tags: ["Google Ads", "eCommerce"],
+        href: "#",
+      },
+    ],
+  },
 }
 
 export function generateStaticParams() {
@@ -41,6 +80,7 @@ export function generateStaticParams() {
     { slug: "emily-parker" },
     { slug: "michael-brown" },
     { slug: "lisa-wang" },
+    { slug: "sarmad-shabir" }, // Adding Sarmad Shabir to static params
   ]
 }
 
@@ -88,6 +128,26 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                     <Twitter size={18} />
                   </a>
                 )}
+                {member.facebook && (
+                  <a
+                    href={member.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  >
+                    <Facebook size={18} />
+                  </a>
+                )}
+                {member.instagram && (
+                  <a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  >
+                    <Instagram size={18} />
+                  </a>
+                )}
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
@@ -101,7 +161,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
               {/* Bio */}
               <div className="mb-8">
                 <h2 className="text-lg font-semibold text-foreground mb-3">About</h2>
-                <p className="text-muted-foreground leading-relaxed">{member.bio}</p>
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{member.bio}</p>
               </div>
 
               {/* Skills */}
@@ -137,9 +197,12 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
           </div>
         </Section>
 
-        {/* Featured Projects */}
+        {/* Featured Projects / Portfolio */}
         {member.featuredProjects && member.featuredProjects.length > 0 && (
-          <Section eyebrow="Featured Work" title="Projects Led">
+          <Section eyebrow="Featured Work" title={member.portfolioTitle || "Projects Led"}>
+            {member.portfolioDescription && (
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">{member.portfolioDescription}</p>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {member.featuredProjects.map((project) => (
                 <CaseStudyCard key={project.title} {...project} />
@@ -147,6 +210,15 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
             </div>
           </Section>
         )}
+
+        {/* Pricing Calculator Section */}
+        <Section eyebrow="Pricing" title="Starting Pricing Calculator">
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Get an instant estimate for services managed by {member.name.split(" ")[0]}. Select your requirements to see
+            starting prices.
+          </p>
+          <PricingCalculator />
+        </Section>
 
         {/* CTA */}
         <Section gradient>

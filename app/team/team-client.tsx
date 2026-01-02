@@ -2,6 +2,7 @@
 
 import { Section } from "@/components/ui/section"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { PricingCalculator } from "@/components/forms/pricing-calculator"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Linkedin, Twitter } from "lucide-react"
@@ -58,6 +59,14 @@ const teamMembers = [
     slug: "lisa-wang",
     linkedin: "#",
     twitter: "#",
+  },
+  {
+    name: "Sarmad Shabir",
+    role: "Senior Google Ads Expert & Account Manager",
+    image: "/sarmad-shabir-headshot.jpg",
+    bio: "Google Ads specialist with hands-on experience managing and scaling paid advertising campaigns for UK businesses.",
+    slug: "sarmad-shabir",
+    linkedin: "#",
   },
 ]
 
@@ -140,6 +149,15 @@ export function TeamClient() {
               <TeamMemberCard key={member.slug} {...member} />
             ))}
           </div>
+        </Section>
+
+        {/* Pricing Calculator Section */}
+        <Section eyebrow="Pricing" title="Starting Pricing Calculator">
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Get an instant estimate for the services our team can provide. Select your requirements to see starting
+            prices.
+          </p>
+          <PricingCalculator />
         </Section>
 
         {/* Join Us CTA */}
