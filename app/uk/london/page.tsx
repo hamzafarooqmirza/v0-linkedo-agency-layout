@@ -69,7 +69,7 @@ export default function LondonPage() {
       <main className="pt-24">
         {/* Hero */}
         <div
-          className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+          className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/tower-bridge-sunset-london.webp')" }}
         >
           {/* Dark overlay for text readability */}
