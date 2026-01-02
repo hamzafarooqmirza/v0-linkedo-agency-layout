@@ -35,7 +35,7 @@ const teamData = {
   "sarmad-shabir": {
     name: "Sarmad Shabir",
     role: "Senior Google Ads Expert & Account Manager",
-    image: "/placeholder.svg?height=500&width=500",
+    image: "/sarmad-shabir.jpg",
     bio: "Sarmad Shabir is a Senior Google Ads specialist with hands-on experience managing and scaling paid advertising campaigns for businesses, primarily across the UK market. Since starting his career in Google Ads in 2022, Sarmad has worked with a wide range of clients, focusing on lead generation, eCommerce growth, and high-intent search campaigns.\n\nHe specialises in building structured, data-driven Google Ads accounts that prioritise return on ad spend, cost efficiency, and long-term account stability. As both an ads expert and account manager, Sarmad works closely with clients to understand business goals, optimise performance, and deliver measurable results through continuous testing and optimisation.",
     skills: [
       "Google Ads Strategy",
@@ -50,23 +50,23 @@ const teamData = {
     instagram: "https://www.instagram.com/onlinemarketinghub2025?igsh=YTlueXd3OGh6ZzRt",
     portfolioTitle: "Google Ads Campaigns Managed by Sarmad",
     portfolioDescription:
-      "A selection of Google Ads campaigns planned, managed, and optimised by Sarmad for UK-based clients, focused on lead generation, scalability, and measurable performance improvements.",
-    featuredProjects: [
+      "A selection of Google Ads campaigns planned, managed, and optimised by Sarmad for UK-based clients, focused on lead generation, efficiency, and measurable growth.",
+    googleAdsPortfolio: [
       {
-        title: "Lead Generation Campaign",
-        client: "UK Business Services",
-        description: "Optimized Google Ads campaign for lead generation",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["Google Ads", "Lead Gen"],
-        href: "#",
+        image: "/sarmad-google-ads-1.jpeg",
+        caption: "UK Lead Generation Campaign",
       },
       {
-        title: "eCommerce Growth Strategy",
-        client: "UK Online Retailer",
-        description: "Performance Max campaign driving eCommerce sales",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["Google Ads", "eCommerce"],
-        href: "#",
+        image: "/sarmad-google-ads-2.jpeg",
+        caption: "Search & Conversion-Focused Campaign Structure",
+      },
+      {
+        image: "/sarmad-google-ads-3.jpeg",
+        caption: "Google Ads Performance Optimisation",
+      },
+      {
+        image: "/sarmad-google-ads-4.jpeg",
+        caption: "Weekly Campaign Performance Overview",
       },
     ],
   },
@@ -197,10 +197,40 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
           </div>
         </Section>
 
+        {member.googleAdsPortfolio && member.googleAdsPortfolio.length > 0 && (
+          <Section eyebrow="Portfolio" title={member.portfolioTitle || "Featured Work"}>
+            {member.portfolioDescription && (
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+                {member.portfolioDescription}
+              </p>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {member.googleAdsPortfolio.map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-xl overflow-hidden bg-card border border-border hover:border-primary transition-all duration-300"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.caption}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="text-sm text-muted-foreground text-center">{item.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
         {/* Featured Projects / Portfolio */}
         {member.featuredProjects && member.featuredProjects.length > 0 && (
           <Section eyebrow="Featured Work" title={member.portfolioTitle || "Projects Led"}>
-            {member.portfolioDescription && (
+            {member.portfolioDescription && !member.googleAdsPortfolio && (
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">{member.portfolioDescription}</p>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

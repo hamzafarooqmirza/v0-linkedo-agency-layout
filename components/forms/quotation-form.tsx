@@ -255,7 +255,7 @@ export function QuotationForm({ onClose }: QuotationFormProps) {
                 <FormInput
                   label="Phone Number"
                   type="tel"
-                  placeholder="+44 7700 900000"
+                  placeholder="+92 317 5980459"
                   value={formData.phone}
                   onChange={(e) => updateFormData("phone", e.target.value)}
                 />

@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 123 456 7890",
-    href: "tel:+441234567890",
+    value: "03175980459",
+    href: "tel:+923175980459",
   },
   {
     icon: Clock,

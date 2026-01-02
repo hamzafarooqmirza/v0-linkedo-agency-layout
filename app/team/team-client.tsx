@@ -63,7 +63,7 @@ const teamMembers = [
   {
     name: "Sarmad Shabir",
     role: "Senior Google Ads Expert & Account Manager",
-    image: "/sarmad-shabir-headshot.jpg",
+    image: "/sarmad-shabir.jpg",
     bio: "Google Ads specialist with hands-on experience managing and scaling paid advertising campaigns for UK businesses.",
     slug: "sarmad-shabir",
     linkedin: "#",
