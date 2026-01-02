@@ -68,42 +68,42 @@ export default function LondonPage() {
     <div className="min-h-screen bg-background">
       <main className="pt-24">
         {/* Hero */}
-        <Section
-          className="pt-8 relative bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/tower-bridge-sunset-london.webp')",
-          }}
+        <div
+          className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/tower-bridge-sunset-london.webp')" }}
         >
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-background/80 -z-10" />
+          <div className="absolute inset-0 bg-background/75" />
 
-          <div className="max-w-4xl relative z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-4xl">🇬🇧</span>
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">United Kingdom</span>
+          <Section className="pt-8 relative">
+            <div className="max-w-4xl relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-4xl">🇬🇧</span>
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">United Kingdom</span>
+              </div>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
+                Digital Marketing Agency in <span className="text-gradient-primary">London</span>
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+                We help London businesses grow online with data-driven web development, SEO, and advertising strategies
+                that deliver measurable results and real ROI.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <AnimatedButton size="lg">
+                    Book a Strategy Call
+                    <ArrowRight className="w-4 h-4" />
+                  </AnimatedButton>
+                </Link>
+                <Link href="#services">
+                  <AnimatedButton variant="secondary" size="lg">
+                    View London Services
+                  </AnimatedButton>
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
-              Digital Marketing Agency in <span className="text-gradient-primary">London</span>
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              We help London businesses grow online with data-driven web development, SEO, and advertising strategies
-              that deliver measurable results and real ROI.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <AnimatedButton size="lg">
-                  Book a Strategy Call
-                  <ArrowRight className="w-4 h-4" />
-                </AnimatedButton>
-              </Link>
-              <Link href="#services">
-                <AnimatedButton variant="secondary" size="lg">
-                  View London Services
-                </AnimatedButton>
-              </Link>
-            </div>
-          </div>
-        </Section>
+          </Section>
+        </div>
 
         {/* Services for London */}
         <Section
@@ -184,7 +184,7 @@ export default function LondonPage() {
             <div className="order-1">
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Greenland%20Dock%20in%20London.-a7UjQfKU5GjqIFXNeFrcP1ezFKk3an.webp"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Greenland%20Dock%20in%20London.-iWeIi9X2GW3PUcRnoCLgpBxFwJrLZ8.webp"
                   alt="Greenland Dock in London showing modern waterfront development"
                   className="w-full h-full object-cover"
                 />
