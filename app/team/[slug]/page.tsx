@@ -7,30 +7,22 @@ import Link from "next/link"
 import { ArrowRight, Linkedin, Twitter, Mail, Facebook, Instagram } from "lucide-react"
 
 const teamData = {
-  "alex-thompson": {
-    name: "Alex Thompson",
-    role: "Founder & CEO",
-    image: "/placeholder.svg?height=500&width=500",
-    bio: "Alex founded Linkedo Agency in 2018 with a vision to create a digital marketing agency that truly delivers results. With over 15 years of experience in the industry, he has led growth initiatives at two successful startups before starting Linkedo.",
-    skills: ["Digital Strategy", "Business Development", "Team Leadership", "Client Relations"],
-    experience: [
-      { company: "Linkedo Agency", role: "Founder & CEO", years: "2018 - Present" },
-      { company: "GrowthTech Inc.", role: "VP of Marketing", years: "2014 - 2018" },
-      { company: "StartupXYZ", role: "Head of Growth", years: "2010 - 2014" },
+  "waleed-sabbir": {
+    name: "Waleed Sabbir",
+    role: "Digital Marketing Specialist & Campaign Manager",
+    image: "/waleed-sabbir.webp",
+    bio: "Waleed Sabbir is a Digital Marketing Specialist with over three years of hands-on experience delivering performance-focused marketing solutions for service-based and online businesses. His work spans paid advertising, campaign optimisation, and strategic planning, with a strong emphasis on generating consistent leads and measurable growth.\n\nSince entering the digital marketing field, Waleed has worked across multiple client accounts, helping businesses improve visibility, control acquisition costs, and scale campaigns with a structured, data-driven approach. He is known for his attention to detail, analytical mindset, and ability to translate business goals into practical marketing actions.",
+    skills: [
+      "Digital Marketing Strategy",
+      "Google Ads Campaign Management",
+      "Lead Generation & Funnel Optimisation",
+      "Performance Tracking & Reporting",
+      "Conversion Optimisation",
+      "Client Communication & Account Support",
     ],
+    experience: [{ company: "Linkedo Agency", role: "Digital Marketing Specialist", years: "2021 - Present" }],
     linkedin: "#",
     twitter: "#",
-    email: "alex@linkedo.agency",
-    featuredProjects: [
-      {
-        title: "300% Increase in Organic Traffic",
-        client: "TechFlow SaaS",
-        description: "Led the strategy for a comprehensive SEO overhaul.",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["Strategy", "SEO"],
-        href: "/case-studies/techflow",
-      },
-    ],
   },
   "sarmad-shabir": {
     name: "Sarmad Shabir",
@@ -74,7 +66,7 @@ const teamData = {
 
 export function generateStaticParams() {
   return [
-    { slug: "alex-thompson" },
+    { slug: "waleed-sabbir" },
     { slug: "sarah-chen" },
     { slug: "james-wilson" },
     { slug: "emily-parker" },
@@ -86,7 +78,7 @@ export function generateStaticParams() {
 
 export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const member = teamData[slug as keyof typeof teamData] || teamData["alex-thompson"]
+  const member = teamData[slug as keyof typeof teamData] || teamData["waleed-sabbir"]
 
   return (
     <div className="min-h-screen bg-background">
@@ -95,8 +87,12 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
         <Section className="pt-8">
           <div className="mt-8 grid lg:grid-cols-2 gap-12 items-start">
             {/* Photo */}
-            <div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden">
-              <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+            <div className="relative w-full aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden">
+              <img
+                src={member.image || "/placeholder.svg"}
+                alt={`${member.name} – ${member.role}`}
+                className="w-full h-full object-cover"
+              />
               {/* Glow */}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             </div>

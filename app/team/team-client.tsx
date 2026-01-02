@@ -9,11 +9,11 @@ import { ArrowRight, Linkedin, Twitter } from "lucide-react"
 
 const teamMembers = [
   {
-    name: "Alex Thompson",
-    role: "Founder & CEO",
-    image: "/professional-man-headshot-suit.jpg",
-    bio: "15+ years in digital marketing, previously led growth at two successful startups.",
-    slug: "alex-thompson",
+    name: "Waleed Sabbir",
+    role: "Digital Marketing Specialist & Campaign Manager",
+    image: "/waleed-sabbir.webp",
+    bio: "Digital Marketing Specialist with over three years of hands-on experience delivering performance-focused marketing solutions.",
+    slug: "waleed-sabbir",
     linkedin: "#",
     twitter: "#",
   },
@@ -71,54 +71,71 @@ const teamMembers = [
 ]
 
 function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (typeof teamMembers)[0]) {
+  console.log("[v0] TeamMemberCard rendered:", { name, image, slug })
+
   return (
-    <div className="group relative rounded-xl overflow-hidden bg-card/50 border border-border/50 hover:border-primary/30 transition-all duration-300">
-      <Link href={`/team/${slug}`} className="block">
-        <div className="relative aspect-square overflow-hidden">
-          <Image
-            src={image || "/placeholder.svg"}
-            alt={name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+    <div
+      className="group relative rounded-xl overflow-hidden bg-card/50 border border-border/50 hover:border-primary/30 transition-all duration-300 cursor-pointer"
+      onClick={(e) => {
+        // Only navigate if not clicking on social links
+        if (!(e.target as HTMLElement).closest("a")) {
+          window.location.href = `/team/${slug}`
+        }
+      }}
+    >
+      <div className="relative aspect-square overflow-hidden">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={name}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          onError={(e) => {
+            console.log("[v0] Image failed to load:", { name, image })
+            // Fallback to placeholder
+            e.currentTarget.src = "/placeholder.svg"
+          }}
+          onLoad={() => {
+            console.log("[v0] Image loaded successfully:", { name, image })
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
-          {/* Social Links */}
-          <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-            {linkedin && (
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Linkedin size={14} />
-              </a>
-            )}
-            {twitter && (
-              <a
-                href={twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Twitter size={14} />
-              </a>
-            )}
-          </div>
-
-          {/* Glow effect */}
-          <div className="absolute inset-0 rounded-t-xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        {/* Social Links */}
+        <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          {linkedin && (
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Linkedin size={14} />
+            </a>
+          )}
+          {twitter && (
+            <a
+              href={twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Twitter size={14} />
+            </a>
+          )}
         </div>
 
-        <div className="p-5">
-          <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">{name}</h3>
-          <p className="text-sm text-primary mb-2">{role}</p>
-          <p className="text-sm text-muted-foreground line-clamp-2">{bio}</p>
-        </div>
-      </Link>
+        {/* Glow effect */}
+        <div className="absolute inset-0 rounded-t-xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      </div>
+
+      <div className="p-5">
+        <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">{name}</h3>
+        <p className="text-sm text-primary mb-2">{role}</p>
+        <p className="text-sm text-muted-foreground line-clamp-2">{bio}</p>
+      </div>
     </div>
   )
 }
