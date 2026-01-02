@@ -1,7 +1,5 @@
 "use client"
 
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { AnimatedButton } from "@/components/ui/animated-button"
 import Image from "next/image"
@@ -119,8 +117,6 @@ function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (ty
 export function TeamClient() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -163,8 +159,6 @@ export function TeamClient() {
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

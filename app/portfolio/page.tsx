@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { ProjectCard } from "@/components/ui/project-card"
 import { FilterBar } from "@/components/ui/filter-bar"
@@ -88,8 +86,6 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -162,8 +158,6 @@ export default function PortfolioPage() {
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

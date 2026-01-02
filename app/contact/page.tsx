@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { ContactForm } from "@/components/forms/contact-form"
 import { ContactModal } from "@/components/ui/contact-modal"
@@ -52,8 +50,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -162,7 +158,6 @@ export default function ContactPage() {
         </Section>
       </main>
 
-      <Footer />
       <ContactModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </div>
   )

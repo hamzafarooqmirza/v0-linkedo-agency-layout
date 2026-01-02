@@ -114,3 +114,5 @@ export function PricingSection() {
     </Section>
   )
 }
+
+export { PricingSection as PricingSectionComponent }

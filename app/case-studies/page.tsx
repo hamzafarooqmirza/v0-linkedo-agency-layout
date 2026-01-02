@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { FilterBar } from "@/components/ui/filter-bar"
@@ -81,8 +79,6 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -132,8 +128,6 @@ export default function CaseStudiesPage() {
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

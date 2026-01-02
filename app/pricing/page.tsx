@@ -1,11 +1,7 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
-import { PricingSection as PricingSectionComponent } from "@/components/sections/pricing-section"
+import { PricingSectionComponent } from "@/components/sections/pricing-section"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
-import { AnimatedButton } from "@/components/ui/animated-button"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
 export const metadata = {
   title: "Pricing & Packages | Linkedo Agency",
@@ -49,8 +45,6 @@ const faqs = [
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -86,16 +80,14 @@ export default function PricingPage() {
               Every business is unique. Let's discuss your specific needs and create a tailored package just for you.
             </p>
             <Link href="/contact">
-              <AnimatedButton size="lg">
+              {/* <AnimatedButton size="lg">
                 Get a Custom Quote
                 <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
+              </AnimatedButton> */}
             </Link>
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }

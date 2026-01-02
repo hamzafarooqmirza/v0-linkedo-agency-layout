@@ -68,8 +68,16 @@ export default function LondonPage() {
     <div className="min-h-screen bg-background">
       <main className="pt-24">
         {/* Hero */}
-        <Section className="pt-8">
-          <div className="max-w-4xl">
+        <Section
+          className="pt-8 relative bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/tower-bridge-sunset-london.webp')",
+          }}
+        >
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-background/80 -z-10" />
+
+          <div className="max-w-4xl relative z-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">🇬🇧</span>
               <span className="text-sm font-medium text-primary uppercase tracking-wider">United Kingdom</span>
@@ -165,6 +173,68 @@ export default function LondonPage() {
                     <p className="text-sm text-muted-foreground">UK Companies House Registered</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        <Section>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Image Column */}
+            <div className="order-1">
+              <div className="rounded-2xl overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Greenland%20Dock%20in%20London.-a7UjQfKU5GjqIFXNeFrcP1ezFKk3an.webp"
+                  alt="Greenland Dock in London showing modern waterfront development"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Text Column */}
+            <div className="order-2">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+                Local Insight from London's Business Districts
+              </h2>
+              <p className="text-base lg:text-lg leading-relaxed text-foreground/90">
+                Based around Greenland Dock and the surrounding Rotherhithe area, this part of London reflects a mix of
+                modern businesses, growing agencies, and established service companies. Linkedo works with organisations
+                in and around London's key commercial districts, delivering web development, SEO, and digital
+                advertising solutions designed for competitive, fast-moving markets. Our work focuses on clarity,
+                performance, and long-term growth, supporting businesses that need dependable digital systems rather
+                than short-term fixes.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/* Location Map */}
+        <Section eyebrow="Our Location" title="Visit Us in London">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card/30 border border-border/50 rounded-2xl p-4 sm:p-6 lg:p-8">
+              <div className="aspect-video w-full rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2476.9968586277364!2d-0.10838162347868145!3d51.62326670223237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487619778746806d%3A0xe56bfd29ae92d60b!2sLinkedo%20LTD!5e0!3m2!1sen!2s!4v1767333745617!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">Linkedo LTD</h3>
+                  <p className="text-sm text-muted-foreground">London, United Kingdom</p>
+                </div>
+                <Link href="/contact">
+                  <AnimatedButton variant="secondary" size="sm">
+                    Get Directions
+                    <ArrowRight className="w-4 h-4" />
+                  </AnimatedButton>
+                </Link>
               </div>
             </div>
           </div>

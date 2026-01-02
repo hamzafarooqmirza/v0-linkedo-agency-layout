@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
@@ -120,8 +118,6 @@ const faqs = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-24">
         {/* Hero */}
         <Section className="pt-12">
@@ -209,8 +205,6 @@ export default function ServicesPage() {
           </div>
         </Section>
       </main>
-
-      <Footer />
     </div>
   )
 }
