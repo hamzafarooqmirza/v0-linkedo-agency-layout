@@ -18,49 +18,6 @@ const teamMembers = [
     twitter: "#",
   },
   {
-    name: "Sarah Chen",
-    role: "Head of SEO",
-    image: "/professional-woman-headshot.png",
-    bio: "SEO specialist with a track record of driving 10x organic growth for B2B companies.",
-    slug: "sarah-chen",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    name: "James Wilson",
-    role: "Lead Developer",
-    image: "/developer-man-headshot-casual.jpg",
-    bio: "Full-stack developer specializing in React, Next.js, and scalable web applications.",
-    slug: "james-wilson",
-    linkedin: "#",
-  },
-  {
-    name: "Emily Parker",
-    role: "Head of Paid Media",
-    image: "/marketing-woman-headshot-professional.jpg",
-    bio: "Google Ads and Meta certified expert managing $5M+ in annual ad spend.",
-    slug: "emily-parker",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    name: "Michael Brown",
-    role: "Creative Director",
-    image: "/creative-director-man-headshot.jpg",
-    bio: "Award-winning designer with experience at top agencies worldwide.",
-    slug: "michael-brown",
-    linkedin: "#",
-  },
-  {
-    name: "Lisa Wang",
-    role: "Content Strategist",
-    image: "/content-strategist-woman-headshot.jpg",
-    bio: "Former journalist turned content marketer, driving thought leadership for B2B brands.",
-    slug: "lisa-wang",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
     name: "Sarmad Shabir",
     role: "Senior Google Ads Expert & Account Manager",
     image: "/sarmad-shabir.jpg",
@@ -68,11 +25,17 @@ const teamMembers = [
     slug: "sarmad-shabir",
     linkedin: "#",
   },
+  {
+    name: "Jamshaid Ahmed",
+    role: "Google Ads Expert",
+    image: "/jamshaid-ahmed.jpg",
+    bio: "Google Ads Expert with hands-on experience managing and optimising paid advertising campaigns focused on lead generation and performance growth.",
+    slug: "jamshaid-ahmed",
+    linkedin: "#",
+  },
 ]
 
 function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (typeof teamMembers)[0]) {
-  console.log("[v0] TeamMemberCard rendered:", { name, image, slug })
-
   return (
     <div
       className="group relative rounded-xl overflow-hidden bg-card/50 border border-border/50 hover:border-primary/30 transition-all duration-300 cursor-pointer"
@@ -90,14 +53,6 @@ function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (ty
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          onError={(e) => {
-            console.log("[v0] Image failed to load:", { name, image })
-            // Fallback to placeholder
-            e.currentTarget.src = "/placeholder.svg"
-          }}
-          onLoad={() => {
-            console.log("[v0] Image loaded successfully:", { name, image })
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
