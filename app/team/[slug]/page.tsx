@@ -101,6 +101,51 @@ const teamData = {
       },
     ],
   },
+  "waleed-hussain": {
+    name: "Waleed Hussain",
+    role: "Google Ads Specialist",
+    image: "/waleed-hussain.jpg",
+    bio: "Waleed Hussain is a Google Ads specialist with strong expertise in managing, optimising, and scaling paid advertising campaigns focused on lead generation and performance growth. His work centres around search intent, campaign structure, and continuous optimisation to improve conversion quality and reduce cost per acquisition.\n\nHe works with data-driven strategies to ensure Google Ads campaigns remain efficient, competitive, and aligned with business goals.",
+    skills: [
+      "Google Ads Campaign Setup & Optimisation",
+      "Lead Generation Campaigns",
+      "Keyword Research & Search Intent",
+      "Conversion Tracking & Performance Monitoring",
+      "Budget Control & Cost Optimisation",
+    ],
+    experience: [{ company: "Linkedo Agency", role: "Google Ads Specialist", years: "2023 - Present" }],
+    facebook: "https://www.facebook.com/share/17qrvBVWeA/?mibextid=wwXIfr",
+    whatsapp: "https://wa.me/923411153794",
+    portfolioTitle: "Google Ads Campaign Work by Waleed",
+    portfolioDescription:
+      "A selection of Google Ads campaigns managed and optimised by Waleed, focused on lead generation, efficiency, and performance improvement.",
+    googleAdsPortfolio: [
+      {
+        image: "/waleed-google-ads-1.jpg",
+        caption: "All-Time Campaign Performance Overview",
+      },
+      {
+        image: "/waleed-google-ads-2.jpg",
+        caption: "14-Day Performance Tracking",
+      },
+      {
+        image: "/waleed-google-ads-3.jpg",
+        caption: "30-Day Campaign Analysis",
+      },
+      {
+        image: "/waleed-google-ads-4.jpg",
+        caption: "Monthly Performance Dashboard",
+      },
+      {
+        image: "/waleed-google-ads-5.jpg",
+        caption: "Weekly Campaign Metrics",
+      },
+      {
+        image: "/waleed-google-ads-6.jpg",
+        caption: "Daily Performance Overview",
+      },
+    ],
+  },
 }
 
 export function generateStaticParams() {
@@ -108,6 +153,7 @@ export function generateStaticParams() {
     { slug: "waleed-sabbir" },
     { slug: "sarmad-shabir" },
     { slug: "jamshaid-ahmed" },
+    { slug: "waleed-hussain" },
   ]
 }
 

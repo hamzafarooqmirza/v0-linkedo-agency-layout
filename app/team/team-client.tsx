@@ -33,6 +33,14 @@ const teamMembers = [
     slug: "jamshaid-ahmed",
     linkedin: "#",
   },
+  {
+    name: "Waleed Hussain",
+    role: "Google Ads Specialist",
+    image: "/waleed-hussain.jpg",
+    bio: "Google Ads specialist with strong expertise in managing, optimising, and scaling paid advertising campaigns focused on lead generation and performance growth.",
+    slug: "waleed-hussain",
+    linkedin: "#",
+  },
 ]
 
 function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (typeof teamMembers)[0]) {
