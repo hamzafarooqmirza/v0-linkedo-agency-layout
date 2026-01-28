@@ -4,7 +4,7 @@ import { AnimatedButton } from "@/components/ui/animated-button"
 import { PricingCalculator } from "@/components/forms/pricing-calculator"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Linkedin, Twitter, Mail, Facebook, Instagram } from "lucide-react"
+import { ArrowRight, Linkedin, Twitter, Mail, Facebook, Instagram, MessageCircle } from "lucide-react"
 
 const teamData = {
   "waleed-sabbir": {
@@ -62,17 +62,51 @@ const teamData = {
       },
     ],
   },
+  "jamshaid-ahmed": {
+    name: "Jamshaid Ahmed",
+    role: "Google Ads Expert",
+    image: "/jamshaid-ahmed.jpg",
+    bio: "Jamshaid Ahmed is a Google Ads Expert with hands-on experience managing and optimising paid advertising campaigns focused on lead generation and performance growth. He works closely with campaign data, audience targeting, and conversion tracking to ensure advertising budgets are used efficiently and deliver measurable results.\n\nHis approach is practical and performance-driven, with a strong focus on campaign structure, keyword intent, and continuous optimisation to improve lead quality and reduce cost per acquisition.",
+    skills: [
+      "Google Ads Campaign Setup & Optimisation",
+      "Lead Generation Campaigns",
+      "Keyword Research & Search Intent",
+      "Conversion Tracking & Performance Analysis",
+      "Budget & Cost Optimisation",
+    ],
+    experience: [{ company: "Linkedo Agency", role: "Google Ads Expert", years: "2023 - Present" }],
+    instagram: "https://www.instagram.com/themarketinglab229?igsh=MXhibzRjNmk2Zjd4bg%3D%3D&utm_source=qr",
+    snapchat: "https://snapchat.com/t/lkjBwzS5",
+    whatsapp: "https://wa.me/923408986192",
+    portfolioTitle: "Google Ads Campaign Work by Jamshaid",
+    portfolioDescription:
+      "A selection of Google Ads campaign work managed by Jamshaid, focused on lead generation, optimisation, and performance improvements.",
+    googleAdsPortfolio: [
+      {
+        image: "/jamshaid-google-ads-1.jpg",
+        caption: "Campaign Performance Overview",
+      },
+      {
+        image: "/jamshaid-google-ads-2.jpg",
+        caption: "Multi-Campaign Management Dashboard",
+      },
+      {
+        image: "/jamshaid-google-ads-3.jpg",
+        caption: "Conversion Tracking & Optimisation",
+      },
+      {
+        image: "/jamshaid-google-ads-4.jpg",
+        caption: "Cost Per Conversion Analysis",
+      },
+    ],
+  },
 }
 
 export function generateStaticParams() {
   return [
     { slug: "waleed-sabbir" },
-    { slug: "sarah-chen" },
-    { slug: "james-wilson" },
-    { slug: "emily-parker" },
-    { slug: "michael-brown" },
-    { slug: "lisa-wang" },
-    { slug: "sarmad-shabir" }, // Adding Sarmad Shabir to static params
+    { slug: "sarmad-shabir" },
+    { slug: "jamshaid-ahmed" },
   ]
 }
 
@@ -142,6 +176,26 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                     className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                   >
                     <Instagram size={18} />
+                  </a>
+                )}
+                {member.snapchat && (
+                  <a
+                    href={member.snapchat}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  >
+                    <MessageCircle size={18} />
+                  </a>
+                )}
+                {member.whatsapp && (
+                  <a
+                    href={member.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  >
+                    <MessageCircle size={18} />
                   </a>
                 )}
                 {member.email && (
