@@ -41,6 +41,14 @@ const teamMembers = [
     slug: "waleed-hussain",
     linkedin: "#",
   },
+  {
+    name: "Kawish Azeem",
+    role: "Digital Advertising Specialist",
+    image: "/kawish-azeem.jpg",
+    bio: "Digital Advertising Specialist with experience working across multiple paid marketing platforms, helping businesses increase visibility and generate consistent leads.",
+    slug: "kawish-azeem",
+    linkedin: "https://www.linkedin.com/in/kawish-azeem-18911b309",
+  },
 ]
 
 function TeamMemberCard({ name, role, image, bio, slug, linkedin, twitter }: (typeof teamMembers)[0]) {
