@@ -38,21 +38,30 @@ export const metadata: Metadata = {
   keywords: ["digital agency", "web development", "SEO", "Google Ads", "lead generation", "B2B marketing"],
   authors: [{ name: "Linkedo Agency" }],
   icons: {
-    icon: [
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    title: "Linkedo | Digital Marketing Agency",
+    description: "Web Development, SEO, and Google Ads services for growth-focused businesses.",
+    url: "https://linkedo.co.uk",
+    siteName: "Linkedo",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Linkedo Digital Marketing Agency",
       },
     ],
-    apple: "/apple-icon.png",
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Linkedo | Digital Marketing Agency",
+    description: "Web Development, SEO, and Google Ads services for growth-focused businesses.",
+    images: ["/og-image.jpg"],
   },
 }
 

@@ -30,7 +30,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "py-16 lg:py-24 relative",
+        "py-12 sm:py-16 lg:py-24 relative",
         gradient && "bg-gradient-to-b from-transparent via-primary/5 to-transparent",
         className,
       )}
@@ -42,7 +42,7 @@ export function Section({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12 lg:mb-16 max-w-3xl mx-auto"
+            className="text-center mb-8 sm:mb-12 lg:mb-16 max-w-3xl mx-auto"
           >
             {eyebrow && (
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
@@ -50,9 +50,9 @@ export function Section({
               </span>
             )}
             {title && (
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 text-balance">{title}</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 text-balance">{title}</h2>
             )}
-            {description && <p className="text-lg text-muted-foreground text-pretty">{description}</p>}
+            {description && <p className="text-base sm:text-lg text-muted-foreground text-pretty leading-relaxed">{description}</p>}
           </motion.div>
         )}
         {children}
