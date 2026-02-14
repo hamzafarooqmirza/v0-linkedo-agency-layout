@@ -1,11 +1,6 @@
-import type { Metadata } from "next"
-import Link from "next/link"
+"use client"
 
-export const metadata: Metadata = {
-  title: "UK Coverage | Linkedo Digital Marketing Agency",
-  description:
-    "Digital marketing services across major UK cities. We help businesses grow through web development, SEO, and performance-driven advertising.",
-}
+import Link from "next/link"
 
 export default function UKPage() {
   return (
