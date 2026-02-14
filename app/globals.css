@@ -79,7 +79,7 @@
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
-  --font-heading: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-heading: "Montserrat", "Montserrat Fallback", system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
