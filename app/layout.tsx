@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Geist_Mono, Montserrat, Jost } from "next/font/google"
+import { Inter, Geist_Mono, Montserrat, Jost, Roboto } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ConditionalLayout } from "@/components/layout/conditional-layout"
@@ -23,6 +23,12 @@ const montserrat = Montserrat({
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
+})
+
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
 })
 
 export const metadata: Metadata = {
@@ -64,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${geistMono.variable} ${montserrat.variable} ${jost.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${geistMono.variable} ${montserrat.variable} ${jost.variable} ${roboto.variable} font-sans antialiased`}>
         <ConditionalLayout>{children}</ConditionalLayout>
         <Analytics />
       </body>

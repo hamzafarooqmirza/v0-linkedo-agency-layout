@@ -77,7 +77,7 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-sans: "Roboto", "Roboto Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
   --font-heading: "Jost", "Jost Fallback", system-ui, sans-serif;
   --font-logo: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -134,6 +134,11 @@
   /* Apply Jost font to all headings */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-jost), var(--font-heading);
+  }
+
+  /* Apply Roboto font to paragraphs and body text */
+  p, span, div, li, label, input, textarea, button {
+    font-family: var(--font-roboto), var(--font-sans);
   }
 
   /* Smooth scrolling */
