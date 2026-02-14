@@ -22,7 +22,6 @@ const serviceLinks = [
 
 const locations = [
   { city: "London", country: "United Kingdom" },
-  { city: "Mirpur", country: "AJK" },
 ]
 
 export function Footer() {

@@ -36,13 +36,6 @@ const locations = [
     address: "123 Business Street, London, EC1A 1BB",
     timezone: "GMT / BST",
   },
-  {
-    city: "Mirpur",
-    country: "AJK, Pakistan",
-    flag: "🇵🇰",
-    address: "456 Tech Park, Mirpur, AJK",
-    timezone: "PKT (GMT+5)",
-  },
 ]
 
 export default function ContactPage() {

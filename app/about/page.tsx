@@ -98,9 +98,8 @@ export default function AboutPage() {
                   expertise with creative problem-solving to deliver solutions that actually work.
                 </p>
                 <p>
-                  With offices in London and Mirpur, we offer the best of both worlds: UK-based strategy and account
-                  management with a talented global development team that enables us to deliver exceptional quality at
-                  competitive rates.
+                  Based in London, we combine UK-based strategy and account management with a talented global
+                  development team that enables us to deliver exceptional quality at competitive rates.
                 </p>
               </div>
             </div>
@@ -155,22 +154,15 @@ export default function AboutPage() {
         <Section
           eyebrow="Global Presence"
           title="Where We Operate"
-          description="Serving clients worldwide from our offices in the UK and Pakistan."
+          description="Serving clients worldwide from our UK headquarters."
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             <LocationCard
               city="London"
               country="United Kingdom"
               flag="🇬🇧"
               href="/uk/london"
               description="Our UK headquarters, home to strategy, sales, and client success teams."
-            />
-            <LocationCard
-              city="Mirpur"
-              country="AJK, Pakistan"
-              flag="🇵🇰"
-              href="/pk/mirpur"
-              description="Our development and operations hub with 24/7 support capability."
             />
           </div>
         </Section>

@@ -141,22 +141,15 @@ export default function HomePage() {
         <Section
           eyebrow="Where We Operate"
           title="Global Reach, Local Expertise"
-          description="Serving clients worldwide from our offices in the UK and Pakistan."
+          description="Serving clients worldwide from our UK headquarters."
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             <LocationCard
               city="London"
               country="United Kingdom"
               flag="🇬🇧"
               href="/uk/london"
               description="Our UK headquarters, serving European and North American clients."
-            />
-            <LocationCard
-              city="Mirpur"
-              country="AJK, Pakistan"
-              flag="🇵🇰"
-              href="/pk/mirpur"
-              description="Our development and operations hub with 24/7 support capability."
             />
           </div>
         </Section>
