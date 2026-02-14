@@ -4,8 +4,6 @@ import { MapPin, Mail, Phone } from "lucide-react"
 
 const quickLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -22,7 +20,6 @@ const serviceLinks = [
 
 const locations = [
   { city: "London", country: "United Kingdom" },
-  { city: "Mirpur", country: "AJK" },
 ]
 
 export function Footer() {
@@ -89,11 +86,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@linkedo.agency"
+                  href="mailto:info@linkedo.co.uk"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail size={14} />
-                  hello@linkedo.agency
+                  info@linkedo.co.uk
                 </a>
               </li>
               <li>
@@ -120,7 +117,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Linkedo Agency. All rights reserved.
+            ©{new Date().getFullYear()} Linkedo. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

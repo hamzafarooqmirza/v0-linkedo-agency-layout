@@ -13,13 +13,9 @@ import { WebsiteAuditModal } from "@/components/ui/website-audit-modal"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/free-ai-tools-online", label: "Free AI Tools" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-  { href: "/team", label: "Team" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ]
 
