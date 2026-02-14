@@ -36,7 +36,7 @@ export function Footer() {
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
                 alt="Linkedo - Connect, Grow, Succeed"
-                className="h-6 sm:h-8 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -102,7 +102,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone size={14} />
-                  03175980459
+                  +92 317 5980459
                 </a>
               </li>
             </ul>

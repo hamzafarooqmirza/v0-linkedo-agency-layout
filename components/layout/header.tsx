@@ -8,6 +8,7 @@ import { Menu, X, ChevronRight, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { MainShell } from "./main-shell"
 import { Button } from "@/components/ui/button"
+import { WebsiteAuditModal } from "@/components/ui/website-audit-modal"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -26,6 +27,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const [isAuditModalOpen, setIsAuditModalOpen] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
@@ -76,7 +78,7 @@ export function Header() {
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
                 alt="Linkedo - Connect, Grow, Succeed"
-                className="h-6 sm:h-8 lg:h-10 w-auto transition-opacity group-hover:opacity-80"
+                className="h-8 sm:h-10 lg:h-12 w-auto transition-opacity group-hover:opacity-80"
               />
             </Link>
 
@@ -95,11 +97,12 @@ export function Header() {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
-              <Link href="/contact">
-                <Button className="relative overflow-hidden bg-gradient-to-r from-primary to-cyan-400 text-primary-foreground font-medium px-6 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-                  <span className="relative z-10">Book a Call</span>
-                </Button>
-              </Link>
+              <Button
+                onClick={() => setIsAuditModalOpen(true)}
+                className="relative overflow-hidden bg-gradient-to-r from-primary to-cyan-400 text-primary-foreground font-medium px-6 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              >
+                <span className="relative z-10">Free Website Audit</span>
+              </Button>
             </div>
 
             <button
@@ -228,16 +231,20 @@ export function Header() {
                       transition={{ delay: 0.5, duration: 0.3 }}
                       className="mt-8 pt-6 border-t border-border/50"
                     >
-                      <Link href="/contact" onClick={handleLinkClick}>
-                        <Button className="w-full relative overflow-hidden bg-gradient-to-r from-primary via-cyan-400 to-primary text-primary-foreground font-semibold py-6 rounded-xl hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 bg-[length:200%] hover:bg-right group">
-                          <span className="relative z-10 flex items-center justify-center gap-2">
-                            Book a Call
-                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                          </span>
-                        </Button>
-                      </Link>
+                      <Button
+                        onClick={() => {
+                          setIsAuditModalOpen(true)
+                          handleLinkClick()
+                        }}
+                        className="w-full relative overflow-hidden bg-gradient-to-r from-primary via-cyan-400 to-primary text-primary-foreground font-semibold py-6 rounded-xl hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 bg-[length:200%] hover:bg-right group"
+                      >
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                          Free Website Audit
+                          <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Button>
 
-                      <p className="text-center text-sm text-muted-foreground mt-4">Ready to grow your business?</p>
+                      <p className="text-center text-sm text-muted-foreground mt-4">Get your free website analysis</p>
                     </motion.div>
                   </div>
                 </motion.div>
@@ -246,6 +253,9 @@ export function Header() {
           </AnimatePresence>,
           document.body,
         )}
+
+      {/* Website Audit Modal */}
+      <WebsiteAuditModal isOpen={isAuditModalOpen} onClose={() => setIsAuditModalOpen(false)} />
     </>
   )
 }

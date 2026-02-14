@@ -32,8 +32,36 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    const formData = new FormData(e.currentTarget)
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const phone = formData.get("phone") as string
+    const company = formData.get("company") as string
+    const budget = formData.get("budget") as string
+    const services = formData.getAll("services") as string[]
+    const message = formData.get("message") as string
+
+    // Create WhatsApp message
+    const whatsappMessage = encodeURIComponent(
+      `📞 *Contact Form Submission*\n\n` +
+        `👤 *Name:* ${name}\n` +
+        `📧 *Email:* ${email}\n` +
+        `📱 *Phone:* ${phone || "Not provided"}\n` +
+        `🏢 *Company:* ${company || "Not provided"}\n` +
+        `💰 *Budget:* ${budget || "Not provided"}\n` +
+        `🛠️ *Services:* ${services.join(", ") || "Not provided"}\n` +
+        `💬 *Message:* ${message || "Not provided"}\n\n` +
+        `_Sent from Linkedo Contact Form_`
+    )
+
+    const whatsappNumber = "923175980459"
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank")
+
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     setLoading(false)
   }
 
@@ -41,16 +69,16 @@ export function ContactForm() {
     <FormCard title="Get in Touch" description="Tell us about your project and we'll get back to you within 24 hours.">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <FormInput label="Name" placeholder="John Doe" required />
-          <FormInput label="Email" type="email" placeholder="john@company.com" required />
+          <FormInput label="Name" name="name" placeholder="John Doe" required />
+          <FormInput label="Email" name="email" type="email" placeholder="john@company.com" required />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <FormInput label="Phone" type="tel" placeholder="+1 (555) 000-0000" />
-          <FormInput label="Company" placeholder="Acme Inc." />
+          <FormInput label="Phone" name="phone" type="tel" placeholder="+92 317 5980459" />
+          <FormInput label="Company" name="company" placeholder="Acme Inc." />
         </div>
 
-        <FormSelect label="Budget Range" placeholder="Select your budget" options={budgetOptions} />
+        <FormSelect label="Budget Range" name="budget" placeholder="Select your budget" options={budgetOptions} />
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-foreground">Services Interested In</label>
@@ -61,7 +89,7 @@ export function ContactForm() {
           </div>
         </div>
 
-        <FormTextarea label="Message" placeholder="Tell us about your project goals and requirements..." rows={4} />
+        <FormTextarea label="Message" name="message" placeholder="Tell us about your project goals and requirements..." rows={4} />
 
         <AnimatedButton type="submit" loading={loading} className="w-full">
           Send Message
