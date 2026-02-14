@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@linkedo.agency",
-    href: "mailto:hello@linkedo.agency",
+    value: "info@linkedo.co.uk",
+    href: "mailto:info@linkedo.co.uk",
   },
   {
     icon: Phone,

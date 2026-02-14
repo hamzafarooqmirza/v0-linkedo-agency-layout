@@ -89,11 +89,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@linkedo.agency"
+                  href="mailto:info@linkedo.co.uk"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail size={14} />
-                  hello@linkedo.agency
+                  info@linkedo.co.uk
                 </a>
               </li>
               <li>
