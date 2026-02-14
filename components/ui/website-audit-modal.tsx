@@ -42,12 +42,18 @@ export function WebsiteAuditModal({ isOpen, onClose }: WebsiteAuditModalProps) {
 
     setLoading(true)
 
+    // Normalize website URL - add https:// if no protocol is provided
+    let normalizedUrl = websiteUrl.trim()
+    if (!normalizedUrl.startsWith("http://") && !normalizedUrl.startsWith("https://")) {
+      normalizedUrl = "https://" + normalizedUrl
+    }
+
     // Create WhatsApp message
     const message = encodeURIComponent(
       `🌐 *Free Website Audit Request*\n\n` +
         `👤 *Name:* ${name}\n` +
         `📧 *Email:* ${email}\n` +
-        `🔗 *Website:* ${websiteUrl}\n\n` +
+        `🔗 *Website:* ${normalizedUrl}\n\n` +
         `_Sent from Linkedo Website_`
     )
 
@@ -116,8 +122,8 @@ export function WebsiteAuditModal({ isOpen, onClose }: WebsiteAuditModalProps) {
               <form onSubmit={handleSubmit} className="p-6 space-y-4">
                 <FormInput
                   label="Website URL"
-                  type="url"
-                  placeholder="https://yourwebsite.com"
+                  type="text"
+                  placeholder="yourwebsite.com or https://yourwebsite.com"
                   value={websiteUrl}
                   onChange={(e) => setWebsiteUrl(e.target.value)}
                   required
