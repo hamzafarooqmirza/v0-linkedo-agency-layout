@@ -41,6 +41,28 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+  openGraph: {
+    title: "Linkedo | Digital Marketing Agency",
+    description: "Web Development, SEO, and Google Ads services for growth-focused businesses.",
+    url: "https://linkedo.co.uk",
+    siteName: "Linkedo",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Linkedo Digital Marketing Agency",
+      },
+    ],
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Linkedo | Digital Marketing Agency",
+    description: "Web Development, SEO, and Google Ads services for growth-focused businesses.",
+    images: ["/og-image.jpg"],
+  },
 }
 
 export const viewport: Viewport = {
