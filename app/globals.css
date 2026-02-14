@@ -79,7 +79,7 @@
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
-  --font-heading: "Gotham", "Gotham SSm A", "Gotham SSm B", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Jost", "Jost Fallback", system-ui, sans-serif;
   --font-logo: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);

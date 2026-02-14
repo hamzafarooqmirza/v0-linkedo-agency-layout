@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Geist_Mono, Montserrat } from "next/font/google"
+import { Inter, Geist_Mono, Montserrat, Jost } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ConditionalLayout } from "@/components/layout/conditional-layout"
@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
+})
+
+const jost = Jost({
+  subsets: ["latin"],
+  variable: "--font-jost",
 })
 
 export const metadata: Metadata = {
@@ -59,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${geistMono.variable} ${montserrat.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${geistMono.variable} ${montserrat.variable} ${jost.variable} font-sans antialiased`}>
         <ConditionalLayout>{children}</ConditionalLayout>
         <Analytics />
       </body>
