@@ -123,7 +123,7 @@ export function WebsiteAuditModal({ isOpen, onClose }: WebsiteAuditModalProps) {
                 <FormInput
                   label="Website URL"
                   type="text"
-                  placeholder="yourwebsite.com or https://yourwebsite.com"
+                  placeholder="yourwebsite.com"
                   value={websiteUrl}
                   onChange={(e) => setWebsiteUrl(e.target.value)}
                   required
