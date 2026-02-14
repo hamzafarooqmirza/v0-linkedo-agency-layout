@@ -81,6 +81,7 @@ export default function UKPage() {
                 alt="Aerial view of London cityscape at dusk"
                 city="London"
                 description="Strategic digital growth in the capital's competitive market."
+                href="/uk/london"
               />
               <CityCard
                 image="https://lh3.googleusercontent.com/aida-public/AB6AXuBmAcrwxRhTnvtaD5-GD-12iPvWnq3kCAnpy39h3yLoBMoY6GVLhudCK-ucMDmgZX_SuIwwhU97G1ZZR2PfD44rMtame2DFMhvLBfL2vl5e427L2DZP-O4eKK5p1nnR2yjzxoJatH-ov6BcGWvrUFK8FrUI7Ag9XjbxrwemWWqtit-BbFi6Y5Ulevezfp32Nz1SVwTdKODZne7jGP1dpnXThtXGhpktictRkxbVV_YLzVc8o1jXxJvW5XD86B2IZy2jux5iVpa6QBY"
@@ -257,14 +258,16 @@ function CityCard({
   alt,
   city,
   description,
+  href,
 }: {
   image: string
   alt: string
   city: string
   description: string
+  href?: string
 }) {
-  return (
-    <div className="group p-6 rounded-xl border border-white/5 bg-navy-deep hover:border-primary/50 transition-all cursor-default">
+  const content = (
+    <>
       <div className="w-full h-40 rounded-lg overflow-hidden mb-4 bg-charcoal">
         <img
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -274,6 +277,20 @@ function CityCard({
       </div>
       <h3 className="text-xl font-bold mb-2">{city}</h3>
       <p className="text-sm text-white/50 leading-relaxed">{description}</p>
+    </>
+  )
+
+  if (href) {
+    return (
+      <Link href={href} className="group p-6 rounded-xl border border-white/5 bg-navy-deep hover:border-primary/50 transition-all cursor-pointer block">
+        {content}
+      </Link>
+    )
+  }
+
+  return (
+    <div className="group p-6 rounded-xl border border-white/5 bg-navy-deep hover:border-primary/50 transition-all cursor-default">
+      {content}
     </div>
   )
 }
