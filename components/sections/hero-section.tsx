@@ -63,7 +63,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance font-[family-name:var(--font-heading)]"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance font-sans"
               >
                 Web, SEO & Ads That <span className="text-gradient-primary">Actually Bring Leads</span>
               </motion.h1>
