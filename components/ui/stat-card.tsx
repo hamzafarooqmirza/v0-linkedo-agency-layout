@@ -18,13 +18,13 @@ export function StatCard({ value, label, suffix, className }: StatCardProps) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.3 }}
       className={cn(
-        "relative p-6 rounded-xl text-center",
+        "relative p-4 sm:p-6 rounded-xl text-center",
         "bg-card/50 backdrop-blur-sm border border-border/50",
         "hover:border-primary/30 transition-colors duration-300",
         className,
       )}
     >
-      <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
+      <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-2">
         <span className="text-gradient-primary">{value}</span>
         {suffix && <span className="text-primary">{suffix}</span>}
       </div>

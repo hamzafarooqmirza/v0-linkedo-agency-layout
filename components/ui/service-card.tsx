@@ -27,7 +27,7 @@ export function ServiceCard({ iconName, title, description, href, className }: S
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        "group relative block p-6 lg:p-8 rounded-xl",
+        "group relative block p-5 sm:p-6 lg:p-8 rounded-xl",
         "bg-card/50 backdrop-blur-sm border border-border/50",
         "hover:border-primary/30 hover:bg-card/80",
         "transition-all duration-300",
@@ -42,10 +42,10 @@ export function ServiceCard({ iconName, title, description, href, className }: S
         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
           <Icon className="w-6 h-6 text-primary" />
         </div>
-        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+        <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{description}</p>
       </div>
     </Component>
   )

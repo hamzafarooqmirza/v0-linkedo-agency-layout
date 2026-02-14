@@ -238,7 +238,7 @@ export default function HomePage() {
         </Section>
 
         {/* Final CTA Section */}
-        <section className="relative py-24 overflow-hidden">
+        <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-cyan-500/10" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px]" />
@@ -251,10 +251,10 @@ export default function HomePage() {
               className="text-center max-w-3xl mx-auto"
             >
               <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-foreground mb-6">
                 Ready to Transform Your Digital Presence?
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base sm:text-lg text-muted-foreground mb-8">
                 Book a free strategy call with our experts and discover how we can help you achieve your business goals.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

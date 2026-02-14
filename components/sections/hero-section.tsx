@@ -18,7 +18,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center py-32 lg:py-40 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center py-24 sm:py-32 lg:py-40 overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
@@ -63,7 +63,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground mb-6 text-balance font-[family-name:var(--font-jost)]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 text-balance font-[family-name:var(--font-jost)]"
               >
                 Where Strategy Turns Into Revenue
               </motion.h1>
@@ -72,7 +72,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 text-pretty"
+                className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 text-pretty leading-relaxed"
               >
                 We help B2B businesses grow with data-driven digital marketing strategies that deliver measurable
                 results and real ROI.
@@ -156,9 +156,9 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16 pt-16 border-t border-border/50"
+            className="mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-border/50"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               {[
                 { value: "150+", label: "Projects Delivered" },
                 { value: "98%", label: "Client Satisfaction" },
@@ -166,8 +166,8 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 { value: "5x", label: "Average ROI" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
                 </div>
               ))}
             </div>

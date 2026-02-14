@@ -28,15 +28,15 @@ const locations = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card/30">
-      <MainShell className="py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <MainShell className="py-10 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
                 alt="Linkedo - Connect, Grow, Succeed"
-                className="h-8 w-auto"
+                className="h-6 sm:h-8 w-auto"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -118,7 +118,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Linkedo Agency. All rights reserved.
           </p>
