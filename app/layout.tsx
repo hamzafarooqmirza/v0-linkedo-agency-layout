@@ -38,21 +38,8 @@ export const metadata: Metadata = {
   keywords: ["digital agency", "web development", "SEO", "Google Ads", "lead generation", "B2B marketing"],
   authors: [{ name: "Linkedo Agency" }],
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 }
 
