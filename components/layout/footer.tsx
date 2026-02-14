@@ -102,7 +102,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone size={14} />
-                  03175980459
+                  +92 317 5980459
                 </a>
               </li>
             </ul>

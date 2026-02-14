@@ -137,9 +137,29 @@ export function QuotationForm({ onClose }: QuotationFormProps) {
     if (!validateStep(3)) return
 
     setLoading(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+
+    // Create WhatsApp message
+    const whatsappMessage = encodeURIComponent(
+      `📋 *Quotation Request*\n\n` +
+        `🛠️ *Service:* ${serviceOptions.find((s) => s.value === formData.service)?.label || formData.service}\n` +
+        `⏰ *Timeline:* ${formData.timeline ? getTimelineOptions(formData.service).find((t) => t.value === formData.timeline)?.label : "Not specified"}\n` +
+        `💰 *Budget:* ${budgetOptions.find((b) => b.value === formData.budget)?.label || formData.budget}\n` +
+        `📝 *Project Brief:* ${formData.projectBrief || "Not provided"}\n\n` +
+        `👤 *Name:* ${formData.fullName}\n` +
+        `📧 *Email:* ${formData.email}\n` +
+        `📱 *Phone:* ${formData.phone || "Not provided"}\n` +
+        `🏢 *Company:* ${formData.company || "Not provided"}\n\n` +
+        `_Sent from Linkedo Quotation Form_`
+    )
+
+    const whatsappNumber = "923175980459"
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank")
+
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     setLoading(false)
-    console.log("[v0] Quote form submitted:", formData)
     onClose?.()
   }
 
