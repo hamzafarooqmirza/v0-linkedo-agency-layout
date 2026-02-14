@@ -77,7 +77,7 @@
 }
 
 @theme inline {
-  --font-sans: "Roboto", "Roboto Fallback", system-ui, sans-serif;
+  --font-sans: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
   --font-heading: "Jost", "Jost Fallback", system-ui, sans-serif;
   --font-logo: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -136,9 +136,9 @@
     font-family: var(--font-jost), var(--font-heading);
   }
 
-  /* Apply Roboto font to paragraphs and body text */
+  /* Apply Open Sans font to paragraphs and body text */
   p, span, div, li, label, input, textarea, button {
-    font-family: var(--font-roboto), var(--font-sans);
+    font-family: var(--font-open-sans), var(--font-sans);
   }
 
   /* Smooth scrolling */
