@@ -72,12 +72,13 @@ export function Header() {
         <MainShell>
           <nav className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
-                alt="Linkedo - Connect, Grow, Succeed"
-                className="h-8 lg:h-10 w-auto transition-opacity group-hover:opacity-80"
-              />
+            <Link href="/" className="flex flex-col group">
+              <span className="text-2xl lg:text-3xl font-bold text-foreground tracking-wider transition-opacity group-hover:opacity-80" style={{ fontFamily: 'var(--font-logo)' }}>
+                LINKEDO
+              </span>
+              <span className="text-[8px] lg:text-[9px] text-muted-foreground tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-logo)' }}>
+                Connect · Grow · Succeed
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
