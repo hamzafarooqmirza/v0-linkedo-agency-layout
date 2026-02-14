@@ -32,11 +32,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-cyan-400 flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">L</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">Linkedo</span>
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
+                alt="Linkedo - Connect, Grow, Succeed"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Web, SEO & Ads that actually bring leads. We help B2B businesses grow with data-driven digital marketing

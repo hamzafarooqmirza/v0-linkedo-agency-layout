@@ -72,14 +72,12 @@ export function Header() {
         <MainShell>
           <nav className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-cyan-400 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">L</span>
-                </div>
-                <div className="absolute inset-0 rounded-lg bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <span className="text-xl font-bold text-foreground">Linkedo</span>
+            <Link href="/" className="flex items-center group">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Linkedo%20Logo-2ktZ7qcYVdGvooWw3nwry3bnN2kV5C.png"
+                alt="Linkedo - Connect, Grow, Succeed"
+                className="h-8 lg:h-10 w-auto transition-opacity group-hover:opacity-80"
+              />
             </Link>
 
             {/* Desktop Navigation */}
