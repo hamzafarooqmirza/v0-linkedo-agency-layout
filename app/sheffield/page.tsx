@@ -2,8 +2,31 @@ import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
+
+const sheffieldSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["MarketingAgency", "LocalBusiness"],
+    "@id": "https://linkedo.co.uk/sheffield#localbusiness",
+    name: "Linkedo Agency – Sheffield",
+    url: "https://linkedo.co.uk/sheffield",
+    description: "Expert digital marketing agency serving Sheffield businesses with SEO, web development, Google Ads, and Meta Ads services.",
+    address: { "@type": "PostalAddress", addressLocality: "Sheffield", addressRegion: "South Yorkshire", addressCountry: "GB" },
+    areaServed: [{ "@type": "City", name: "Sheffield" }, { "@type": "AdministrativeArea", name: "South Yorkshire" }],
+    parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+      { "@type": "ListItem", position: 2, name: "Sheffield", item: "https://linkedo.co.uk/sheffield" },
+    ],
+  },
+]
 
 export const metadata = {
   title: "Digital Marketing Agency in Sheffield | Linkedo Agency",
@@ -66,6 +89,7 @@ const caseStudy = {
 export default function SheffieldPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={sheffieldSchema} />
       <main className="pt-24">
         {/* Hero */}
         <div

@@ -6,6 +6,39 @@ import { ServiceCard } from "@/components/ui/service-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const brandingServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/branding#service",
+  name: "Branding Services",
+  url: "https://linkedo.co.uk/branding",
+  description:
+    "Strategic branding that creates memorable impressions, builds lasting connections with your audience, and differentiates your business.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Branding & Identity",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Branding Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Identity Design" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Strategy" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Guidelines" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Refresh" } },
+    ],
+  },
+}
+
+const brandingBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Branding", item: "https://linkedo.co.uk/branding" },
+  ],
+}
 
 const services = [
   {
@@ -33,6 +66,8 @@ const services = [
 export default function BrandingPage() {
   return (
     <MainShell>
+      <SchemaMarkup schema={brandingServiceSchema} />
+      <SchemaMarkup schema={brandingBreadcrumbSchema} />
       <Section className="mb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

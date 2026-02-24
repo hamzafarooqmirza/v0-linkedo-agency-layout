@@ -2,8 +2,31 @@ import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
+
+const edinburghSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["MarketingAgency", "LocalBusiness"],
+    "@id": "https://linkedo.co.uk/edinburgh#localbusiness",
+    name: "Linkedo Agency – Edinburgh",
+    url: "https://linkedo.co.uk/edinburgh",
+    description: "Expert digital marketing agency serving Edinburgh businesses with SEO, web development, Google Ads, and Meta Ads services.",
+    address: { "@type": "PostalAddress", addressLocality: "Edinburgh", addressRegion: "Scotland", addressCountry: "GB" },
+    areaServed: [{ "@type": "City", name: "Edinburgh" }, { "@type": "AdministrativeArea", name: "Scotland" }],
+    parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+      { "@type": "ListItem", position: 2, name: "Edinburgh", item: "https://linkedo.co.uk/edinburgh" },
+    ],
+  },
+]
 
 export const metadata = {
   title: "Digital Marketing Agency in Edinburgh | Linkedo Agency",
@@ -66,6 +89,7 @@ const caseStudy = {
 export default function EdinburghPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={edinburghSchema} />
       <main className="pt-24">
         {/* Hero */}
         <div

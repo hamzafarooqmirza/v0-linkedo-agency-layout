@@ -15,6 +15,98 @@ import { MainShell } from "@/components/layout/main-shell"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://linkedo.co.uk/#webpage",
+  url: "https://linkedo.co.uk",
+  name: "Linkedo Agency | Web, SEO & Ads That Actually Bring Leads",
+  description:
+    "Linkedo Agency delivers premium web development, SEO optimisation, and paid advertising services that generate real leads and measurable results for B2B businesses.",
+  isPartOf: { "@id": "https://linkedo.co.uk/#website" },
+  about: { "@id": "https://linkedo.co.uk/#organization" },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    ],
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2"],
+  },
+}
+
+const homeServiceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Linkedo Agency Services",
+  description: "Full-service digital marketing services including web development, SEO, Google Ads, Meta Ads, branding and consulting.",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Web Development",
+        url: "https://linkedo.co.uk/web-development",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "SEO Optimisation",
+        url: "https://linkedo.co.uk/seo",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Google Ads Management",
+        url: "https://linkedo.co.uk/google-ads",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Meta Ads",
+        url: "https://linkedo.co.uk/meta-ads",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Service",
+        name: "Branding",
+        url: "https://linkedo.co.uk/branding",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      item: {
+        "@type": "Service",
+        name: "Digital Consulting",
+        url: "https://linkedo.co.uk/consulting",
+        provider: { "@id": "https://linkedo.co.uk/#organization" },
+      },
+    },
+  ],
+}
 
 const caseStudies = [
   {
@@ -113,6 +205,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={homePageSchema} />
+      <SchemaMarkup schema={homeServiceListSchema} />
       <main>
         <HeroSection onBookCall={() => setIsModalOpen(true)} />
 

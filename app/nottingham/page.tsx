@@ -2,8 +2,31 @@ import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
+
+const nottinghamSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["MarketingAgency", "LocalBusiness"],
+    "@id": "https://linkedo.co.uk/nottingham#localbusiness",
+    name: "Linkedo Agency – Nottingham",
+    url: "https://linkedo.co.uk/nottingham",
+    description: "Expert digital marketing agency serving Nottingham businesses with SEO, web development, Google Ads, and Meta Ads services.",
+    address: { "@type": "PostalAddress", addressLocality: "Nottingham", addressRegion: "East Midlands", addressCountry: "GB" },
+    areaServed: [{ "@type": "City", name: "Nottingham" }, { "@type": "AdministrativeArea", name: "East Midlands" }],
+    parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+      { "@type": "ListItem", position: 2, name: "Nottingham", item: "https://linkedo.co.uk/nottingham" },
+    ],
+  },
+]
 
 export const metadata = {
   title: "Digital Marketing Agency in Nottingham | Linkedo Agency",
@@ -66,6 +89,7 @@ const caseStudy = {
 export default function NottinghamPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={nottinghamSchema} />
       <main className="pt-24">
         <div className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/tower-bridge-sunset-london.webp')" }}>
           <div className="absolute inset-0 bg-background/80" />
