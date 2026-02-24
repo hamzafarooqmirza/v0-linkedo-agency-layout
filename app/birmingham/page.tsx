@@ -40,7 +40,7 @@ const services = [
     iconName: "Shield",
     title: "Security Services",
     description: "Website security and protection for Birmingham businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

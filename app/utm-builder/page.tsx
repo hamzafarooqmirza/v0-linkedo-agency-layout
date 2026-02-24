@@ -151,7 +151,7 @@ export default function UTMBuilderPage() {
               <div className="space-y-5">
                 <FormInput
                   label="Website URL *"
-                  placeholder="https://linkedo.co.uk/services/seo"
+                  placeholder="https://linkedo.co.uk/seo"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                 />

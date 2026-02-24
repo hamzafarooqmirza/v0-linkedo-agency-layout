@@ -69,23 +69,23 @@ const processSteps = [
 const aiTools = [
   {
     iconName: "Search",
-    title: "SEO Analyzer",
-    description: "Get a comprehensive SEO audit of your website in seconds.",
-    href: "/tools/seo-analyzer",
+    title: "Meta Title Generator",
+    description: "Generate optimized meta titles for any page instantly.",
+    href: "/meta-title-generator",
     badge: "Free",
   },
   {
     iconName: "FileText",
-    title: "Meta Tag Generator",
-    description: "Generate optimized meta titles and descriptions for any page.",
-    href: "/tools/meta-generator",
+    title: "Meta Description Generator",
+    description: "Write compelling meta descriptions that boost click-through rates.",
+    href: "/meta-description-generator",
     badge: "Free",
   },
   {
     iconName: "BarChart3",
-    title: "Keyword Research Tool",
-    description: "Discover high-value keywords for your content strategy.",
-    href: "/tools/keyword-research",
+    title: "Blog Outline Generator",
+    description: "Structure your content for maximum engagement and SEO impact.",
+    href: "/blog-outline-generator",
     badge: "Free",
   },
 ]
@@ -167,7 +167,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/tools">
+            <Link href="/free-ai-tools-online">
               <AnimatedButton variant="secondary">
                 View All Tools
                 <ArrowRight className="w-4 h-4" />

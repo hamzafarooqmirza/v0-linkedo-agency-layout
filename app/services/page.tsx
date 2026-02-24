@@ -22,19 +22,19 @@ const developmentServices = [
     iconName: "Globe",
     title: "Web Applications",
     description: "Full-stack web applications with complex functionality and seamless user experiences.",
-    href: "/services/web-applications",
+    href: "/web-development",
   },
   {
     iconName: "Smartphone",
     title: "Mobile-First Design",
     description: "Responsive designs that look and work perfectly on every device and screen size.",
-    href: "/services/mobile-design",
+    href: "/web-development",
   },
   {
     iconName: "ShoppingCart",
     title: "E-Commerce Solutions",
     description: "Online stores that convert visitors into customers with optimized checkout flows.",
-    href: "/services/ecommerce",
+    href: "/web-development",
   },
 ]
 
@@ -49,7 +49,7 @@ const marketingServices = [
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "Strategic PPC campaigns that maximize your advertising ROI and generate qualified leads.",
-    href: "/services/google-ads-management",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
@@ -67,7 +67,7 @@ const marketingServices = [
     iconName: "MessageSquare",
     title: "Content Marketing",
     description: "Strategic content that educates your audience and drives conversions throughout the funnel.",
-    href: "/services/content-marketing",
+    href: "/consulting",
   },
 ]
 
@@ -76,19 +76,19 @@ const securityServices = [
     iconName: "Shield",
     title: "Security Audits",
     description: "Comprehensive security assessments to identify and fix vulnerabilities in your digital assets.",
-    href: "/services/security-audits",
+    href: "/consulting",
   },
   {
     iconName: "Lock",
     title: "SSL & Encryption",
     description: "Secure your website and customer data with industry-standard encryption protocols.",
-    href: "/services/ssl-encryption",
+    href: "/consulting",
   },
   {
     iconName: "Bug",
     title: "Malware Removal",
     description: "Fast and thorough malware detection and removal to protect your business reputation.",
-    href: "/services/malware-removal",
+    href: "/consulting",
   },
 ]
 

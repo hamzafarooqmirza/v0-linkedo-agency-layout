@@ -137,7 +137,7 @@ const initialPageScripts: PageScript[] = [
   },
   {
     id: "2",
-    path: "/services/seo",
+    path: "/seo",
     headerCode: "",
     bodyCode: "<!-- Hotjar -->",
     footerCode: "",
@@ -412,7 +412,7 @@ export default function AdminTrackingPage() {
               <div className="flex items-start gap-3 p-4 rounded-lg bg-primary/5 border border-primary/20">
                 <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
-                  Attach unique tracking to specific URLs (e.g., /services/seo, /contact, /london/seo).
+                  Attach unique tracking to specific URLs (e.g., /seo, /contact, /london/seo).
                 </p>
               </div>
 
@@ -611,7 +611,7 @@ export default function AdminTrackingPage() {
           <div className="space-y-4 py-4">
             <FormInput
               label="Page Path"
-              placeholder="/services/seo"
+              placeholder="/seo"
               value={pageForm.path}
               onChange={(e) => setPageForm({ ...pageForm, path: e.target.value })}
             />
