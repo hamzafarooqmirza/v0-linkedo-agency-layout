@@ -15,7 +15,7 @@ const ukCities = [
     city: "London",
     country: "United Kingdom",
     flag: "🇬🇧",
-    href: "/locations/london",
+    href: "/london",
     description: "Our headquarters. Expert SEO, web development, and paid ads for London businesses.",
   },
   {
