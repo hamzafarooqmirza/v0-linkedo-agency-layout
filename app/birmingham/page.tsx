@@ -32,6 +32,7 @@ export const metadata = {
   title: "Digital Marketing Agency in Birmingham | Linkedo Agency",
   description:
     "Linkedo Agency provides expert SEO, web development, and paid advertising for Birmingham businesses. Dominate the Midlands market with proven digital marketing strategies.",
+  alternates: { canonical: "/birmingham" },
 }
 
 const services = [

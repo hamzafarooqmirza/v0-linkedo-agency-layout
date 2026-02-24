@@ -6,6 +6,13 @@ import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
 
+export const metadata = {
+  title: "Digital Marketing Agency in London | Linkedo Agency",
+  description:
+    "London-based digital marketing agency delivering web development, SEO, Google Ads and Meta Ads that generate real leads for B2B businesses across Greater London.",
+  alternates: { canonical: "/london" },
+}
+
 const londonLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["MarketingAgency", "LocalBusiness"],

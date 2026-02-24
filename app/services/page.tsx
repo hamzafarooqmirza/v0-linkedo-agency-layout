@@ -9,6 +9,7 @@ export const metadata = {
   title: "Our Services | Linkedo Agency",
   description:
     "Comprehensive digital marketing services including web development, SEO, Google Ads, Meta Ads, and more.",
+  alternates: { canonical: "/services" },
 }
 
 const developmentServices = [

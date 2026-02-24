@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  return {
+    alternates: { canonical: `/blog/${params.slug}` },
+  }
+}
+
 import { MainShell } from "@/components/layout/main-shell"
 import { Chip } from "@/components/ui/chip"
 import { AnimatedButton } from "@/components/ui/animated-button"

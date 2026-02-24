@@ -8,6 +8,7 @@ export const metadata = {
   title: "Our Locations | Linkedo Agency",
   description:
     "Linkedo Agency serves businesses across major UK cities including London, Manchester, Birmingham, Leeds, Bristol, Edinburgh and more. Find your local digital marketing experts.",
+  alternates: { canonical: "/locations" },
 }
 
 const ukCities = [

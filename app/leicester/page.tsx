@@ -32,6 +32,7 @@ export const metadata = {
   title: "Digital Marketing Agency in Leicester | Linkedo Agency",
   description:
     "Linkedo Agency delivers expert SEO, web development, and paid advertising for Leicester businesses. Build your digital presence across the East Midlands with Linkedo.",
+  alternates: { canonical: "/leicester" },
 }
 
 const services = [

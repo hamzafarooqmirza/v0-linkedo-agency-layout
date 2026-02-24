@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Free AI Tools Online | Linkedo Agency",
   description:
     "Free AI-powered tools for SEOs, marketers, and business owners. Generate meta titles, descriptions, blog outlines, UTM links, and more.",
+  alternates: { canonical: "/free-ai-tools-online" },
 }
 
 const tools = [
