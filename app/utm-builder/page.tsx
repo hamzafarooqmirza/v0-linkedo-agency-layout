@@ -48,7 +48,7 @@ const relatedTools = [
     icon: FileText,
     title: "Meta Title Generator",
     description: "Generate SEO-optimized page titles.",
-    href: "/free-ai-tools-online/meta-title-generator",
+    href: "/meta-title-generator",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Content", variant: "default" as const },
@@ -279,7 +279,7 @@ export default function UTMBuilderPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Let our analytics experts set up comprehensive tracking for all your marketing campaigns.
           </p>
-          <Link href="/services/google-ads-management">
+            <Link href="/google-ads">
             <AnimatedButton size="lg">
               <span>Explore Ads Services</span>
               <ArrowRight className="w-4 h-4" />

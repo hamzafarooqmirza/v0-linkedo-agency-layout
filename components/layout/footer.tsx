@@ -10,12 +10,12 @@ const quickLinks = [
 ]
 
 const serviceLinks = [
-  { href: "/services/web-development", label: "Web Development" },
-  { href: "/services/seo", label: "SEO Optimization" },
-  { href: "/services/google-ads", label: "Google Ads" },
-  { href: "/services/meta-ads", label: "Meta Ads" },
-  { href: "/services/branding", label: "Branding" },
-  { href: "/services/consulting", label: "Consulting" },
+  { href: "/web-development", label: "Web Development" },
+  { href: "/seo", label: "SEO Optimization" },
+  { href: "/google-ads", label: "Google Ads" },
+  { href: "/meta-ads", label: "Meta Ads" },
+  { href: "/branding", label: "Branding" },
+  { href: "/consulting", label: "Consulting" },
 ]
 
 const locations = [

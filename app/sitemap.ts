@@ -35,23 +35,23 @@ const cityRoutes = [
   "/nottingham",
 ]
 
-// Services nested routes
+// Service top-level routes
 const serviceRoutes = [
-  "/services/seo",
-  "/services/google-ads",
-  "/services/meta-ads",
-  "/services/web-development",
-  "/services/website-development",
-  "/services/branding",
-  "/services/consulting",
+  "/seo",
+  "/google-ads",
+  "/meta-ads",
+  "/web-development",
+  "/website-development",
+  "/branding",
+  "/consulting",
 ]
 
-// Free AI Tools nested routes
+// Free AI Tools top-level routes
 const aiToolRoutes = [
-  "/free-ai-tools-online/blog-outline-generator",
-  "/free-ai-tools-online/meta-description-generator",
-  "/free-ai-tools-online/meta-title-generator",
-  "/free-ai-tools-online/utm-builder",
+  "/blog-outline-generator",
+  "/meta-description-generator",
+  "/meta-title-generator",
+  "/utm-builder",
 ]
 
 // London nested routes

@@ -16,7 +16,7 @@ const developmentServices = [
     iconName: "Code",
     title: "Website Development",
     description: "Custom websites built with modern technologies for performance, security, and scalability.",
-    href: "/services/website-development",
+    href: "/website-development",
   },
   {
     iconName: "Globe",
@@ -43,7 +43,7 @@ const marketingServices = [
     iconName: "Search",
     title: "SEO Optimization",
     description: "Data-driven SEO strategies that improve your search rankings and drive organic traffic.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
@@ -55,13 +55,13 @@ const marketingServices = [
     iconName: "Megaphone",
     title: "Meta Ads (Facebook & Instagram)",
     description: "Targeted social media advertising to reach your ideal customers on Meta platforms.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Palette",
     title: "Branding & Identity",
     description: "Compelling brand identities that differentiate your business and resonate with your audience.",
-    href: "/services/branding",
+    href: "/branding",
   },
   {
     iconName: "MessageSquare",

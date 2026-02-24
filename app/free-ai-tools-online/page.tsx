@@ -18,7 +18,7 @@ const tools = [
     iconName: "FileText",
     title: "Meta Title Generator",
     description: "Generate compelling, SEO-optimized meta titles that improve click-through rates and rankings.",
-    href: "/free-ai-tools-online/meta-title-generator",
+    href: "/meta-title-generator",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Content", variant: "default" as const },
@@ -28,7 +28,7 @@ const tools = [
     iconName: "FileSearch",
     title: "Meta Description Generator",
     description: "Create persuasive meta descriptions that entice users to click through from search results.",
-    href: "/free-ai-tools-online/meta-description-generator",
+    href: "/meta-description-generator",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Content", variant: "default" as const },
@@ -38,7 +38,7 @@ const tools = [
     iconName: "ListTree",
     title: "Blog Outline Generator",
     description: "Structure your blog posts with AI-generated outlines optimized for readability and SEO.",
-    href: "/free-ai-tools-online/blog-outline-generator",
+    href: "/blog-outline-generator",
     categories: [
       { label: "Content", variant: "default" as const },
       { label: "SEO", variant: "primary" as const },
@@ -68,7 +68,7 @@ const tools = [
     iconName: "Link2",
     title: "UTM Builder",
     description: "Build properly formatted UTM parameters to track your marketing campaigns accurately.",
-    href: "/free-ai-tools-online/utm-builder",
+    href: "/utm-builder",
     categories: [
       { label: "Analytics", variant: "default" as const },
       { label: "Technical", variant: "primary" as const },
@@ -149,7 +149,7 @@ export default function FreeAIToolsPage() {
       >
         <div className="grid md:grid-cols-2 gap-8 mt-8">
           <Link
-            href="/services/seo"
+            href="/seo"
             className="group p-6 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 transition-all"
           >
             <div className="flex items-start gap-4">
@@ -173,7 +173,7 @@ export default function FreeAIToolsPage() {
           </Link>
 
           <Link
-            href="/services/google-ads-management"
+            href="/google-ads"
             className="group p-6 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 transition-all"
           >
             <div className="flex items-start gap-4">
