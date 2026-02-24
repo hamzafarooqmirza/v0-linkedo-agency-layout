@@ -46,31 +46,11 @@ const serviceRoutes = [
   "/consulting",
 ]
 
-// Free AI Tools top-level routes
-const aiToolRoutes = [
-  "/blog-outline-generator",
-  "/meta-description-generator",
-  "/meta-title-generator",
-  "/utm-builder",
-]
-
 // London nested routes
 const londonNestedRoutes = ["/london/seo"]
 
-// Team member slugs
-const teamSlugs = [
-  "waleed-sabbir",
-  "sarmad-shabir",
-  "jamshaid-ahmed",
-  "waleed-hussain",
-  "kawish-azeem",
-]
-
 // Case study slugs
 const caseStudySlugs = ["techflow", "manufacturing-co", "legal-partners"]
-
-// Blog post slugs (static for now; extend dynamically if a CMS is added)
-const blogSlugs = ["seo-trends-2025", "local-seo-strategies", "technical-seo-checklist"]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -109,25 +89,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Nested AI tool routes
-  const aiTools: MetadataRoute.Sitemap = aiToolRoutes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
   // London nested routes
   const londonNested: MetadataRoute.Sitemap = londonNestedRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
-  // Team member dynamic routes
-  const teamMembers: MetadataRoute.Sitemap = teamSlugs.map((slug) => ({
-    url: `${BASE_URL}/team/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
@@ -141,23 +105,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Blog post dynamic routes
-  const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
   return [
     ...homepage,
     ...topLevel,
     ...cities,
     ...services,
-    ...aiTools,
     ...londonNested,
-    ...teamMembers,
     ...caseStudies,
-    ...blogPosts,
   ]
 }
