@@ -2,8 +2,31 @@ import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
+
+const manchesterSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["MarketingAgency", "LocalBusiness"],
+    "@id": "https://linkedo.co.uk/manchester#localbusiness",
+    name: "Linkedo Agency – Manchester",
+    url: "https://linkedo.co.uk/manchester",
+    description: "Expert SEO, web development, and paid advertising services for Manchester businesses. Drive more leads and grow your presence across Greater Manchester.",
+    address: { "@type": "PostalAddress", addressLocality: "Manchester", addressRegion: "Greater Manchester", addressCountry: "GB" },
+    areaServed: [{ "@type": "City", name: "Manchester" }, { "@type": "AdministrativeArea", name: "Greater Manchester" }],
+    parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+      { "@type": "ListItem", position: 2, name: "Manchester", item: "https://linkedo.co.uk/manchester" },
+    ],
+  },
+]
 
 export const metadata = {
   title: "Digital Marketing Agency in Manchester | Linkedo Agency",
@@ -66,6 +89,7 @@ const caseStudy = {
 export default function ManchesterPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={manchesterSchema} />
       <main className="pt-24">
         {/* Hero */}
         <div

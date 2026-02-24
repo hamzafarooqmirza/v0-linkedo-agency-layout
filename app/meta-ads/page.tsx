@@ -8,6 +8,71 @@ import { FAQAccordion } from "@/components/ui/faq-accordion"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { StatCard } from "@/components/ui/stat-card"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const metaAdsServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/meta-ads#service",
+  name: "Meta Ads Management",
+  alternateName: "Facebook & Instagram Ads",
+  url: "https://linkedo.co.uk/meta-ads",
+  description:
+    "Strategic Meta advertising campaigns on Facebook and Instagram that reach your target audience and drive measurable business results.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Social Media Advertising",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Meta Ads Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Facebook Ads Management" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Instagram Ads Management" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Audience Targeting & Retargeting" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Creative Development" } },
+    ],
+  },
+}
+
+const metaAdsFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What's the minimum budget for Meta Ads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We recommend a minimum budget of £1,000-£2,000/month for Meta Ads to gather sufficient data and optimise effectively. However, we can discuss options based on your specific goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Facebook vs Instagram - which is better for advertising?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It depends on your audience and objectives. We typically test both platforms and allocate budget based on performance. B2B often performs better on Facebook, while B2C and visual products excel on Instagram.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you handle creative development for Meta Ads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We can work with your existing creative assets or develop new ad creatives. We'll provide guidance on best practices and continuously test different variations to find what resonates with your audience.",
+      },
+    },
+  ],
+}
+
+const metaAdsBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Meta Ads", item: "https://linkedo.co.uk/meta-ads" },
+  ],
+}
 
 const services = [
   {
@@ -60,6 +125,9 @@ const stats = [
 export default function MetaAdsPage() {
   return (
     <MainShell>
+      <SchemaMarkup schema={metaAdsServiceSchema} />
+      <SchemaMarkup schema={metaAdsFaqSchema} />
+      <SchemaMarkup schema={metaAdsBreadcrumbSchema} />
       {/* Hero section with image */}
       <Section className="mb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -9,6 +9,87 @@ import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const webDevServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/web-development#service",
+  name: "Web Development Services",
+  url: "https://linkedo.co.uk/web-development",
+  description:
+    "Professional web development services combining stunning design with powerful functionality to grow your business.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Web Development",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Web Development Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Design" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Responsive Mobile-First Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Performance Optimisation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-Commerce Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "SaaS Web Application Development" } },
+    ],
+  },
+}
+
+const webDevFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How long does it take to build a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Timeline varies based on complexity. A basic website typically takes 4-6 weeks, while complex web applications can take 3-6 months. We'll provide a detailed timeline during the discovery phase.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What platforms do you work with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with modern frameworks including Next.js, React, and Vue.js for custom development. We also build on platforms like WordPress, Shopify, and Webflow depending on your needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide website maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer ongoing maintenance packages including security updates, content updates, performance monitoring, and technical support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will my website be mobile-friendly?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. All our websites are built mobile-first, ensuring they look and perform perfectly on all devices from smartphones to desktop computers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you redesign my existing website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we specialise in website redesigns. We'll analyse your current site, identify improvement opportunities, and create a modern, high-performing replacement.",
+      },
+    },
+  ],
+}
+
+const webDevBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Web Development", item: "https://linkedo.co.uk/web-development" },
+  ],
+}
 
 const serviceFeatures = [
   {
@@ -121,6 +202,9 @@ const faqs = [
 export default function WebDevelopmentPage() {
   return (
     <MainShell>
+      <SchemaMarkup schema={webDevServiceSchema} />
+      <SchemaMarkup schema={webDevFaqSchema} />
+      <SchemaMarkup schema={webDevBreadcrumbSchema} />
       {/* Hero Image Section */}
       <Section className="mb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

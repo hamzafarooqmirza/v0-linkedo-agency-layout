@@ -11,6 +11,81 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Check } from "lucide-react"
 import Image from "next/image"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const seoPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/seo#service",
+  name: "SEO Optimisation Services",
+  alternateName: "Search Engine Optimisation",
+  url: "https://linkedo.co.uk/seo",
+  description:
+    "Data-driven SEO strategies that improve your search rankings, drive organic traffic, and generate qualified leads for your business.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Search Engine Optimisation",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "SEO Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Technical SEO" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "On-Page SEO" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local SEO" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Link Building" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Keyword Research" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Analytics" } },
+    ],
+  },
+}
+
+const seoFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How long does it take to see SEO results?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO is a long-term strategy. You can expect to see initial improvements within 3-4 months, with significant results typically appearing after 6-12 months. The timeline depends on your industry competition, current site authority, and the aggressiveness of the strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you guarantee first page rankings?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No ethical SEO agency can guarantee specific rankings, as Google's algorithm considers hundreds of factors outside our control. What we do guarantee is following best practices, transparent reporting, and a data-driven approach that consistently delivers measurable improvements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's included in your monthly SEO service?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our monthly service includes technical SEO monitoring and fixes, content optimisation, link building outreach, keyword tracking, competitor analysis, and detailed monthly reports. We also provide ongoing consultation and strategy adjustments based on performance data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you approach link building?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We focus on quality over quantity, building links through guest posting on relevant industry publications, digital PR campaigns, and creating linkable assets like original research and tools. We never engage in black-hat tactics that could harm your site.",
+      },
+    },
+  ],
+}
+
+const seoBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "SEO Services", item: "https://linkedo.co.uk/seo" },
+  ],
+}
 
 const whoIsFor = [
   "B2B companies looking to increase organic lead generation",
@@ -127,6 +202,9 @@ const faqs = [
 export default function SEOServicePage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={seoPageSchema} />
+      <SchemaMarkup schema={seoFaqSchema} />
+      <SchemaMarkup schema={seoBreadcrumbSchema} />
       {/* Hero */}
       <Section className="pt-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

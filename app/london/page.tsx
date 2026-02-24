@@ -2,8 +2,76 @@ import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
+
+const londonLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@id": "https://linkedo.co.uk/london#localbusiness",
+  name: "Linkedo Agency – London",
+  alternateName: "Linkedo LTD",
+  url: "https://linkedo.co.uk/london",
+  logo: "https://linkedo.co.uk/favicon.png",
+  image: "https://linkedo.co.uk/tower-bridge-sunset-london.webp",
+  description:
+    "UK-registered digital marketing agency serving London businesses with web development, SEO, Google Ads, and Meta Ads strategies that deliver measurable results.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "483 Green Lanes",
+    addressLocality: "London",
+    postalCode: "N13 4BS",
+    addressCountry: "GB",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.623267,
+    longitude: -0.108382,
+  },
+  hasMap: "https://maps.google.com/?cid=e56bfd29ae92d60b",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    areaServed: "GB",
+    availableLanguage: "English",
+    url: "https://linkedo.co.uk/contact",
+  },
+  areaServed: [
+    { "@type": "City", name: "London" },
+    { "@type": "AdministrativeArea", name: "Greater London" },
+    { "@type": "Country", name: "United Kingdom" },
+  ],
+  priceRange: "££",
+  currenciesAccepted: "GBP",
+  paymentAccepted: "Bank Transfer, Credit Card",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "London Digital Marketing Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Development", url: "https://linkedo.co.uk/web-development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Services", url: "https://linkedo.co.uk/seo" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Google Ads Management", url: "https://linkedo.co.uk/google-ads" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Meta Ads", url: "https://linkedo.co.uk/meta-ads" } },
+    ],
+  },
+  parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
+}
+
+const londonBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "London", item: "https://linkedo.co.uk/london" },
+  ],
+}
 
 export const metadata = {
   title: "Digital Marketing Agency in London | Linkedo Agency",
@@ -66,6 +134,8 @@ const caseStudy = {
 export default function LondonPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SchemaMarkup schema={londonLocalBusinessSchema} />
+      <SchemaMarkup schema={londonBreadcrumbSchema} />
       <main className="pt-24">
         {/* Hero */}
         <div

@@ -9,6 +9,87 @@ import { StatCard } from "@/components/ui/stat-card"
 import { FAQAccordion } from "@/components/ui/faq-accordion"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const googleAdsServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/google-ads#service",
+  name: "Google Ads Management",
+  url: "https://linkedo.co.uk/google-ads",
+  description:
+    "Expert Google Ads management that delivers measurable results and maximises your advertising budget with strategic PPC campaigns.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Pay-Per-Click Advertising",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Google Ads Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Search Campaign Management" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shopping Ads" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Display Advertising" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Performance Max Campaigns" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "YouTube Ads" } },
+    ],
+  },
+}
+
+const googleAdsFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much should I spend on Google Ads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Budget depends on your industry, competition, and goals. We typically recommend starting with at least £1,500-£3,000/month for meaningful results, but we can work with various budgets and scale as we see success.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long before I see results from Google Ads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You'll start seeing clicks and data immediately, but meaningful results typically take 2-3 months as we optimise campaigns based on performance data. Some clients see positive ROI within the first month.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage Shopping and Display ads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we manage all types of Google Ads campaigns including Search, Shopping, Display, Video (YouTube), and Performance Max campaigns. We'll recommend the best mix for your goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's included in your Google Ads management service?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Full campaign setup, keyword research, ad copywriting, bid management, landing page recommendations, A/B testing, monthly reporting, and ongoing optimisation. We handle everything to maximise your ROI.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you measure Google Ads success?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We track metrics that matter to your business: conversions, cost per acquisition, return on ad spend (ROAS), and ultimately revenue generated. You'll receive detailed monthly reports showing campaign performance.",
+      },
+    },
+  ],
+}
+
+const googleAdsBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Google Ads", item: "https://linkedo.co.uk/google-ads" },
+  ],
+}
 
 const serviceFeatures = [
   {
@@ -104,6 +185,9 @@ const faqs = [
 export default function GoogleAdsPage() {
   return (
     <MainShell>
+      <SchemaMarkup schema={googleAdsServiceSchema} />
+      <SchemaMarkup schema={googleAdsFaqSchema} />
+      <SchemaMarkup schema={googleAdsBreadcrumbSchema} />
       {/* Hero Image Section */}
       <Section className="mb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

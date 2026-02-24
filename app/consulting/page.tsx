@@ -6,6 +6,39 @@ import { ServiceCard } from "@/components/ui/service-card"
 import { AnimatedButton } from "@/components/ui/animated-button"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const consultingServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://linkedo.co.uk/consulting#service",
+  name: "Digital Marketing Consulting",
+  url: "https://linkedo.co.uk/consulting",
+  description:
+    "Strategic digital marketing consulting to help you make informed decisions, accelerate digital growth, and build winning online strategies.",
+  provider: { "@id": "https://linkedo.co.uk/#organization" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  serviceType: "Marketing Consulting",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Consulting Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Strategy Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Audits" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Analytics Setup & Reporting" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Training & Workshops" } },
+    ],
+  },
+}
+
+const consultingBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Consulting", item: "https://linkedo.co.uk/consulting" },
+  ],
+}
 
 const services = [
   {
@@ -33,6 +66,8 @@ const services = [
 export default function ConsultingPage() {
   return (
     <MainShell>
+      <SchemaMarkup schema={consultingServiceSchema} />
+      <SchemaMarkup schema={consultingBreadcrumbSchema} />
       <Section className="mb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
