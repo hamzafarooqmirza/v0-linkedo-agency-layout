@@ -81,7 +81,7 @@ export default function UKPage() {
                 alt="Aerial view of London cityscape at dusk"
                 city="London"
                 description="Strategic digital growth in the capital's competitive market."
-                href="/uk/london"
+                href="/london"
               />
               <CityCard
                 image="https://lh3.googleusercontent.com/aida-public/AB6AXuBmAcrwxRhTnvtaD5-GD-12iPvWnq3kCAnpy39h3yLoBMoY6GVLhudCK-ucMDmgZX_SuIwwhU97G1ZZR2PfD44rMtame2DFMhvLBfL2vl5e427L2DZP-O4eKK5p1nnR2yjzxoJatH-ov6BcGWvrUFK8FrUI7Ag9XjbxrwemWWqtit-BbFi6Y5Ulevezfp32Nz1SVwTdKODZne7jGP1dpnXThtXGhpktictRkxbVV_YLzVc8o1jXxJvW5XD86B2IZy2jux5iVpa6QBY"
