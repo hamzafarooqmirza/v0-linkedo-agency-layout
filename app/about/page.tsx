@@ -161,7 +161,7 @@ export default function AboutPage() {
               city="London"
               country="United Kingdom"
               flag="🇬🇧"
-              href="/uk/london"
+              href="/london"
               description="Our UK headquarters, home to strategy, sales, and client success teams."
             />
           </div>

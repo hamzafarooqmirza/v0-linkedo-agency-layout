@@ -148,7 +148,7 @@ export default function HomePage() {
               city="London"
               country="United Kingdom"
               flag="🇬🇧"
-              href="/uk/london"
+              href="/london"
               description="Our UK headquarters, serving European and North American clients."
             />
           </div>
