@@ -19,7 +19,7 @@ const serviceLinks = [
 ]
 
 const locations = [
-  { city: "London", country: "United Kingdom" },
+  { city: "483 Green Lanes, London N13 4BS, United Kingdom" },
 ]
 
 export function Footer() {
@@ -42,11 +42,9 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               {locations.map((location) => (
-                <div key={location.city} className="flex items-center gap-2">
-                  <MapPin size={14} className="text-primary" />
-                  <span>
-                    {location.city}, {location.country}
-                  </span>
+                <div key={location.city} className="flex items-start gap-2">
+                  <MapPin size={14} className="text-primary mt-0.5 shrink-0" />
+                  <span>{location.city}</span>
                 </div>
               ))}
             </div>
@@ -95,11 +93,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+923175980459"
+                  href="tel:+447927969991"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone size={14} />
-                  +92 317 5980459
+                  +44 7927 969991
                 </a>
               </li>
             </ul>

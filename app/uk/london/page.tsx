@@ -227,7 +227,7 @@ export default function LondonPage() {
               <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-1">Linkedo LTD</h3>
-                  <p className="text-sm text-muted-foreground">London, United Kingdom</p>
+                  <p className="text-sm text-muted-foreground">483 Green Lanes, London N13 4BS, United Kingdom</p>
                 </div>
                 <Link href="/contact">
                   <AnimatedButton variant="secondary" size="sm">

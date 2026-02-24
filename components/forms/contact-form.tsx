@@ -58,7 +58,7 @@ export function ContactForm() {
         `_Sent from Linkedo Contact Form_`
     )
 
-    const whatsappNumber = "923175980459"
+    const whatsappNumber = "447927969991"
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
     // Open WhatsApp in new tab
@@ -77,7 +77,7 @@ export function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <FormInput label="Phone" name="phone" type="tel" placeholder="+92 317 5980459" />
+          <FormInput label="Phone" name="phone" type="tel" placeholder="+44 7927 969991" />
           <FormInput label="Company" name="company" placeholder="Acme Inc." />
         </div>
 

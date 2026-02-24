@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "03175980459",
-    href: "tel:+923175980459",
+    value: "+447927969991",
+    href: "tel:+447927969991",
   },
   {
     icon: Clock,
@@ -33,7 +33,7 @@ const locations = [
     city: "London",
     country: "United Kingdom",
     flag: "🇬🇧",
-    address: "123 Business Street, London, EC1A 1BB",
+    address: "483 Green Lanes, London N13 4BS, United Kingdom",
     timezone: "GMT / BST",
   },
 ]
