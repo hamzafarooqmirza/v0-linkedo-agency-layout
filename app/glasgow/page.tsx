@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Modern, high-performance websites for Glasgow businesses built to convert and grow.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Local SEO and national ranking strategies for Glasgow businesses across all industries.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "Targeted PPC campaigns reaching Glasgow customers and beyond with strong returns.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Facebook and Instagram advertising connecting Glasgow brands with the right audiences.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Website security audits and protection for Glasgow businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

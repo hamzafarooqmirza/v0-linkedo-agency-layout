@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Professional websites built for Sheffield businesses that need to convert and compete.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Local and national SEO strategies helping Sheffield businesses rank higher on Google.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "ROI-focused PPC campaigns targeting Sheffield and South Yorkshire customers.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Social media advertising for Sheffield businesses targeting local and national audiences.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Comprehensive website security for Sheffield-based businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

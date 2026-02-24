@@ -9,37 +9,37 @@ const services = [
     icon: Code,
     title: "Web Development",
     description: "Custom websites and web applications built with modern technologies for performance and scalability.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     icon: Search,
     title: "SEO Optimization",
     description: "Data-driven SEO strategies that improve your search rankings and drive organic traffic.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     icon: BarChart3,
     title: "Google Ads",
     description: "Strategic PPC campaigns that maximize your advertising ROI and generate qualified leads.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     icon: Megaphone,
     title: "Meta Ads",
     description: "Targeted social media advertising on Facebook and Instagram to reach your ideal customers.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     icon: Palette,
     title: "Branding",
     description: "Compelling brand identities that differentiate your business and resonate with your audience.",
-    href: "/services/branding",
+    href: "/branding",
   },
   {
     icon: MessageSquare,
     title: "Consulting",
     description: "Expert digital marketing consultation to help you develop and execute winning strategies.",
-    href: "/services/consulting",
+    href: "/consulting",
   },
 ]
 

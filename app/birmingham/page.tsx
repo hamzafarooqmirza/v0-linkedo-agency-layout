@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Custom, conversion-focused websites built for Birmingham businesses ready to scale.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Local and national SEO to help Birmingham businesses rank above their competitors.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "High-ROI PPC campaigns targeting Birmingham and Midlands audiences.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Targeted Facebook and Instagram advertising for Birmingham brands.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Website security and protection for Birmingham businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

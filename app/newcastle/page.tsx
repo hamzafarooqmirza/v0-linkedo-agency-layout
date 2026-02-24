@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Professional, conversion-ready websites for Newcastle businesses built for competitive markets.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Local and national SEO to help Newcastle businesses rank higher and attract more customers.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "ROI-focused PPC campaigns targeting Newcastle and North East England audiences.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Social media advertising campaigns for Newcastle businesses reaching local and national markets.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Website security audits and protection for Newcastle-based businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

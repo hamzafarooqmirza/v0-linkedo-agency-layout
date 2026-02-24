@@ -35,42 +35,22 @@ const cityRoutes = [
   "/nottingham",
 ]
 
-// Services nested routes
+// Service top-level routes
 const serviceRoutes = [
-  "/services/seo",
-  "/services/google-ads",
-  "/services/meta-ads",
-  "/services/web-development",
-  "/services/website-development",
-  "/services/branding",
-  "/services/consulting",
-]
-
-// Free AI Tools nested routes
-const aiToolRoutes = [
-  "/free-ai-tools-online/blog-outline-generator",
-  "/free-ai-tools-online/meta-description-generator",
-  "/free-ai-tools-online/meta-title-generator",
-  "/free-ai-tools-online/utm-builder",
+  "/seo",
+  "/google-ads",
+  "/meta-ads",
+  "/web-development",
+  "/website-development",
+  "/branding",
+  "/consulting",
 ]
 
 // London nested routes
 const londonNestedRoutes = ["/london/seo"]
 
-// Team member slugs
-const teamSlugs = [
-  "waleed-sabbir",
-  "sarmad-shabir",
-  "jamshaid-ahmed",
-  "waleed-hussain",
-  "kawish-azeem",
-]
-
 // Case study slugs
 const caseStudySlugs = ["techflow", "manufacturing-co", "legal-partners"]
-
-// Blog post slugs (static for now; extend dynamically if a CMS is added)
-const blogSlugs = ["seo-trends-2025", "local-seo-strategies", "technical-seo-checklist"]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -109,25 +89,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Nested AI tool routes
-  const aiTools: MetadataRoute.Sitemap = aiToolRoutes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
   // London nested routes
   const londonNested: MetadataRoute.Sitemap = londonNestedRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
-  // Team member dynamic routes
-  const teamMembers: MetadataRoute.Sitemap = teamSlugs.map((slug) => ({
-    url: `${BASE_URL}/team/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
@@ -141,23 +105,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Blog post dynamic routes
-  const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
   return [
     ...homepage,
     ...topLevel,
     ...cities,
     ...services,
-    ...aiTools,
     ...londonNested,
-    ...teamMembers,
     ...caseStudies,
-    ...blogPosts,
   ]
 }

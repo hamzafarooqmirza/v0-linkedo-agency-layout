@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Modern, fast websites for Leicester businesses designed to rank well and convert visitors.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Comprehensive SEO strategies helping Leicester businesses rank for their most valuable search terms.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "Targeted PPC campaigns reaching Leicester and Midlands customers for maximum ROI.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Facebook and Instagram advertising for Leicester businesses targeting local and national audiences.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Website security and protection tailored to Leicester-based businesses.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

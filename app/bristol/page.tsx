@@ -16,31 +16,31 @@ const services = [
     iconName: "Code",
     title: "Website Development",
     description: "Fast, modern websites designed to convert Bristol visitors into loyal customers.",
-    href: "/services/web-development",
+    href: "/web-development",
   },
   {
     iconName: "Search",
     title: "SEO Services",
     description: "Organic search strategies helping Bristol businesses rank prominently on Google.",
-    href: "/services/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
     description: "PPC campaigns targeting Bristol and South West audiences with precision and ROI focus.",
-    href: "/services/google-ads",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads",
     description: "Social media advertising built for Bristol's diverse consumer and B2B audiences.",
-    href: "/services/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Security Services",
     description: "Website security solutions to protect Bristol businesses online.",
-    href: "/services/security",
+    href: "/consulting",
   },
 ]
 

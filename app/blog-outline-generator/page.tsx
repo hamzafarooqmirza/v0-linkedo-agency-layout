@@ -26,7 +26,7 @@ const relatedTools = [
     icon: FileText,
     title: "Meta Title Generator",
     description: "Create click-worthy meta titles for your blog posts.",
-    href: "/free-ai-tools-online/meta-title-generator",
+    href: "/meta-title-generator",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Content", variant: "default" as const },
@@ -36,7 +36,7 @@ const relatedTools = [
     icon: FileSearch,
     title: "Meta Description Generator",
     description: "Write compelling descriptions for search results.",
-    href: "/free-ai-tools-online/meta-description-generator",
+    href: "/meta-description-generator",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Content", variant: "default" as const },
@@ -178,7 +178,7 @@ export default function BlogOutlineGeneratorPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Let our content experts create high-quality blog posts that drive traffic and conversions.
           </p>
-          <Link href="/services/seo">
+          <Link href="/seo">
             <AnimatedButton size="lg">
               <span>Explore Content Services</span>
               <ArrowRight className="w-4 h-4" />
