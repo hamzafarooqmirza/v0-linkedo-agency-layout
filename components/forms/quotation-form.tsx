@@ -153,7 +153,7 @@ export function QuotationForm({ onClose }: QuotationFormProps) {
         `_Sent from Linkedo Quotation Form_`
     )
 
-    const whatsappNumber = "923175980459"
+    const whatsappNumber = "447927969991"
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
     // Open WhatsApp in new tab
@@ -276,7 +276,7 @@ export function QuotationForm({ onClose }: QuotationFormProps) {
                 <FormInput
                   label="Phone Number"
                   type="tel"
-                  placeholder="+92 317 5980459"
+                  placeholder="+44 7927 969991"
                   value={formData.phone}
                   onChange={(e) => updateFormData("phone", e.target.value)}
                 />

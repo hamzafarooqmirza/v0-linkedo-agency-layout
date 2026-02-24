@@ -57,7 +57,7 @@ export function WebsiteAuditModal({ isOpen, onClose }: WebsiteAuditModalProps) {
         `_Sent from Linkedo Website_`
     )
 
-    const whatsappNumber = "923175980459"
+    const whatsappNumber = "447927969991"
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 
     // Open WhatsApp in new tab
