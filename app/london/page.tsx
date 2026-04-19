@@ -7,7 +7,7 @@ import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
 
-const title = "Digital Marketing Agency in London | Linkedo Agency"
+const title = "Digital Marketing Agency in London | Linkedo"
 const description =
   "London-based digital marketing agency delivering web development, SEO, Google Ads and Meta Ads that generate real leads for B2B businesses across Greater London."
 
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     title,
     description,
     url: "https://linkedo.co.uk/london",
-    siteName: "Linkedo Agency",
+    siteName: "Linkedo",
     images: [
       {
         url: "https://linkedo.co.uk/tower-bridge-sunset-london.webp",
         width: 1200,
         height: 630,
-        alt: "Digital Marketing Agency in London – Linkedo Agency",
+        alt: "Digital Marketing Agency in London – Linkedo",
       },
     ],
     type: "website",
