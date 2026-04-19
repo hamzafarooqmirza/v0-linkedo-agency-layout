@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/ui/service-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
@@ -6,11 +7,38 @@ import { SchemaMarkup } from "@/components/seo/schema-markup"
 import Link from "next/link"
 import { ArrowRight, MapPin, Clock, Building2, Check } from "lucide-react"
 
-export const metadata = {
-  title: "Digital Marketing Agency in London | Linkedo Agency",
-  description:
-    "London-based digital marketing agency delivering web development, SEO, Google Ads and Meta Ads that generate real leads for B2B businesses across Greater London.",
-  alternates: { canonical: "/london" },
+const title = "Digital Marketing Agency in London | Linkedo Agency"
+const description =
+  "London-based digital marketing agency delivering web development, SEO, Google Ads and Meta Ads that generate real leads for B2B businesses across Greater London."
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: "https://linkedo.co.uk/london",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "https://linkedo.co.uk/london",
+    siteName: "Linkedo Agency",
+    images: [
+      {
+        url: "https://linkedo.co.uk/tower-bridge-sunset-london.webp",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing Agency in London – Linkedo Agency",
+      },
+    ],
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["https://linkedo.co.uk/tower-bridge-sunset-london.webp"],
+  },
 }
 
 const londonLocalBusinessSchema = {
