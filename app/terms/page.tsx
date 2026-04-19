@@ -1,6 +1,12 @@
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 
+export const metadata = {
+  title: "Terms of Service | Linkedo Agency",
+  description: "The terms and conditions governing your use of Linkedo Agency services.",
+  alternates: { canonical: "/terms" },
+}
+
 export default function TermsOfServicePage() {
   return (
     <MainShell>

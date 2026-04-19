@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Blog | Digital Marketing Insights | Linkedo Agency",
+  description:
+    "Expert insights on SEO, web development, Google Ads, and digital marketing strategies to help grow your business.",
+  alternates: { canonical: "/blog" },
+}
+
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 import { Chip } from "@/components/ui/chip"

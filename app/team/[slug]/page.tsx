@@ -209,6 +209,40 @@ export function generateStaticParams() {
   ]
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const member = teamData[slug as keyof typeof teamData] || teamData["waleed-sabbir"]
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://linkedo.co.uk"
+  const ogImage = `${baseUrl}${member.image}`
+
+  return {
+    title: `${member.name} – ${member.role} | Linkedo Agency`,
+    description: member.bio.split("\n")[0],
+    openGraph: {
+      title: `${member.name} – ${member.role}`,
+      description: member.bio.split("\n")[0],
+      url: `${baseUrl}/team/${slug}`,
+      siteName: "Linkedo Agency",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${member.name} – ${member.role}`,
+        },
+      ],
+      type: "profile",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${member.name} – ${member.role}`,
+      description: member.bio.split("\n")[0],
+      images: [ogImage],
+    },
+  }
+}
+
 export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const member = teamData[slug as keyof typeof teamData] || teamData["waleed-sabbir"]

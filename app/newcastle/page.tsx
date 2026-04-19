@@ -32,6 +32,7 @@ export const metadata = {
   title: "Digital Marketing Agency in Newcastle | Linkedo Agency",
   description:
     "Linkedo Agency delivers expert SEO, web development, and paid advertising for Newcastle businesses. Grow your North East brand with proven digital marketing strategies.",
+  alternates: { canonical: "/newcastle" },
 }
 
 const services = [

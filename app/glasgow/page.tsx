@@ -32,6 +32,7 @@ export const metadata = {
   title: "Digital Marketing Agency in Glasgow | Linkedo Agency",
   description:
     "Linkedo Agency delivers expert SEO, web development, and paid advertising for Glasgow businesses. Connect with more customers and grow your brand across Scotland with Linkedo.",
+  alternates: { canonical: "/glasgow" },
 }
 
 const services = [

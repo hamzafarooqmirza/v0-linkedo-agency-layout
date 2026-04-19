@@ -8,6 +8,7 @@ export const metadata = {
   title: "About Us | Linkedo Agency",
   description:
     "Learn about Linkedo Agency, our story, values, and the team behind our success in digital marketing and web development.",
+  alternates: { canonical: "/about" },
 }
 
 const values = [

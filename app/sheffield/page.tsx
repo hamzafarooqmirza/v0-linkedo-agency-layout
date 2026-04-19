@@ -32,6 +32,7 @@ export const metadata = {
   title: "Digital Marketing Agency in Sheffield | Linkedo Agency",
   description:
     "Linkedo Agency delivers expert SEO, web development, and paid media for Sheffield businesses. Grow your South Yorkshire brand with proven digital marketing that drives results.",
+  alternates: { canonical: "/sheffield" },
 }
 
 const services = [

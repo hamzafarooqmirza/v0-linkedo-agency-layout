@@ -1,6 +1,12 @@
 import { MainShell } from "@/components/layout/main-shell"
 import { Section } from "@/components/ui/section"
 
+export const metadata = {
+  title: "Privacy Policy | Linkedo Agency",
+  description: "How Linkedo Agency collects, uses, and protects your personal information.",
+  alternates: { canonical: "/privacy" },
+}
+
 export default function PrivacyPolicyPage() {
   return (
     <MainShell>
