@@ -80,12 +80,6 @@ const londonBreadcrumbSchema = {
   ],
 }
 
-export const metadata = {
-  title: "Digital Marketing Agency in London | Linkedo Agency",
-  description:
-    "Linkedo Agency is a UK-registered digital marketing agency serving London businesses with web development, SEO, and paid advertising services.",
-}
-
 const services = [
   {
     iconName: "Code",
