@@ -4,7 +4,7 @@ import { FAQAccordion } from "@/components/ui/faq-accordion"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Pricing & Packages | Linkedo Agency",
+  title: "Pricing & Packages | Linkedo",
   description:
     "Transparent pricing for web development, SEO, and digital marketing services. Find the perfect plan for your business.",
   alternates: { canonical: "/pricing" },

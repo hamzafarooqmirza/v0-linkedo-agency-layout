@@ -29,9 +29,9 @@ const edinburghSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Edinburgh | Linkedo Agency",
+  title: "Digital Marketing Agency in Edinburgh | Linkedo",
   description:
-    "Linkedo Agency provides expert SEO, web development, and paid advertising for Edinburgh businesses. Grow your Scottish brand with proven digital marketing strategies.",
+    "Linkedo provides expert SEO, web development, and paid advertising for Edinburgh businesses. Grow your Scottish brand with proven digital marketing strategies.",
   alternates: { canonical: "/edinburgh" },
 }
 

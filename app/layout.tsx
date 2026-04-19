@@ -117,15 +117,15 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://linkedo.co.uk"),
-  title: "Linkedo Agency | Web, SEO & Ads That Actually Bring Leads",
+  title: "Linkedo | Web, SEO & Ads That Actually Bring Leads",
   description:
-    "Linkedo Agency delivers premium web development, SEO optimization, and paid advertising services that generate real leads and measurable results for B2B businesses.",
+    "Linkedo delivers premium web development, SEO optimization, and paid advertising services that generate real leads and measurable results for B2B businesses.",
   generator: "v0.app",
   alternates: {
     canonical: "/",
   },
   keywords: ["digital agency", "web development", "SEO", "Google Ads", "lead generation", "B2B marketing"],
-  authors: [{ name: "Linkedo Agency" }],
+  authors: [{ name: "Linkedo" }],
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",

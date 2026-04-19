@@ -29,9 +29,9 @@ const bristolSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Bristol | Linkedo Agency",
+  title: "Digital Marketing Agency in Bristol | Linkedo",
   description:
-    "Linkedo Agency delivers expert SEO, web development, and paid advertising for Bristol businesses. Grow your South West brand with a digital marketing agency that delivers results.",
+    "Linkedo delivers expert SEO, web development, and paid advertising for Bristol businesses. Grow your South West brand with a digital marketing agency that delivers results.",
   alternates: { canonical: "/bristol" },
 }
 

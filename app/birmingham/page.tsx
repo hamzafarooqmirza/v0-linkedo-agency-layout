@@ -29,9 +29,9 @@ const birminghamSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Birmingham | Linkedo Agency",
+  title: "Digital Marketing Agency in Birmingham | Linkedo",
   description:
-    "Linkedo Agency provides expert SEO, web development, and paid advertising for Birmingham businesses. Dominate the Midlands market with proven digital marketing strategies.",
+    "Linkedo provides expert SEO, web development, and paid advertising for Birmingham businesses. Dominate the Midlands market with proven digital marketing strategies.",
   alternates: { canonical: "/birmingham" },
 }
 

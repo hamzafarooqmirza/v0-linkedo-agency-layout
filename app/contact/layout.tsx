@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Linkedo Agency",
+  title: "Contact Us | Linkedo",
   description:
-    "Get in touch with Linkedo Agency. Book a free consultation to discuss your web development, SEO, or paid advertising needs.",
+    "Get in touch with Linkedo. Book a free consultation to discuss your web development, SEO, or paid advertising needs.",
   alternates: { canonical: "/contact" },
 }
 

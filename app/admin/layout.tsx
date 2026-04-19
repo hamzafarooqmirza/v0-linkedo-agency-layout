@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard | Linkedo Agency",
+  title: "Admin Dashboard | Linkedo",
   description: "Internal admin dashboard for managing tracking scripts and pixels.",
   robots: "noindex, nofollow",
 }

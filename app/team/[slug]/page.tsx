@@ -220,16 +220,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     metadataBase: new URL("https://linkedo.co.uk"),
-    title: `${member.name} – ${member.role} | Linkedo Agency`,
+    title: `${member.name} – ${member.role} | Linkedo`,
     description,
     alternates: {
       canonical: `/team/${slug}`,
     },
     openGraph: {
-      title: `${member.name} – ${member.role} | Linkedo Agency`,
+      title: `${member.name} – ${member.role} | Linkedo`,
       description,
       url: `https://linkedo.co.uk/team/${slug}`,
-      siteName: "Linkedo Agency",
+      siteName: "Linkedo",
       images: [
         {
           url: ogImage,
@@ -242,7 +242,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${member.name} – ${member.role} | Linkedo Agency`,
+      title: `${member.name} – ${member.role} | Linkedo`,
       description,
       images: [ogImage],
     },

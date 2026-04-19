@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog | Digital Marketing Insights | Linkedo Agency",
+  title: "Blog | Digital Marketing Insights | Linkedo",
   description:
     "Expert insights on SEO, web development, Google Ads, and digital marketing strategies to help grow your business.",
   alternates: { canonical: "/blog" },

@@ -5,9 +5,9 @@ import Link from "next/link"
 import { ArrowRight, MapPin } from "lucide-react"
 
 export const metadata = {
-  title: "Our Locations | Linkedo Agency",
+  title: "Our Locations | Linkedo",
   description:
-    "Linkedo Agency serves businesses across major UK cities including London, Manchester, Birmingham, Leeds, Bristol, Edinburgh and more. Find your local digital marketing experts.",
+    "Linkedo serves businesses across major UK cities including London, Manchester, Birmingham, Leeds, Bristol, Edinburgh and more. Find your local digital marketing experts.",
   alternates: { canonical: "/locations" },
 }
 

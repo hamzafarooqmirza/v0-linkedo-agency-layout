@@ -5,9 +5,9 @@ import Link from "next/link"
 import { ArrowRight, Target, Heart, Zap, Users, Building2, Briefcase, ShoppingCart, Stethoscope } from "lucide-react"
 
 export const metadata = {
-  title: "About Us | Linkedo Agency",
+  title: "About Us | Linkedo",
   description:
-    "Learn about Linkedo Agency, our story, values, and the team behind our success in digital marketing and web development.",
+    "Learn about Linkedo, our story, values, and the team behind our success in digital marketing and web development.",
   alternates: { canonical: "/about" },
 }
 

@@ -6,7 +6,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export const metadata = {
-  title: "Our Services | Linkedo Agency",
+  title: "Our Services | Linkedo",
   description:
     "Comprehensive digital marketing services including web development, SEO, Google Ads, Meta Ads, and more.",
   alternates: { canonical: "/services" },
