@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Meta Ads Management (Facebook & Instagram) | Linkedo Agency",
+  title: "Meta Ads Management (Facebook & Instagram) | Linkedo",
   description:
     "Strategic Meta advertising on Facebook and Instagram that reaches your target audience and drives measurable business results.",
   alternates: { canonical: "/meta-ads" },

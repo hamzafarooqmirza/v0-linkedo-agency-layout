@@ -29,9 +29,9 @@ const liverpoolSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Liverpool | Linkedo Agency",
+  title: "Digital Marketing Agency in Liverpool | Linkedo",
   description:
-    "Linkedo Agency delivers expert SEO, web development, and paid advertising for Liverpool businesses. Grow your Merseyside brand with results-driven digital marketing.",
+    "Linkedo delivers expert SEO, web development, and paid advertising for Liverpool businesses. Grow your Merseyside brand with results-driven digital marketing.",
   alternates: { canonical: "/liverpool" },
 }
 

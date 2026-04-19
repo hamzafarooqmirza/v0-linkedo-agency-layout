@@ -29,9 +29,9 @@ const manchesterSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Manchester | Linkedo Agency",
+  title: "Digital Marketing Agency in Manchester | Linkedo",
   description:
-    "Linkedo Agency delivers expert SEO, web development, and paid advertising services to Manchester businesses. Drive more leads and grow your presence across Greater Manchester.",
+    "Linkedo delivers expert SEO, web development, and paid advertising services to Manchester businesses. Drive more leads and grow your presence across Greater Manchester.",
   alternates: { canonical: "/manchester" },
 }
 

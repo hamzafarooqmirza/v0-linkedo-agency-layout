@@ -29,9 +29,9 @@ const newcastleSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Newcastle | Linkedo Agency",
+  title: "Digital Marketing Agency in Newcastle | Linkedo",
   description:
-    "Linkedo Agency delivers expert SEO, web development, and paid advertising for Newcastle businesses. Grow your North East brand with proven digital marketing strategies.",
+    "Linkedo delivers expert SEO, web development, and paid advertising for Newcastle businesses. Grow your North East brand with proven digital marketing strategies.",
   alternates: { canonical: "/newcastle" },
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Consulting UK | Linkedo Agency",
+  title: "Digital Marketing Consulting UK | Linkedo",
   description:
     "Strategic digital marketing consulting to accelerate your growth, make informed decisions, and build winning online strategies.",
   alternates: { canonical: "/consulting" },

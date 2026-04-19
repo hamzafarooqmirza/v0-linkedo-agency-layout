@@ -29,9 +29,9 @@ const leedsSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Leeds | Linkedo Agency",
+  title: "Digital Marketing Agency in Leeds | Linkedo",
   description:
-    "Linkedo Agency delivers expert SEO, web development, and paid media for Leeds businesses. Scale your Yorkshire business with data-driven digital marketing that gets results.",
+    "Linkedo delivers expert SEO, web development, and paid media for Leeds businesses. Scale your Yorkshire business with data-driven digital marketing that gets results.",
   alternates: { canonical: "/leeds" },
 }
 

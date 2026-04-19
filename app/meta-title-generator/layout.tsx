@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Free Meta Title Generator | Linkedo Agency",
+  title: "Free Meta Title Generator | Linkedo",
   description:
     "Generate optimised meta titles for any page instantly. Boost your click-through rates with compelling, SEO-friendly title tags.",
   alternates: { canonical: "/meta-title-generator" },

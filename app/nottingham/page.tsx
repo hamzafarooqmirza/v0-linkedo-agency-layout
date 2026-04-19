@@ -29,9 +29,9 @@ const nottinghamSchema = [
 ]
 
 export const metadata = {
-  title: "Digital Marketing Agency in Nottingham | Linkedo Agency",
+  title: "Digital Marketing Agency in Nottingham | Linkedo",
   description:
-    "Linkedo Agency provides expert SEO, web development, and paid advertising for Nottingham businesses. Grow your East Midlands brand with a digital agency that delivers results.",
+    "Linkedo provides expert SEO, web development, and paid advertising for Nottingham businesses. Grow your East Midlands brand with a digital agency that delivers results.",
   alternates: { canonical: "/nottingham" },
 }
 
