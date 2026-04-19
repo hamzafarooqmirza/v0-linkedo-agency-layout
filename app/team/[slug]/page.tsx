@@ -214,7 +214,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const member = teamData[slug as keyof typeof teamData] || teamData["waleed-sabbir"]
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://linkedo.co.uk"
-  const ogImage = `${baseUrl}${member.image}`
+
+  // Use the dedicated OG image for Waleed Hussain, otherwise fall back to the member's profile image
+  const ogImage =
+    slug === "waleed-hussain"
+      ? `${baseUrl}/waleed-hussain-og.jpeg`
+      : `${baseUrl}${member.image}`
 
   return {
     title: `${member.name} – ${member.role} | Linkedo Agency`,
