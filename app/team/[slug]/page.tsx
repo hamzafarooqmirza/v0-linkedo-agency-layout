@@ -213,21 +213,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const member = teamData[slug as keyof typeof teamData] || teamData["waleed-sabbir"]
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://linkedo.co.uk"
+  // Relative paths work because metadataBase is set in the root layout.tsx
+  const ogImage = slug === "waleed-hussain" ? "/waleed-hussain-og.jpeg" : member.image
 
-  // Use the dedicated OG image for Waleed Hussain, otherwise fall back to the member's profile image
-  const ogImage =
-    slug === "waleed-hussain"
-      ? `${baseUrl}/waleed-hussain-og.jpeg`
-      : `${baseUrl}${member.image}`
+  const description = member.bio.replace(/\n+/g, " ").trim().slice(0, 160)
 
   return {
+    metadataBase: new URL("https://linkedo.co.uk"),
     title: `${member.name} – ${member.role} | Linkedo Agency`,
-    description: member.bio.split("\n")[0],
+    description,
+    alternates: {
+      canonical: `/team/${slug}`,
+    },
     openGraph: {
-      title: `${member.name} – ${member.role}`,
-      description: member.bio.split("\n")[0],
-      url: `${baseUrl}/team/${slug}`,
+      title: `${member.name} – ${member.role} | Linkedo Agency`,
+      description,
+      url: `https://linkedo.co.uk/team/${slug}`,
       siteName: "Linkedo Agency",
       images: [
         {
@@ -241,8 +242,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${member.name} – ${member.role}`,
-      description: member.bio.split("\n")[0],
+      title: `${member.name} – ${member.role} | Linkedo Agency`,
+      description,
       images: [ogImage],
     },
   }
