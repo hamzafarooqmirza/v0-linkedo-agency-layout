@@ -55,7 +55,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
             <div className="text-center lg:text-left">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                 <Chip variant="primary" className="mb-6">
-                  Trusted by 100+ B2B Companies
+                  Trusted by 100+ UK Businesses
                 </Chip>
               </motion.div>
 
@@ -65,7 +65,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 text-balance font-[family-name:var(--font-jost)]"
               >
-                Where Strategy Turns Into Revenue
+                Digital Marketing Agency UK That Drives Real Growth
               </motion.h1>
 
               <motion.p
@@ -74,8 +74,8 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 text-pretty leading-relaxed"
               >
-                We help B2B businesses grow with data-driven digital marketing strategies that deliver measurable
-                results and real ROI.
+                Linkedo helps B2B and B2C businesses across the UK grow through SEO, web design, Google Ads, and
+                data-driven digital marketing strategies focused on leads, sales, and long-term ROI.
               </motion.p>
 
               <motion.div
