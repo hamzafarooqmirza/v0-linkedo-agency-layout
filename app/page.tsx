@@ -1,49 +1,83 @@
-"use client"
-
-import { useState } from "react"
-import { HeroSection } from "@/components/sections/hero-section"
-import { ServicesSection } from "@/components/sections/services-section"
-import { Section } from "@/components/ui/section"
-import { StatCard } from "@/components/ui/stat-card"
-import { CaseStudyCard } from "@/components/ui/case-study-card"
-import { ToolCard } from "@/components/ui/tool-card"
-import { LocationCard } from "@/components/ui/location-card"
-import { ProcessTimeline } from "@/components/ui/process-timeline"
-import { ContactModal } from "@/components/ui/contact-modal"
-import { AnimatedButton } from "@/components/ui/animated-button"
-import { MainShell } from "@/components/layout/main-shell"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowRight, Sparkles } from "lucide-react"
+import type { Metadata } from "next"
+import { HomePageContent } from "@/components/sections/home-page-content"
 import { SchemaMarkup } from "@/components/seo/schema-markup"
+
+const title = "Digital Marketing Agency UK | Linkedo"
+const description =
+  "Linkedo helps UK businesses grow with SEO, Google Ads, web design & digital marketing. Trusted by 100+ businesses. Get real results & measurable ROI."
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: "https://linkedo.co.uk",
+  },
+  keywords: [
+    "digital marketing agency UK",
+    "SEO agency UK",
+    "Google Ads agency UK",
+    "web development UK",
+    "Meta ads agency",
+    "B2B marketing UK",
+    "B2C marketing UK",
+    "Linkedo",
+  ],
+  openGraph: {
+    title,
+    description,
+    url: "https://linkedo.co.uk",
+    siteName: "Linkedo",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Linkedo — Digital Marketing Agency UK",
+      },
+    ],
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.jpg"],
+  },
+}
 
 const homePageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://linkedo.co.uk/#webpage",
   url: "https://linkedo.co.uk",
-  name: "Linkedo Agency | Web, SEO & Ads That Actually Bring Leads",
-  description:
-    "Linkedo Agency delivers premium web development, SEO optimisation, and paid advertising services that generate real leads and measurable results for B2B businesses.",
+  name: "Digital Marketing Agency UK | Linkedo",
+  description,
   isPartOf: { "@id": "https://linkedo.co.uk/#website" },
   about: { "@id": "https://linkedo.co.uk/#organization" },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
-    ],
-  },
+  inLanguage: "en-GB",
+  breadcrumb: { "@id": "https://linkedo.co.uk/#breadcrumb" },
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: ["h1", "h2"],
   },
 }
 
+const homeBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://linkedo.co.uk/#breadcrumb",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
+  ],
+}
+
 const homeServiceListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Linkedo Agency Services",
-  description: "Full-service digital marketing services including web development, SEO, Google Ads, Meta Ads, branding and consulting.",
+  name: "Linkedo Digital Marketing Services",
+  description:
+    "Full-service digital marketing services for UK businesses including SEO, web development, Google Ads, Meta Ads, branding and consulting.",
   itemListElement: [
     {
       "@type": "ListItem",
@@ -60,7 +94,7 @@ const homeServiceListSchema = {
       position: 2,
       item: {
         "@type": "Service",
-        name: "SEO Optimisation",
+        name: "SEO Services",
         url: "https://linkedo.co.uk/seo",
         provider: { "@id": "https://linkedo.co.uk/#organization" },
       },
@@ -100,7 +134,7 @@ const homeServiceListSchema = {
       position: 6,
       item: {
         "@type": "Service",
-        name: "Digital Consulting",
+        name: "Digital Marketing Consulting",
         url: "https://linkedo.co.uk/consulting",
         provider: { "@id": "https://linkedo.co.uk/#organization" },
       },
@@ -108,258 +142,101 @@ const homeServiceListSchema = {
   ],
 }
 
-const caseStudies = [
-  {
-    title: "300% Increase in Organic Traffic",
-    client: "TechFlow SaaS",
-    description: "How we helped a B2B SaaS company triple their organic traffic in 6 months through strategic SEO.",
-    image: "/saas-dashboard-analytics-dark-theme.jpg",
-    tags: ["SEO", "Content Marketing"],
-    href: "/case-studies/techflow",
-  },
-  {
-    title: "5x ROAS on Google Ads",
-    client: "Manufacturing Co.",
-    description: "Achieving exceptional return on ad spend for a manufacturing company entering new markets.",
-    image: "/manufacturing-industrial-modern.jpg",
-    tags: ["Google Ads", "Lead Generation"],
-    href: "/case-studies/manufacturing-co",
-  },
-  {
-    title: "Complete Digital Transformation",
-    client: "Legal Partners LLP",
-    description: "Redesigning the digital presence of a law firm to generate 200+ qualified leads monthly.",
-    image: "/legal-office-professional-modern.jpg",
-    tags: ["Web Development", "SEO", "Ads"],
-    href: "/case-studies/legal-partners",
-  },
-]
-
-const processSteps = [
-  {
-    iconName: "FileSearch",
-    title: "Discovery",
-    description: "We analyze your business, competitors, and target market to build a solid strategy foundation.",
-  },
-  {
-    iconName: "PenTool",
-    title: "Strategy",
-    description: "Custom roadmap with clear milestones, KPIs, and timelines tailored to your goals.",
-  },
-  {
-    iconName: "Rocket",
-    title: "Execution",
-    description: "Our team implements the strategy with precision, keeping you informed every step of the way.",
-  },
-  {
-    iconName: "TrendingUp",
-    title: "Optimization",
-    description: "Continuous monitoring and optimization to maximize results and ROI over time.",
-  },
-]
-
-const aiTools = [
-  {
-    iconName: "Search",
-    title: "Meta Title Generator",
-    description: "Generate optimized meta titles for any page instantly.",
-    href: "/meta-title-generator",
-    badge: "Free",
-  },
-  {
-    iconName: "FileText",
-    title: "Meta Description Generator",
-    description: "Write compelling meta descriptions that boost click-through rates.",
-    href: "/meta-description-generator",
-    badge: "Free",
-  },
-  {
-    iconName: "BarChart3",
-    title: "Blog Outline Generator",
-    description: "Structure your content for maximum engagement and SEO impact.",
-    href: "/blog-outline-generator",
-    badge: "Free",
-  },
-]
-
-const blogPosts = [
-  {
-    title: "The Ultimate Guide to B2B SEO in 2024",
-    category: "SEO",
-    href: "/blog/b2b-seo-guide-2024",
-  },
-  {
-    title: "How to Reduce Google Ads Cost Per Lead by 50%",
-    category: "Ads",
-    href: "/blog/reduce-google-ads-cpl",
-  },
-  {
-    title: "Website Speed Optimization Checklist",
-    category: "Development",
-    href: "/blog/website-speed-optimization",
-  },
-]
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What digital marketing services does Linkedo offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linkedo offers SEO, Google Ads management, Meta Ads, web development, branding, and digital marketing consulting — all focused on driving leads, sales, and long-term ROI for UK businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Linkedo work with both B2B and B2C businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Linkedo works with both B2B and B2C companies across the UK, tailoring strategies to match each business model, target audience, and growth objective.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which areas of the UK does Linkedo serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linkedo serves businesses across the entire United Kingdom, including London, Manchester, Birmingham, Leeds, Liverpool, Glasgow, and surrounding regions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to see results from SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO is a long-term strategy. Most businesses begin seeing measurable improvements in rankings and organic traffic within 3 to 6 months, depending on competition, website authority, and strategy execution.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Linkedo manage my Google Ads campaigns?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Linkedo builds and manages strategic Google Ads campaigns focused on maximising conversions, reducing cost per acquisition, and delivering a strong return on investment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Linkedo different from other UK digital marketing agencies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linkedo combines data-driven strategy, performance tracking, and tailored execution across SEO, paid ads, and web development — with a clear focus on measurable business growth rather than vanity metrics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Linkedo build websites as well as run marketing campaigns?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Linkedo offers custom web development services, building fast, SEO-optimised websites designed for user experience, lead generation, and long-term business growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Linkedo's process work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linkedo follows a four-step process: Discovery & Research, Strategy & Planning, Campaign Execution, and Optimisation & Growth — ensuring every campaign is built on solid data and continuously improved.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are there any free tools available on the Linkedo website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Linkedo offers free AI-powered marketing tools including an AI Meta Title Generator, AI Meta Description Generator, and AI Blog Outline Generator to help businesses improve their SEO quickly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Linkedo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can get started by reaching out through the Linkedo website to book a consultation. The team will analyse your business, discuss your goals, and recommend a customised digital marketing strategy.",
+      },
+    },
+  ],
+}
 
 export default function HomePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <SchemaMarkup schema={homePageSchema} />
+      <SchemaMarkup schema={homeBreadcrumbSchema} />
       <SchemaMarkup schema={homeServiceListSchema} />
-      <main>
-        <HeroSection onBookCall={() => setIsModalOpen(true)} />
-
-        <ServicesSection />
-
-        {/* Stats Section */}
-        <Section gradient>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <StatCard value="150" suffix="+" label="Projects Completed" />
-            <StatCard value="98" suffix="%" label="Client Retention" />
-            <StatCard value="$50M" suffix="+" label="Revenue Generated" />
-            <StatCard value="15" suffix="+" label="Industry Awards" />
-          </div>
-        </Section>
-
-        {/* Process Section */}
-        <Section
-          eyebrow="Our Process"
-          title="How We Drive Results"
-          description="A proven methodology refined over hundreds of successful projects."
-        >
-          <ProcessTimeline steps={processSteps} />
-        </Section>
-
-        {/* Locations Section */}
-        <Section
-          eyebrow="Where We Operate"
-          title="Global Reach, Local Expertise"
-          description="Serving clients worldwide from our UK headquarters."
-        >
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-2xl mx-auto">
-            <LocationCard
-              city="London"
-              country="United Kingdom"
-              flag="🇬🇧"
-              href="/london"
-              description="Our UK headquarters, serving European and North American clients."
-            />
-          </div>
-        </Section>
-
-        {/* AI Tools Teaser */}
-        <Section
-          eyebrow="Free AI Tools"
-          title="Power Up Your Marketing"
-          description="Try our free AI-powered tools to get instant insights for your business."
-          gradient
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {aiTools.map((tool) => (
-              <ToolCard key={tool.title} {...tool} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/free-ai-tools-online">
-              <AnimatedButton variant="secondary">
-                View All Tools
-                <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
-            </Link>
-          </div>
-        </Section>
-
-        {/* Case Studies */}
-        <Section
-          eyebrow="Case Studies"
-          title="Real Results for Real Businesses"
-          description="See how we've helped companies like yours achieve their growth goals."
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.title} {...study} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/case-studies">
-              <AnimatedButton variant="secondary">
-                View All Case Studies
-                <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
-            </Link>
-          </div>
-        </Section>
-
-        {/* Mini Blog Strip */}
-        <Section eyebrow="From Our Blog" title="Latest Insights">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.map((post, index) => (
-              <motion.div
-                key={post.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link
-                  href={post.href}
-                  className="block p-6 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 transition-colors group"
-                >
-                  <span className="text-xs text-primary uppercase tracking-wider">{post.category}</span>
-                  <h3 className="text-lg font-semibold text-foreground mt-2 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h3>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/blog">
-              <AnimatedButton variant="ghost">
-                Read More Articles
-                <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
-            </Link>
-          </div>
-        </Section>
-
-        {/* Final CTA Section */}
-        <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
-          {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-cyan-500/10" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px]" />
-
-          <MainShell className="relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-foreground mb-6">
-                Ready to Transform Your Digital Presence?
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-8">
-                Book a free strategy call with our experts and discover how we can help you achieve your business goals.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <AnimatedButton size="lg" onClick={() => setIsModalOpen(true)}>
-                  Book a Strategy Call
-                  <ArrowRight className="w-4 h-4" />
-                </AnimatedButton>
-                <Link href="/contact">
-                  <AnimatedButton variant="secondary" size="lg">
-                    Contact Us
-                  </AnimatedButton>
-                </Link>
-              </div>
-            </motion.div>
-          </MainShell>
-        </section>
-      </main>
-      <ContactModal open={isModalOpen} onOpenChange={setIsModalOpen} />
-    </div>
+      <SchemaMarkup schema={homeFaqSchema} />
+      <HomePageContent />
+    </>
   )
 }
