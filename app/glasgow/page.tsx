@@ -438,7 +438,7 @@ export default function GlasgowPage() {
 
         {/* About + Stats */}
         <Section eyebrow="About Linkedo in Glasgow" title="A Digital Marketing Agency Built for Glasgow's Growing Business Community">
-          <div className="max-w-4xl mx-auto text-muted-foreground mb-12">
+          <div className="max-w-4xl mx-auto text-muted-foreground mb-12 text-center">
             <p>
               Linkedo is a UK Companies House registered digital marketing agency serving businesses across Glasgow
               and the wider Central Scotland region. We deliver SEO, Google Ads, web development, and more — tailored
@@ -479,7 +479,7 @@ export default function GlasgowPage() {
 
         {/* Why UK-Registered */}
         <Section eyebrow="Why Choose Us" title="Why Work With a UK-Registered Agency">
-          <p className="text-muted-foreground max-w-3xl mb-12">
+          <p className="text-muted-foreground max-w-3xl mb-12 mx-auto text-center">
             Glasgow businesses deserve an agency that understands both the local market and the legal standards
             expected of a professional UK operation. Linkedo is fully registered, GDPR compliant, and built to serve
             Scottish businesses with the transparency and accountability they deserve.
@@ -594,32 +594,23 @@ export default function GlasgowPage() {
         </Section>
 
         {/* Local Insight */}
-        <Section gradient>
-          <div className="max-w-5xl mx-auto">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-              Local Insight
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              We Know Glasgow&apos;s Business Landscape Inside Out
-            </h2>
-            <p className="text-muted-foreground mb-10 max-w-3xl">
-              Glasgow&apos;s commercial hubs — from Merchant City and Finnieston to Pacific Quay and the International
-              Financial Services District — each have unique audiences and search behaviours. We use that local
-              knowledge to build strategies that connect your business with the right Glasgow customers at the right
-              time.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {businessDistricts.map((d) => (
-                <div
-                  key={d.name}
-                  className="p-5 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 transition-colors"
-                >
-                  <div className="text-2xl mb-2">{d.icon}</div>
-                  <p className="font-semibold text-foreground text-sm mb-1">{d.name}</p>
-                  <p className="text-xs text-muted-foreground">{d.desc}</p>
-                </div>
-              ))}
-            </div>
+        <Section
+          eyebrow="Local Insight"
+          title="We Know Glasgow's Business Landscape Inside Out"
+          description="Glasgow's commercial hubs — from Merchant City and Finnieston to Pacific Quay and the International Financial Services District — each have unique audiences and search behaviours. We use that local knowledge to build strategies that connect your business with the right Glasgow customers at the right time."
+          gradient
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {businessDistricts.map((d) => (
+              <div
+                key={d.name}
+                className="p-5 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 transition-colors"
+              >
+                <div className="text-2xl mb-2">{d.icon}</div>
+                <p className="font-semibold text-foreground text-sm mb-1">{d.name}</p>
+                <p className="text-xs text-muted-foreground">{d.desc}</p>
+              </div>
+            ))}
           </div>
         </Section>
 
