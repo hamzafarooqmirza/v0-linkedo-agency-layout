@@ -107,7 +107,7 @@ const services = [
     title: "Website Development in London",
     description:
       "Custom, conversion-focused websites built to perform in London's competitive digital landscape.",
-    href: "/london/website-development",
+    href: "/website-development",
   },
   {
     iconName: "Search",
@@ -121,21 +121,21 @@ const services = [
     title: "Google Ads Management in London",
     description:
       "High-ROI PPC campaigns targeting London's high-intent audiences across Search, Display, and Shopping.",
-    href: "/london/google-ads-management",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads in London",
     description:
       "Precision-targeted Facebook and Instagram campaigns designed for London-based brands and audiences.",
-    href: "/london/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Website Security in London",
     description:
       "Comprehensive security audits and ongoing protection keeping London businesses safe and compliant.",
-    href: "/london/security",
+    href: "/services",
   },
 ]
 
@@ -330,10 +330,9 @@ const faqs = [
 
 const londonLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/london#localbusiness",
-  name: "Linkedo Agency – London",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/london",
   logo: "https://linkedo.co.uk/favicon.png",
   image: "https://linkedo.co.uk/tower-bridge-sunset-london.webp",

@@ -7,7 +7,27 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Linkedin, Twitter, Mail, Facebook, Instagram, Music } from "lucide-react"
 
-const teamData = {
+interface TeamMember {
+  name: string
+  role: string
+  image: string
+  bio: string
+  skills: string[]
+  experience: Array<{ company: string; role: string; years: string }>
+  linkedin?: string
+  twitter?: string
+  facebook?: string
+  instagram?: string
+  tiktok?: string
+  snapchat?: string
+  whatsapp?: string
+  email?: string
+  portfolioTitle?: string
+  portfolioDescription?: string
+  googleAdsPortfolio?: Array<{ image: string; caption: string }>
+}
+
+const teamData: Record<string, TeamMember> = {
   "waleed-sabbir": {
     name: "Waleed Sabbir",
     role: "Digital Marketing Specialist & Campaign Manager",
@@ -21,7 +41,7 @@ const teamData = {
       "Conversion Optimisation",
       "Client Communication & Account Support",
     ],
-    experience: [{ company: "Linkedo Agency", role: "Digital Marketing Specialist", years: "2021 - Present" }],
+    experience: [{ company: "Linkedo", role: "Digital Marketing Specialist", years: "2021 - Present" }],
     linkedin: "#",
     twitter: "#",
   },
@@ -38,7 +58,7 @@ const teamData = {
       "Budget & ROAS Management",
       "Client Account Management",
     ],
-    experience: [{ company: "Linkedo Agency", role: "Senior Google Ads Expert & Manager", years: "2022 - Present" }],
+    experience: [{ company: "Linkedo", role: "Senior Google Ads Expert & Manager", years: "2022 - Present" }],
     facebook: "https://www.facebook.com/share/17ocekwB1v/",
     instagram: "https://www.instagram.com/onlinemarketinghub2025?igsh=YTlueXd3OGh6ZzRt",
     portfolioTitle: "Google Ads Campaigns Managed by Sarmad",
@@ -75,7 +95,7 @@ const teamData = {
       "Conversion Tracking & Performance Analysis",
       "Budget & Cost Optimisation",
     ],
-    experience: [{ company: "Linkedo Agency", role: "Google Ads Expert", years: "2023 - Present" }],
+    experience: [{ company: "Linkedo", role: "Google Ads Expert", years: "2023 - Present" }],
     instagram: "https://www.instagram.com/themarketinglab229?igsh=MXhibzRjNmk2Zjd4bg%3D%3D&utm_source=qr",
     snapchat: "https://snapchat.com/t/lkjBwzS5",
     whatsapp: "https://wa.me/923408986192",
@@ -113,7 +133,7 @@ const teamData = {
       "Conversion Tracking & Performance Monitoring",
       "Budget Control & Cost Optimisation",
     ],
-    experience: [{ company: "Linkedo Agency", role: "Google Ads Specialist", years: "2023 - Present" }],
+    experience: [{ company: "Linkedo", role: "Google Ads Specialist", years: "2023 - Present" }],
     facebook: "https://www.facebook.com/share/17qrvBVWeA/?mibextid=wwXIfr",
     whatsapp: "https://wa.me/923411153794",
     portfolioTitle: "Google Ads Campaign Work by Waleed",
@@ -158,7 +178,7 @@ const teamData = {
       "Lead Generation Strategies",
       "Cross-Platform Advertising Support",
     ],
-    experience: [{ company: "Linkedo Agency", role: "Digital Advertising Specialist", years: "2023 - Present" }],
+    experience: [{ company: "Linkedo", role: "Digital Advertising Specialist", years: "2023 - Present" }],
     linkedin: "https://www.linkedin.com/in/kawish-azeem-18911b309",
     facebook: "https://www.facebook.com/profile.php?id=100067481554025",
     tiktok: "https://www.tiktok.com/@digiadpro1",
@@ -416,20 +436,6 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                     <p className="text-sm text-muted-foreground text-center">{item.caption}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </Section>
-        )}
-
-        {/* Featured Projects / Portfolio */}
-        {member.featuredProjects && member.featuredProjects.length > 0 && (
-          <Section eyebrow="Featured Work" title={member.portfolioTitle || "Projects Led"}>
-            {member.portfolioDescription && !member.googleAdsPortfolio && (
-              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">{member.portfolioDescription}</p>
-            )}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {member.featuredProjects.map((project) => (
-                <CaseStudyCard key={project.title} {...project} />
               ))}
             </div>
           </Section>

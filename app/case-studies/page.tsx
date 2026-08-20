@@ -28,7 +28,7 @@ const caseStudies = [
       "Achieving exceptional return on ad spend for a manufacturing company entering new markets with targeted PPC campaigns.",
     image: "/manufacturing-industrial-factory.jpg",
     tags: ["Google Ads", "Lead Generation"],
-    href: "/case-studies/manufacturing-co",
+    href: "/case-studies",
     category: "Ads",
   },
   {
@@ -38,7 +38,7 @@ const caseStudies = [
       "Redesigning the digital presence of a law firm to generate 200+ qualified leads monthly through web and SEO.",
     image: "/law-firm-office-professional.png",
     tags: ["Web Development", "SEO"],
-    href: "/case-studies/legal-partners",
+    href: "/case-studies",
     category: "Web",
   },
   {
@@ -47,7 +47,7 @@ const caseStudies = [
     description: "Scaling an online fashion store through Meta Ads optimization and conversion rate improvements.",
     image: "/fashion-ecommerce-store.png",
     tags: ["Meta Ads", "E-Commerce"],
-    href: "/case-studies/fashion-retailer",
+    href: "/case-studies",
     category: "Ads",
   },
   {
@@ -57,7 +57,7 @@ const caseStudies = [
       "How our security audit and remediation protected a financial services firm from potential data breaches.",
     image: "/cybersecurity-protection-shield.png",
     tags: ["Security", "Audit"],
-    href: "/case-studies/finserv-security",
+    href: "/case-studies",
     category: "Security",
   },
   {
@@ -67,7 +67,7 @@ const caseStudies = [
       "Achieving top 3 Google Maps rankings across 15+ medical service keywords in competitive London market.",
     image: "/medical-clinic-interior-modern.jpg",
     tags: ["Local SEO", "Healthcare"],
-    href: "/case-studies/london-clinic",
+    href: "/case-studies",
     category: "SEO",
   },
 ]

@@ -38,7 +38,7 @@ const relatedTools = [
     icon: Megaphone,
     title: "Google Ads Headline Generator",
     description: "Create high-converting ad headlines.",
-    href: "/free-ai-tools-online/google-ads-headline-generator",
+    href: "/free-ai-tools-online",
     categories: [
       { label: "Ads", variant: "accent" as const },
       { label: "PPC", variant: "default" as const },

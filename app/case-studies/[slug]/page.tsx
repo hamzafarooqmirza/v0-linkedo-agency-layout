@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MapPin, Building2, Calendar } from "lucide-react"
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 
 // This would normally come from a CMS or database
 const caseStudyData = {
@@ -48,12 +50,36 @@ const caseStudyData = {
 }
 
 export function generateStaticParams() {
-  return [{ slug: "techflow" }, { slug: "manufacturing-co" }, { slug: "legal-partners" }]
+  return Object.keys(caseStudyData).map((slug) => ({ slug }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const study = caseStudyData[slug as keyof typeof caseStudyData]
+
+  if (!study) return {}
+
+  const description = `${study.client}: ${study.headlineStat.value}${study.headlineStat.suffix ?? ""} ${study.headlineStat.label.toLowerCase()} through ${study.services.join(", ")}.`
+
+  return {
+    title: `${study.title} | ${study.client} Case Study | Linkedo`,
+    description,
+    alternates: { canonical: `/case-studies/${slug}` },
+    openGraph: {
+      title: `${study.title} | ${study.client} Case Study`,
+      description,
+      url: `/case-studies/${slug}`,
+      images: [{ url: study.heroImage, alt: `${study.client} case study` }],
+      type: "article",
+    },
+  }
 }
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const study = caseStudyData[slug as keyof typeof caseStudyData] || caseStudyData.techflow
+  const study = caseStudyData[slug as keyof typeof caseStudyData]
+
+  if (!study) notFound()
 
   return (
     <div className="min-h-screen bg-background">

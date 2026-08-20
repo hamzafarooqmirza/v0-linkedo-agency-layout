@@ -102,35 +102,35 @@ const services = [
     title: "Website Development in Manchester",
     description:
       "We build fast, conversion-focused websites tailored to Manchester businesses and their customers.",
-    href: "/manchester/website-development",
+    href: "/website-development",
   },
   {
     iconName: "Search",
     title: "SEO Services in Manchester",
     description:
       "Rank higher on Google and attract more local Manchester customers with our data-driven SEO strategies.",
-    href: "/manchester/seo",
+    href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management in Manchester",
     description:
       "Maximise your ad spend with expertly managed Google Ads campaigns targeting Manchester's most valuable search traffic.",
-    href: "/manchester/google-ads-management",
+    href: "/google-ads",
   },
   {
     iconName: "Megaphone",
     title: "Meta Ads in Manchester",
     description:
       "Reach your ideal Manchester audience on Facebook and Instagram with high-converting Meta ad campaigns.",
-    href: "/manchester/meta-ads",
+    href: "/meta-ads",
   },
   {
     iconName: "Shield",
     title: "Website Security in Manchester",
     description:
       "Protect your Manchester business online with proactive website security monitoring and rapid response solutions.",
-    href: "/manchester/security",
+    href: "/services",
   },
 ]
 
@@ -138,7 +138,7 @@ const benefits = [
   {
     title: "UK-Registered & Fully Accountable",
     description:
-      "Linkedo LTD is verified on UK Companies House, giving Manchester businesses complete confidence in who they're working with.",
+      "Linkedo is verified on UK Companies House, giving Manchester businesses complete confidence in who they're working with.",
   },
   {
     title: "Manchester Market Knowledge",
@@ -332,10 +332,9 @@ const faqs = [
 
 const manchesterLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/manchester#localbusiness",
-  name: "Linkedo Agency – Manchester",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/manchester",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -442,7 +441,7 @@ export default function ManchesterPage() {
               </div>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 text-balance">
                 Manchester Digital Marketing Agency —{" "}
-                <span className="text-gradient-primary">Linkedo LTD</span>
+                <span className="text-gradient-primary">Linkedo</span>
               </h1>
               <h2 className="text-xl lg:text-2xl text-foreground/90 font-semibold mb-8 max-w-3xl">
                 Helping Manchester Businesses Grow Online With SEO, Google Ads, Meta Ads &amp;

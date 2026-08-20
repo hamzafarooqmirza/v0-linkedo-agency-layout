@@ -66,10 +66,9 @@ export const metadata: Metadata = {
 
 const newcastleLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/newcastle#localbusiness",
-  name: "Linkedo Agency – Newcastle",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/newcastle",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -87,12 +86,12 @@ const newcastleLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "North East England" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",
@@ -193,7 +192,7 @@ const faqs = [
   {
     question: "Are you GDPR compliant?",
     answer:
-      "Yes, Linkedo LTD is fully GDPR compliant. All client and campaign data is handled securely in line with UK data protection regulations.",
+      "Yes, Linkedo is fully GDPR compliant. All client and campaign data is handled securely in line with UK data protection regulations.",
   },
   {
     question: "How do I get started with Linkedo in Newcastle?",
@@ -263,7 +262,7 @@ const benefits = [
   {
     icon: "🏛️",
     title: "UK Registered & Accountable",
-    text: "Linkedo LTD is fully registered with UK Companies House, giving Newcastle clients complete peace of mind.",
+    text: "Linkedo is fully registered with UK Companies House, giving Newcastle clients complete peace of mind.",
   },
   {
     icon: "📊",

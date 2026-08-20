@@ -1,14 +1,15 @@
 "use client"
 
 import type * as React from "react"
-import { motion } from "framer-motion"
+import { motion, type HTMLMotionProps } from "framer-motion"
 import { Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-interface AnimatedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface AnimatedButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
   variant?: "primary" | "secondary" | "ghost"
   size?: "sm" | "md" | "lg"
   loading?: boolean
+  href?: string
   children: React.ReactNode
 }
 
@@ -31,20 +32,31 @@ export function AnimatedButton({
   disabled,
   className,
   children,
+  href,
   ...props
 }: AnimatedButtonProps) {
+  const styles = cn(
+    "relative inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-300",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+    "disabled:opacity-50 disabled:cursor-not-allowed",
+    variantStyles[variant],
+    sizeStyles[size],
+    className,
+  )
+
+  if (href) {
+    return (
+      <motion.a href={href} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className={styles}>
+        {children}
+      </motion.a>
+    )
+  }
+
   return (
     <motion.button
       whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
       whileTap={{ scale: disabled || loading ? 1 : 0.98 }}
-      className={cn(
-        "relative inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-300",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        "disabled:opacity-50 disabled:cursor-not-allowed",
-        variantStyles[variant],
-        sizeStyles[size],
-        className,
-      )}
+      className={styles}
       disabled={disabled || loading}
       {...props}
     >

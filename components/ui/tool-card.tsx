@@ -18,7 +18,7 @@ interface ToolCardProps {
 }
 
 export function ToolCard({ iconName, title, description, href, badge, className }: ToolCardProps) {
-  const Icon = (Icons as Record<string, React.ComponentType<{ className?: string }>>)[iconName] || Icons.Circle
+  const Icon = (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[iconName] || Icons.Circle
 
   return (
     <motion.div

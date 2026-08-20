@@ -96,8 +96,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">7. Contact Us</h2>
             <p className="text-muted-foreground leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at:{" "}
-              <a href="mailto:privacy@linkedo.agency" className="text-primary hover:underline">
-                privacy@linkedo.agency
+              <a href="mailto:privacy@linkedo.co.uk" className="text-primary hover:underline">
+                privacy@linkedo.co.uk
               </a>
             </p>
           </div>

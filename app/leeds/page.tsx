@@ -67,10 +67,9 @@ export const metadata: Metadata = {
 
 const leedsLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/leeds#localbusiness",
-  name: "Linkedo Agency – Leeds",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/leeds",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -87,12 +86,12 @@ const leedsLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "West Yorkshire" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",

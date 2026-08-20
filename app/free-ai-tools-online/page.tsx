@@ -49,7 +49,7 @@ const tools = [
     iconName: "MapPin",
     title: "Local Landing Page Outline",
     description: "Generate optimized outlines for local landing pages that rank in geo-specific searches.",
-    href: "/free-ai-tools-online/local-landing-page-outline-generator",
+    href: "/free-ai-tools-online",
     categories: [
       { label: "SEO", variant: "primary" as const },
       { label: "Local", variant: "accent" as const },
@@ -59,7 +59,7 @@ const tools = [
     iconName: "Megaphone",
     title: "Google Ads Headline Generator",
     description: "Create high-converting Google Ads headlines that maximize your ad performance.",
-    href: "/free-ai-tools-online/google-ads-headline-generator",
+    href: "/free-ai-tools-online",
     categories: [
       { label: "Ads", variant: "accent" as const },
       { label: "PPC", variant: "default" as const },
@@ -79,7 +79,7 @@ const tools = [
     iconName: "Bot",
     title: "Robots.txt Generator",
     description: "Generate a properly configured robots.txt file to control how search engines crawl your site.",
-    href: "/free-ai-tools-online/robots-txt-generator",
+    href: "/free-ai-tools-online",
     categories: [
       { label: "Technical", variant: "primary" as const },
       { label: "SEO", variant: "primary" as const },
@@ -89,7 +89,7 @@ const tools = [
     iconName: "FileCode",
     title: "XML Sitemap Generator",
     description: "Create XML sitemaps that help search engines discover and index your pages efficiently.",
-    href: "/free-ai-tools-online/xml-sitemap-generator",
+    href: "/free-ai-tools-online",
     categories: [
       { label: "Technical", variant: "primary" as const },
       { label: "SEO", variant: "primary" as const },

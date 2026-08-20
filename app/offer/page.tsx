@@ -431,7 +431,7 @@ export default function OfferPage() {
       {/* Footer strip */}
       <footer className="border-t border-white/10 py-6 text-center">
         <p className="text-white/30 text-xs">
-          © {new Date().getFullYear()} Linkedo LTD · Registered in England & Wales · 483 Green Lanes, London, N13 4BS
+          © {new Date().getFullYear()} Linkedo · Registered in England & Wales · 483 Green Lanes, London, N13 4BS
         </p>
       </footer>
     </div>

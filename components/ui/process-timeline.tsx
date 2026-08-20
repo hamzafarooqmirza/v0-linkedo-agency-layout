@@ -26,7 +26,7 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((step, index) => {
           const Icon =
-            (Icons as Record<string, React.ComponentType<{ className?: string }>>)[step.iconName] || Icons.Circle
+            (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[step.iconName] || Icons.Circle
           return (
             <motion.div
               key={index}

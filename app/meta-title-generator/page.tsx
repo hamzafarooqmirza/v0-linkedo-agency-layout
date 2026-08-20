@@ -24,7 +24,7 @@ const toneOptions = [
 const exampleTitles = [
   "Best SEO Services in London | Grow Organic Traffic | Linkedo",
   "London SEO Agency - Proven Results, Transparent Pricing",
-  "Top-Rated SEO Experts in London | Free Audit | Linkedo Agency",
+  "Top-Rated SEO Experts in London | Free Audit | Linkedo",
   "SEO Services London: Boost Rankings & Drive Leads",
 ]
 
@@ -123,7 +123,7 @@ export default function MetaTitleGeneratorPage() {
             />
             <FormInput
               label="Brand Name (optional)"
-              placeholder="e.g., Linkedo Agency"
+              placeholder="e.g., Linkedo"
               value={brand}
               onChange={(e) => setBrand(e.target.value)}
             />
