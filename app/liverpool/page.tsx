@@ -401,7 +401,7 @@ export default function LiverpoolPage() {
               <span className="text-sm font-medium text-primary uppercase tracking-wider">Liverpool, Merseyside</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
-              Liverpool&apos;s <span className="text-gradient-primary">Digital Marketing Agency</span> — Grow Faster With Linkedo
+              <span className="text-gradient-primary">Liverpool</span> Digital Marketing Agency | Linkedo
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
               Helping Liverpool businesses get found online, generate leads, and scale with confidence.
