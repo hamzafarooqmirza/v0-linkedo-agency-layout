@@ -67,10 +67,9 @@ export const metadata: Metadata = {
 
 const bristolLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/bristol#localbusiness",
-  name: "Linkedo Agency – Bristol",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/bristol",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -87,12 +86,12 @@ const bristolLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "South West England" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",

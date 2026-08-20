@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground leading-relaxed">
-              By accessing and using Linkedo Agency's services, you accept and agree to be bound by the terms and
+              By accessing and using Linkedo's services, you accept and agree to be bound by the terms and
               provisions of this agreement. If you do not agree to these terms, please do not use our services.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-4">2. Services</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Linkedo Agency provides digital marketing and web development services, including but not limited to:
+              Linkedo provides digital marketing and web development services, including but not limited to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>Website development and design</li>
@@ -68,7 +68,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-4">5. Intellectual Property</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Upon full payment, you will own the final deliverables created specifically for you. Linkedo Agency
+              Upon full payment, you will own the final deliverables created specifically for you. Linkedo
               retains the right to use completed work for portfolio and marketing purposes unless otherwise agreed in
               writing.
             </p>
@@ -85,7 +85,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-4">7. Limitation of Liability</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Linkedo Agency will not be liable for any indirect, incidental, special, or consequential damages arising
+              Linkedo will not be liable for any indirect, incidental, special, or consequential damages arising
               from the use of our services. Our total liability shall not exceed the amount paid for the specific
               service giving rise to the claim.
             </p>

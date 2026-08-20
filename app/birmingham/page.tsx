@@ -67,14 +67,15 @@ export const metadata: Metadata = {
 
 const birminghamLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/birmingham#localbusiness",
-  name: "Linkedo Agency – Birmingham",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/birmingham",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
     "UK-registered digital marketing agency serving Birmingham businesses with web development, SEO, Google Ads, and Meta Ads strategies that deliver measurable results.",
+  telephone: "+44 7927 969991",
+  email: "info@linkedo.co.uk",
   address: {
     "@type": "PostalAddress",
     streetAddress: "483 Green Lanes",
@@ -90,6 +91,8 @@ const birminghamLocalBusinessSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    telephone: "+44 7927 969991",
+    email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",
     url: "https://linkedo.co.uk/contact",

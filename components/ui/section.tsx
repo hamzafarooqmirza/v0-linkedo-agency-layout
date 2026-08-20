@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface SectionProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
   eyebrow?: string
   title?: string

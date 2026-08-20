@@ -63,7 +63,7 @@ export function HeroSection({ onBookCall }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 text-balance font-[family-name:var(--font-jost)]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 text-balance font-[family-name:var(--font-heading)]"
               >
                 Digital Marketing Agency UK That Drives Real Growth
               </motion.h1>

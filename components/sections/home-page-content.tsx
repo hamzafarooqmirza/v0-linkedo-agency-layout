@@ -35,7 +35,7 @@ const caseStudies = [
       "Launching high-converting Google Ads campaigns that helped a manufacturing business expand into competitive UK markets with profitable ROI.",
     image: "/manufacturing-industrial-modern.jpg",
     tags: ["Google Ads", "Lead Generation"],
-    href: "/case-studies/manufacturing-co",
+    href: "/case-studies",
   },
   {
     title: "Complete Digital Transformation",
@@ -44,7 +44,7 @@ const caseStudies = [
       "Redesigning a law firm's digital presence with SEO, web development, and paid advertising to generate 200+ qualified leads every month.",
     image: "/legal-office-professional-modern.jpg",
     tags: ["Web Development", "SEO", "Paid Ads"],
-    href: "/case-studies/legal-partners",
+    href: "/case-studies",
   },
 ]
 
@@ -108,21 +108,21 @@ const blogPosts = [
     description:
       "Learn how modern SEO strategies help UK businesses increase rankings, traffic, and qualified lead generation.",
     category: "SEO",
-    href: "/blog/b2b-seo-guide-2024",
+    href: "/blog",
   },
   {
     title: "How to Reduce Google Ads Cost Per Lead Without Losing Conversions",
     description:
       "Discover proven Google Ads optimisation techniques that improve campaign performance and lower acquisition costs.",
     category: "Ads",
-    href: "/blog/reduce-google-ads-cpl",
+    href: "/blog",
   },
   {
     title: "Website Speed Optimisation Checklist for Better SEO & User Experience",
     description:
       "Improve website performance, search rankings, and conversion rates with this complete website speed optimisation guide.",
     category: "Development",
-    href: "/blog/website-speed-optimization",
+    href: "/blog",
   },
 ]
 

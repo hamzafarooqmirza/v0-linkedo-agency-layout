@@ -1,6 +1,5 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Geist_Mono, Montserrat, Jost, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ConditionalLayout } from "@/components/layout/conditional-layout"
@@ -10,15 +9,16 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/#organization",
-  name: "Linkedo Agency",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk",
   logo: {
     "@type": "ImageObject",
     url: "https://linkedo.co.uk/favicon.png",
   },
+  telephone: "+44 7927 969991",
+  email: "info@linkedo.co.uk",
   description:
-    "Linkedo Agency delivers premium web development, SEO optimisation, and paid advertising services that generate real leads and measurable results for B2B businesses.",
+    "Linkedo delivers premium web development, SEO optimisation, and paid advertising services that generate real leads and measurable results for B2B businesses.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "483 Green Lanes",
@@ -67,6 +67,8 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    telephone: "+44 7927 969991",
+    email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",
     url: "https://linkedo.co.uk/contact",
@@ -77,7 +79,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://linkedo.co.uk/#website",
-  name: "Linkedo Agency",
+  name: "Linkedo",
   url: "https://linkedo.co.uk",
   publisher: { "@id": "https://linkedo.co.uk/#organization" },
   potentialAction: {
@@ -89,31 +91,6 @@ const websiteSchema = {
     "query-input": "required name=search_term_string",
   },
 }
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-})
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-})
-
-const jost = Jost({
-  subsets: ["latin"],
-  variable: "--font-jost",
-})
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://linkedo.co.uk"),
@@ -171,7 +148,7 @@ export default function RootLayout({
         <SchemaMarkup schema={organizationSchema} />
         <SchemaMarkup schema={websiteSchema} />
       </head>
-      <body className={`${inter.variable} ${geistMono.variable} ${montserrat.variable} ${jost.variable} ${openSans.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <ConditionalLayout>{children}</ConditionalLayout>
         <Analytics />
       </body>

@@ -66,10 +66,9 @@ export const metadata: Metadata = {
 
 const leicesterLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/leicester#localbusiness",
-  name: "Linkedo Agency – Leicester",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/leicester",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -87,12 +86,12 @@ const leicesterLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "East Midlands" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",
@@ -283,7 +282,7 @@ const benefits = [
   {
     icon: "🏛️",
     title: "UK Companies House Registered",
-    text: "Linkedo LTD is fully registered with UK Companies House, giving Leicester clients complete confidence in our legitimacy and accountability.",
+    text: "Linkedo is fully registered with UK Companies House, giving Leicester clients complete confidence in our legitimacy and accountability.",
   },
   {
     icon: "📞",

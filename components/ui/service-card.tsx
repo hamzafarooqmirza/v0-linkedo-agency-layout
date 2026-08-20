@@ -5,18 +5,24 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import * as Icons from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 
 interface ServiceCardProps {
-  iconName: string
+  iconName?: string
+  icon?: LucideIcon | string
   title: string
   description: string
   href?: string
   className?: string
 }
 
-export function ServiceCard({ iconName, title, description, href, className }: ServiceCardProps) {
+export function ServiceCard({ iconName, icon, title, description, href, className }: ServiceCardProps) {
   const Component = href ? motion.a : motion.div
-  const Icon = (Icons as Record<string, React.ComponentType<{ className?: string }>>)[iconName] || Icons.Circle
+  const iconKey = iconName || (typeof icon === "string" ? icon : undefined)
+  const Icon =
+    (typeof icon === "function" ? icon : undefined) ||
+    (iconKey ? (Icons as unknown as Record<string, LucideIcon>)[iconKey] : undefined) ||
+    Icons.Circle
 
   return (
     <Component

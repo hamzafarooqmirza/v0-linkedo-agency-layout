@@ -67,10 +67,9 @@ export const metadata: Metadata = {
 
 const edinburghLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/edinburgh#localbusiness",
-  name: "Linkedo Agency – Edinburgh",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/edinburgh",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -88,12 +87,12 @@ const edinburghLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Lothian" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",
@@ -528,7 +527,7 @@ export default function EdinburghPage() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Registration</p>
-                  <p className="text-sm text-muted-foreground">UK Companies House Registered — Linkedo LTD</p>
+                  <p className="text-sm text-muted-foreground">UK Companies House Registered — Linkedo</p>
                 </div>
               </div>
             </div>

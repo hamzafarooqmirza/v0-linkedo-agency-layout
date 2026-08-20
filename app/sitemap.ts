@@ -15,6 +15,10 @@ const topLevelRoutes = [
   "/locations",
   "/uk",
   "/free-ai-tools-online",
+  "/meta-title-generator",
+  "/meta-description-generator",
+  "/blog-outline-generator",
+  "/utm-builder",
   "/privacy",
   "/terms",
 ]
@@ -50,16 +54,24 @@ const serviceRoutes = [
 const londonNestedRoutes = ["/london/seo"]
 
 // Case study slugs
-const caseStudySlugs = ["techflow", "manufacturing-co", "legal-partners"]
+const caseStudySlugs = ["techflow"]
+
+const blogSlugs = [
+  "seo-trends-2025",
+  "web-development-best-practices",
+  "google-ads-roi-optimization",
+  "local-seo-london-businesses",
+  "conversion-rate-optimization-guide",
+  "ecommerce-website-redesign-case-study",
+]
+
+const teamSlugs = ["waleed-sabbir", "sarmad-shabir", "jamshaid-ahmed", "waleed-hussain", "kawish-azeem"]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-
   // Homepage
   const homepage: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
@@ -68,7 +80,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Top-level routes
   const topLevel: MetadataRoute.Sitemap = topLevelRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.9,
   }))
@@ -76,7 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // City routes (treated as top-level pages)
   const cities: MetadataRoute.Sitemap = cityRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.9,
   }))
@@ -84,7 +94,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Nested service routes
   const services: MetadataRoute.Sitemap = serviceRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.7,
   }))
@@ -92,7 +101,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // London nested routes
   const londonNested: MetadataRoute.Sitemap = londonNestedRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
   }))
@@ -100,9 +108,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Case study dynamic routes
   const caseStudies: MetadataRoute.Sitemap = caseStudySlugs.map((slug) => ({
     url: `${BASE_URL}/case-studies/${slug}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
+  }))
+
+  const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }))
+
+  const teamMembers: MetadataRoute.Sitemap = teamSlugs.map((slug) => ({
+    url: `${BASE_URL}/team/${slug}`,
+    changeFrequency: "yearly",
+    priority: 0.5,
   }))
 
   return [
@@ -112,5 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...services,
     ...londonNested,
     ...caseStudies,
+    ...blogPosts,
+    ...teamMembers,
   ]
 }

@@ -66,10 +66,9 @@ export const metadata: Metadata = {
 
 const liverpoolLocalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["MarketingAgency", "LocalBusiness"],
+  "@type": "MarketingAgency",
   "@id": "https://linkedo.co.uk/liverpool#localbusiness",
-  name: "Linkedo Agency – Liverpool",
-  alternateName: "Linkedo LTD",
+  name: "Linkedo",
   url: "https://linkedo.co.uk/liverpool",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
@@ -87,12 +86,12 @@ const liverpoolLocalBusinessSchema = {
     { "@type": "AdministrativeArea", name: "North West England" },
     { "@type": "Country", name: "United Kingdom" },
   ],
-  telephone: "+44-7927-969991",
+  telephone: "+44 7927 969991",
   email: "info@linkedo.co.uk",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+44-7927-969991",
+    telephone: "+44 7927 969991",
     email: "info@linkedo.co.uk",
     areaServed: "GB",
     availableLanguage: "English",

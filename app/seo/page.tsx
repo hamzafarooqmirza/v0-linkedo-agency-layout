@@ -172,7 +172,7 @@ const caseStudies = [
     description: "Dominating search results in a competitive legal services market.",
     image: "/legal-office-professional.jpg",
     tags: ["SEO", "Local SEO"],
-    href: "/case-studies/legal-partners",
+    href: "/case-studies",
   },
 ]
 

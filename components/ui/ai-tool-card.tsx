@@ -29,7 +29,8 @@ const iconMap: Record<string, LucideIcon> = {
 }
 
 interface AIToolCardProps {
-  iconName: string
+  iconName?: string
+  icon?: LucideIcon
   title: string
   description: string
   href: string
@@ -37,8 +38,8 @@ interface AIToolCardProps {
   className?: string
 }
 
-export function AIToolCard({ iconName, title, description, href, categories, className }: AIToolCardProps) {
-  const Icon = iconMap[iconName] || FileText
+export function AIToolCard({ iconName, icon, title, description, href, categories, className }: AIToolCardProps) {
+  const Icon = icon || (iconName ? iconMap[iconName] : undefined) || FileText
 
   return (
     <motion.div

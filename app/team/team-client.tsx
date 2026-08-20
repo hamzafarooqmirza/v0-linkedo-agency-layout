@@ -156,7 +156,7 @@ export function TeamClient() {
               We're always looking for talented individuals who are passionate about digital marketing and web
               development.
             </p>
-            <Link href="/careers">
+            <Link href="/contact">
               <AnimatedButton size="lg">
                 View Open Positions
                 <ArrowRight className="w-4 h-4" />
