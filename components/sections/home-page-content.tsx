@@ -17,7 +17,6 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { ServicesSection } from "@/components/sections/services-section"
 import { Section } from "@/components/ui/section"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
-import { ToolCard } from "@/components/ui/tool-card"
 import { ProcessTimeline } from "@/components/ui/process-timeline"
 import { ContactModal } from "@/components/ui/contact-modal"
 import { AnimatedButton } from "@/components/ui/animated-button"
@@ -82,33 +81,6 @@ const processSteps = [
   },
 ]
 
-const aiTools = [
-  {
-    iconName: "Search",
-    title: "AI Meta Title Generator",
-    description:
-      "Generate SEO-optimised meta titles designed to improve rankings and increase click-through rates on Google.",
-    href: "/meta-title-generator",
-    badge: "Free",
-  },
-  {
-    iconName: "FileText",
-    title: "AI Meta Description Generator",
-    description:
-      "Create compelling meta descriptions that attract more clicks and improve your website visibility in search results.",
-    href: "/meta-description-generator",
-    badge: "Free",
-  },
-  {
-    iconName: "BarChart3",
-    title: "AI Blog Outline Generator",
-    description:
-      "Build structured blog outlines designed for SEO, user intent, and higher engagement across search engines.",
-    href: "/blog-outline-generator",
-    badge: "Free",
-  },
-]
-
 const blogPosts = [
   {
     title: "Top SEO Trends to Watch in 2025",
@@ -127,7 +99,7 @@ const blogPosts = [
     category: "Google Ads",
     categoryColor: "text-accent",
     readTime: "8 min read",
-    image: "/google-ads-dashboard-with-campaign-metrics.jpg",
+    image: "/google-ads-dashboard-with-campaign-metrics-and-per.jpg",
     href: "/blog/google-ads-roi-optimization",
   },
   {
@@ -137,7 +109,7 @@ const blogPosts = [
     category: "Development",
     categoryColor: "text-cyan-400",
     readTime: "7 min read",
-    image: "/code-editor-showing-react-and-next-js.jpg",
+    image: "/code-editor-showing-react-and-next-js-development-.jpg",
     href: "/blog/web-development-best-practices",
   },
 ]
@@ -491,26 +463,7 @@ export function HomePageContent() {
           </div>
         </Section>
 
-        <Section
-          eyebrow="Free AI Marketing Tools"
-          title="Smart AI Tools for Faster Marketing Growth"
-          description="Use our free AI-powered SEO and digital marketing tools to generate content ideas, improve search visibility, and optimise your website performance instantly."
-          gradient
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {aiTools.map((tool) => (
-              <ToolCard key={tool.title} {...tool} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/free-ai-tools-online">
-              <AnimatedButton variant="secondary">
-                View All Free Tools
-                <ArrowRight className="w-4 h-4" />
-              </AnimatedButton>
-            </Link>
-          </div>
-        </Section>
+        {/* AI Tools Teaser — hidden */}
 
         <Section
           eyebrow="Case Studies"

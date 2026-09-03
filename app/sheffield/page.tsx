@@ -505,7 +505,7 @@ export default function SheffieldPage() {
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Location</p>
+                  <p className="font-medium text-foreground">Service Area</p>
                   <p className="text-sm text-muted-foreground">Serving Sheffield &amp; South Yorkshire</p>
                 </div>
               </div>
