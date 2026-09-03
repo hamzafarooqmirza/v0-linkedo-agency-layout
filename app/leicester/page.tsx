@@ -503,7 +503,7 @@ export default function LeicesterPage() {
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Location</p>
+                  <p className="font-medium text-foreground">Service Area</p>
                   <p className="text-sm text-muted-foreground">Serving Leicester &amp; Leicestershire</p>
                 </div>
               </div>
