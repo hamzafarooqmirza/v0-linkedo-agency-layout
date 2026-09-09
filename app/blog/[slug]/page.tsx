@@ -126,7 +126,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-primary/20"
             />
             <div>
-              <h4 className="text-base sm:text-lg font-semibold text-foreground">{post.author.name}</h4>
+              <h3 className="text-base sm:text-lg font-semibold text-foreground">{post.author.name}</h3>
               <p className="text-sm text-muted-foreground">{post.author.role}</p>
             </div>
           </div>
