@@ -10,6 +10,7 @@ interface SectionProps {
   className?: string
   eyebrow?: string
   title?: string
+  titleAs?: "h1" | "h2" | "h3"
   description?: string
   fullWidth?: boolean
   gradient?: boolean
@@ -21,6 +22,7 @@ export function Section({
   className,
   eyebrow,
   title,
+  titleAs: TitleTag = "h2",
   description,
   fullWidth = false,
   gradient = false,
@@ -50,7 +52,7 @@ export function Section({
               </span>
             )}
             {title && (
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 text-balance">{title}</h2>
+              <TitleTag className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 text-balance">{title}</TitleTag>
             )}
             {description && <p className="text-base sm:text-lg text-muted-foreground text-pretty leading-relaxed">{description}</p>}
           </motion.div>
