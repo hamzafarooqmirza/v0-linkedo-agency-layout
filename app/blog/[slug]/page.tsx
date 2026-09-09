@@ -1,8 +1,20 @@
 import type { Metadata } from "next"
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+const postMetadata: Record<string, { title: string; description: string }> = {
+  "web-development-best-practices": {
+    title: "Modern Web Development: Best Practices for 2025 | Linkedo",
+    description: "Learn the essential techniques and frameworks that define modern web development.",
+  },
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = postMetadata[slug]
+
   return {
-    alternates: { canonical: `/blog/${params.slug}` },
+    title: post?.title,
+    description: post?.description,
+    alternates: { canonical: `/blog/${slug}` },
   }
 }
 
