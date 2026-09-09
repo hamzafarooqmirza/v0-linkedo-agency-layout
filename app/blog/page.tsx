@@ -78,6 +78,7 @@ export default function BlogPage() {
         <Section
           eyebrow="Blog"
           title="Insights & Strategies"
+          titleAs="h1"
           description="Expert advice, industry insights, and proven strategies to grow your business online."
           className="mb-12 md:mb-16"
         />
