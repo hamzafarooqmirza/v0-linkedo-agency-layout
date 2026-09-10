@@ -175,6 +175,14 @@ const ukCities = [
     description:
       "Expert digital growth strategies for North East England businesses — helping you rank, convert, and retain more customers online.",
   },
+  {
+    city: "Shropshire",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    href: "/locations/shropshire",
+    description:
+      "Helping Shropshire businesses get found, get leads, and grow online — from Shrewsbury to Telford with tailored SEO, Google Ads, and web development.",
+  },
 ]
 
 const trustBadges = [
