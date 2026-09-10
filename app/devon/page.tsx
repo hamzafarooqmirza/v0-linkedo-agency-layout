@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     "Linkedo Devon",
   ],
   alternates: {
-    canonical: "https://linkedo.co.uk/locations/devon",
+    canonical: "https://linkedo.co.uk/devon",
   },
   openGraph: {
     title,
     description,
-    url: "https://linkedo.co.uk/locations/devon",
+    url: "https://linkedo.co.uk/devon",
     siteName: "Linkedo",
     images: [
       {
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
 const devonLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MarketingAgency",
-  "@id": "https://linkedo.co.uk/locations/devon#localbusiness",
+  "@id": "https://linkedo.co.uk/devon#localbusiness",
   name: "Linkedo",
-  url: "https://linkedo.co.uk/locations/devon",
+  url: "https://linkedo.co.uk/devon",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
     "UK-registered digital marketing agency serving Devon businesses with SEO, Google Ads, Meta Ads, and web development.",
@@ -155,7 +155,7 @@ const devonBreadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://linkedo.co.uk/locations" },
-    { "@type": "ListItem", position: 3, name: "Devon", item: "https://linkedo.co.uk/locations/devon" },
+    { "@type": "ListItem", position: 3, name: "Devon", item: "https://linkedo.co.uk/devon" },
   ],
 }
 

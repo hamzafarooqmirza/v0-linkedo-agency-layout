@@ -179,7 +179,7 @@ const ukCities = [
     city: "Shropshire",
     country: "United Kingdom",
     flag: "🇬🇧",
-    href: "/locations/shropshire",
+    href: "/shropshire",
     description:
       "Helping Shropshire businesses get found, get leads, and grow online — from Shrewsbury to Telford with tailored SEO, Google Ads, and web development.",
   },
@@ -187,7 +187,7 @@ const ukCities = [
     city: "Devon",
     country: "United Kingdom",
     flag: "🇬🇧",
-    href: "/locations/devon",
+    href: "/devon",
     description:
       "Helping Devon businesses get found online, win more leads, and grow — from Exeter to Plymouth with tailored SEO, Google Ads, and web development.",
   },
@@ -195,7 +195,7 @@ const ukCities = [
     city: "Midlands",
     country: "United Kingdom",
     flag: "🇬🇧",
-    href: "/location/midland",
+    href: "/midland",
     description:
       "Helping businesses across the Midlands get found online and turn clicks into customers — with SEO, Google Ads, and web development built around local search behaviour.",
   },

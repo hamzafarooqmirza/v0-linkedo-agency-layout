@@ -18,39 +18,39 @@ import {
   TrendingUp,
 } from "lucide-react"
 
-const title = "Midland Digital Marketing Agency | SEO & Google Ads – Linkedo"
+const title = "Digital Marketing Agency Shropshire | Linkedo"
 const description =
-  "Grow your Midlands business with expert SEO, Google Ads management & web development. UK-registered, no lock-in contracts. Get a free audit today."
+  "Grow your Shropshire business with Linkedo's SEO, Google Ads, Meta Ads & web development. No lock-in contracts. Book a free consultation today."
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "digital marketing agency Midlands",
-    "SEO Midlands",
-    "Google Ads management Midland",
-    "internet marketing Midland",
-    "online marketing services Midland",
-    "search engine optimisation Midland",
-    "web development Midlands",
-    "SEO Birmingham",
-    "digital marketing Coventry",
-    "Linkedo Midlands",
+    "digital marketing agency Shropshire",
+    "SEO Shropshire",
+    "Google Ads Shropshire",
+    "Meta Ads management Shropshire",
+    "web development Shropshire",
+    "online marketing services Shropshire",
+    "internet marketing Shropshire",
+    "SEO Shrewsbury",
+    "digital marketing Telford",
+    "Linkedo Shropshire",
   ],
   alternates: {
-    canonical: "https://linkedo.co.uk/location/midland",
+    canonical: "https://linkedo.co.uk/shropshire",
   },
   openGraph: {
     title,
     description,
-    url: "https://linkedo.co.uk/location/midland",
+    url: "https://linkedo.co.uk/shropshire",
     siteName: "Linkedo",
     images: [
       {
         url: "https://linkedo.co.uk/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Midland Digital Marketing Agency – Linkedo",
+        alt: "Digital Marketing Agency Shropshire – Linkedo",
       },
     ],
     type: "website",
@@ -64,15 +64,15 @@ export const metadata: Metadata = {
   },
 }
 
-const midlandLocalBusinessSchema = {
+const shropshireLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MarketingAgency",
-  "@id": "https://linkedo.co.uk/location/midland#localbusiness",
+  "@id": "https://linkedo.co.uk/shropshire#localbusiness",
   name: "Linkedo",
-  url: "https://linkedo.co.uk/location/midland",
+  url: "https://linkedo.co.uk/shropshire",
   logo: "https://linkedo.co.uk/favicon.png",
   description:
-    "UK-registered digital marketing agency serving Midlands businesses with SEO, Google Ads, Meta Ads, and web development.",
+    "UK-registered digital marketing agency serving Shropshire businesses with SEO, Google Ads, Meta Ads, and web development.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "483 Green Lanes",
@@ -81,12 +81,9 @@ const midlandLocalBusinessSchema = {
     addressCountry: "GB",
   },
   areaServed: [
-    { "@type": "AdministrativeArea", name: "West Midlands" },
-    { "@type": "AdministrativeArea", name: "East Midlands" },
-    { "@type": "City", name: "Birmingham" },
-    { "@type": "City", name: "Coventry" },
-    { "@type": "City", name: "Nottingham" },
-    { "@type": "City", name: "Leicester" },
+    { "@type": "AdministrativeArea", name: "Shropshire" },
+    { "@type": "City", name: "Shrewsbury" },
+    { "@type": "City", name: "Telford" },
     { "@type": "Country", name: "United Kingdom" },
   ],
   telephone: "+44 7927 969991",
@@ -116,34 +113,34 @@ const midlandLocalBusinessSchema = {
   review: [
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Trades Business Owner" },
+      author: { "@type": "Person", name: "James Hargreaves" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:
-        "We went from page three to page one in weeks. I couldn't believe the difference it made to our phone ringing.",
+        "Linkedo transformed our online presence completely. Our enquiries doubled within three months of launching our new SEO strategy.",
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Retail Manager" },
+      author: { "@type": "Person", name: "Sarah Mitchell" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:
-        "Our Google Ads were burning budget before Linkedo took over. Now every pound actually brings in customers.",
+        "Professional, transparent, and results-driven. Our Google Ads campaigns have delivered the best ROI we've ever seen.",
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Professional Services Owner" },
+      author: { "@type": "Person", name: "David Thornton" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:
-        "First agency that's ever properly explained what they're doing and why. No jargon, just results.",
+        "Linkedo understood our local market instantly. Our website traffic and leads have grown consistently month on month.",
     },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Midlands Digital Marketing Services",
+    name: "Shropshire Digital Marketing Services",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Development", url: "https://linkedo.co.uk/web-development" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Services", url: "https://linkedo.co.uk/seo" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Google Ads Management", url: "https://linkedo.co.uk/google-ads" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Meta Ads", url: "https://linkedo.co.uk/meta-ads" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Development", url: "https://linkedo.co.uk/web-development" } },
     ],
   },
   priceRange: "££",
@@ -152,66 +149,66 @@ const midlandLocalBusinessSchema = {
   parentOrganization: { "@id": "https://linkedo.co.uk/#organization" },
 }
 
-const midlandBreadcrumbSchema = {
+const shropshireBreadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://linkedo.co.uk" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://linkedo.co.uk/locations" },
-    { "@type": "ListItem", position: 3, name: "Midlands", item: "https://linkedo.co.uk/location/midland" },
+    { "@type": "ListItem", position: 3, name: "Shropshire", item: "https://linkedo.co.uk/shropshire" },
   ],
 }
 
 const faqs = [
   {
-    question: "How much does online marketing cost in Midland?",
+    question: "What does a digital marketing agency in Shropshire actually do?",
     answer:
-      "Costs vary depending on your goals, competition, and which services you need. We'll give you a clear, tailored quote after a free audit — no hidden fees, no vague pricing.",
+      "We handle SEO, Google Ads, Meta Ads, and web development to help Shropshire businesses get found online and turn visitors into customers.",
   },
   {
-    question: "How long does SEO take to show results in the Midlands?",
+    question: "How much does online marketing cost in Shropshire?",
     answer:
-      "Most clients start seeing ranking movement within 30 days, with stronger results building over 3–6 months. SEO is a long-term investment, but the gains compound over time.",
+      "Costs vary based on your goals, competition, and which services you need — we build packages around your budget, not a fixed price list.",
   },
   {
-    question: "What's included in Google Ads management Midland services?",
+    question: "How long does SEO take to show results in Shropshire?",
     answer:
-      "We handle campaign setup, keyword targeting, ad copywriting, budget management, and ongoing optimisation — so you get leads, not just clicks.",
+      "Most businesses start seeing meaningful movement within 3–6 months, with lower local competition often speeding this up.",
   },
   {
-    question: "Do you offer contracts or rolling monthly services?",
+    question: "Does Linkedo work with small businesses in Shropshire?",
     answer:
-      "We work on a no lock-in, rolling monthly basis. We believe in earning your business through results, not tying you into long contracts.",
+      "Yes — we work with businesses of all sizes and tailor strategies to match your budget and goals.",
   },
   {
-    question: "How is internet marketing different from SEO?",
+    question: "What's included in Meta Ads management Shropshire?",
     answer:
-      "SEO is one part of internet marketing. Internet marketing also includes paid ads, content, and branding — all working together for faster, more consistent growth.",
+      "Campaign setup, audience targeting, ad creative, and ongoing performance reporting.",
   },
   {
-    question: "Can you help a small Midlands business compete with bigger companies?",
+    question: "How is online marketing services Shropshire different from national campaigns?",
     answer:
-      "Yes — local SEO and targeted ads let smaller businesses outrank bigger competitors in local search results, where it matters most for enquiries.",
+      "We focus on hyper-local targeting — the towns, industries, and search behaviour specific to Shropshire rather than generic UK-wide messaging.",
   },
   {
-    question: "What makes Linkedo different from other Midlands agencies?",
+    question: "Do you offer website development alongside marketing?",
     answer:
-      "We combine local market knowledge with a full-service team, transparent reporting, and no long-term contracts — so you always know what you're getting.",
+      "Yes — we build fast, conversion-focused websites as part of an integrated marketing strategy.",
   },
   {
-    question: "Do you build websites as well as market them?",
+    question: "Can I cancel my contract if I'm not happy?",
     answer:
-      "Yes — we design and build fast, mobile-first websites specifically built to convert visitors into leads, alongside our marketing services.",
+      "Yes — we don't lock clients into long-term contracts. You stay because it's working.",
   },
   {
-    question: "How do you measure success for online marketing services in Midland?",
+    question: "Which Shropshire towns do you cover?",
     answer:
-      "We track rankings, leads, conversions, and ROI, and report on all of it monthly in plain, jargon-free language.",
+      "Shrewsbury, Telford, Oswestry, Bridgnorth, Ludlow, Market Drayton, and Whitchurch.",
   },
   {
-    question: "How do I get started?",
+    question: "How do I get started with Linkedo?",
     answer:
-      "Book a free audit. We'll review your current online presence and show you exactly where the opportunities are.",
+      "Book a free discovery call and we'll map out a strategy tailored to your business.",
   },
 ]
 
@@ -234,173 +231,166 @@ const trustBadges = [
 ]
 
 const stats = [
-  { icon: TrendingUp, value: "200%+", label: "Average Lead Increase for Midland Clients" },
-  { icon: Clock, value: "30 Days", label: "Average Time to See Ranking Movement" },
-  { icon: Users, value: "100+", label: "UK Businesses Supported" },
+  { icon: Users, value: "150+", label: "Projects Delivered UK-Wide" },
+  { icon: TrendingUp, value: "200%+", label: "Average Increase in Qualified Leads" },
+  { icon: Star, value: "30+", label: "5-Star Client Reviews" },
 ]
 
 const services = [
   {
     iconName: "Search",
-    title: "Search Engine Optimisation (SEO)",
-    description: "We help you rank for the terms your Midland customers are actually searching — including location-specific variations that drive real enquiries.",
+    title: "SEO Shropshire",
+    description: "Rank higher for the local search terms your Shropshire customers are actually typing into Google.",
     href: "/seo",
   },
   {
     iconName: "BarChart3",
     title: "Google Ads Management",
-    description: "Built to convert, not just generate clicks. We handle targeting, budget optimisation, and ad copy so every pound spent works harder for your business.",
+    description: "Targeted PPC campaigns that put your business in front of ready-to-buy searchers across Shropshire.",
     href: "/google-ads",
   },
   {
     iconName: "Megaphone",
-    title: "Meta Ads",
-    description: "We put your business in front of the right Midland audiences on Facebook and Instagram, using precise local and interest-based targeting.",
+    title: "Meta Ads Management Shropshire",
+    description: "Facebook and Instagram ads built around local audience targeting to drive real enquiries.",
     href: "/meta-ads",
   },
   {
     iconName: "Code",
     title: "Website Development",
-    description: "Fast, mobile-first websites designed to turn Midland visitors into paying customers — not just look good.",
+    description: "Fast, mobile-first websites designed to turn visitors into customers, not just look good.",
     href: "/web-development",
   },
   {
-    iconName: "Target",
-    title: "Internet Marketing Strategy",
-    description: "A joined-up internet marketing strategy for the Midlands — every channel working together toward the same growth goals.",
-    href: "/services",
-  },
-  {
-    iconName: "Palette",
-    title: "Branding & Consulting",
-    description: "We help Midland businesses sharpen their positioning and messaging, so you don't just get found online — you stand out once you are.",
-    href: "/branding",
+    iconName: "Shield",
+    title: "Website Security",
+    description: "Ongoing monitoring and protection to keep your site and customer data safe.",
+    href: "/consulting",
   },
 ]
 
 const benefits = [
   {
     icon: "🗺️",
-    title: "Local Market Knowledge",
-    text: "We understand how Midlands customers search and buy, and we build strategies around that — not generic templates.",
-  },
-  {
-    icon: "📈",
-    title: "Proven Results",
-    text: "Our track record speaks for itself: measurable ranking improvements and lead growth for UK businesses.",
-  },
-  {
-    icon: "🤝",
-    title: "No Long-Term Lock-in",
-    text: "We earn your business every month with results, not contracts that trap you.",
-  },
-  {
-    icon: "🏠",
-    title: "Full-Service Team",
-    text: "SEO, ads, web development, and branding — all under one roof, so nothing falls through the cracks.",
+    title: "Local Market Understanding",
+    text: "We know how Shropshire's business landscape differs from major cities — and we build strategies around that.",
   },
   {
     icon: "💬",
-    title: "Transparent Reporting",
-    text: "Clear, jargon-free monthly reports that show exactly what's working and what we're doing next.",
+    title: "No Jargon, No Fluff",
+    text: "Clear communication and honest reporting, so you always know what you're paying for.",
+  },
+  {
+    icon: "📈",
+    title: "Results-Driven",
+    text: "Every strategy is built around leads and ROI, not vanity metrics that don't grow your business.",
+  },
+  {
+    icon: "🤝",
+    title: "Flexible Contracts",
+    text: "No long-term lock-in — stay because it's working, not because you're stuck.",
   },
   {
     icon: "🇬🇧",
-    title: "Fast, Direct Communication",
-    text: "You get a real account manager, not a call centre queue.",
+    title: "UK-Based Team",
+    text: "Direct access to the people actually doing the work, not an outsourced call centre.",
+  },
+  {
+    icon: "⭐",
+    title: "Proven Track Record",
+    text: "Real numbers, real reviews, and a track record of delivering results across the UK.",
   },
 ]
 
 const coverageAreas = [
   {
     icon: "🏙️",
-    name: "West Midlands",
-    areas: ["Birmingham", "Coventry", "Wolverhampton", "Dudley", "Walsall"],
+    name: "Towns We Serve",
+    areas: ["Shrewsbury", "Telford", "Oswestry", "Bridgnorth", "Ludlow", "Market Drayton", "Whitchurch"],
   },
   {
     icon: "🏭",
-    name: "East Midlands",
-    areas: ["Nottingham", "Leicester", "Derby", "Northampton"],
+    name: "Industries We Work With",
+    areas: ["Trades", "Retail", "Hospitality", "Professional Services", "Manufacturing"],
   },
   {
     icon: "📣",
-    name: "Staffordshire & Surrounding",
-    areas: ["Stoke-on-Trent", "Stafford"],
+    name: "Services Available",
+    areas: ["SEO", "Google Ads", "Meta Ads", "Website Development", "Website Security"],
   },
 ]
 
 const industries = [
-  { icon: "🔧", name: "Trades", description: "Helping tradespeople across the Midlands win more local jobs through Google, SEO, and targeted paid ads." },
-  { icon: "🛍️", name: "Retail", description: "Driving footfall and online sales for Midlands retailers through local SEO and social advertising." },
-  { icon: "💼", name: "Professional Services", description: "Generating high-quality leads for Midlands accountants, solicitors, and consultants online." },
-  { icon: "🍽️", name: "Hospitality", description: "Growing bookings and brand visibility for Midlands restaurants, hotels, and leisure businesses." },
-  { icon: "🏥", name: "Healthcare", description: "Helping Midlands clinics and health practitioners attract local patients through targeted digital marketing." },
-  { icon: "⚙️", name: "Manufacturing", description: "Building digital presence for Midlands manufacturers competing in national and regional markets." },
+  { icon: "🔧", name: "Trades", description: "Helping tradespeople across Shropshire win more local jobs through Google, SEO, and targeted paid ads." },
+  { icon: "🛍️", name: "Retail", description: "Driving footfall and online sales for Shropshire retailers through local SEO and social advertising." },
+  { icon: "🍽️", name: "Hospitality", description: "Growing bookings and brand visibility for Shropshire restaurants, hotels, and tourism businesses." },
+  { icon: "💼", name: "Professional Services", description: "Generating high-quality leads for Shropshire accountants, solicitors, and consultants online." },
+  { icon: "⚙️", name: "Manufacturing", description: "Building digital presence for Shropshire manufacturers competing in national and regional markets." },
 ]
 
 const businessDistricts = [
-  { icon: "🏛️", name: "Birmingham", desc: "West Midlands commercial capital" },
-  { icon: "🏭", name: "Coventry", desc: "Major city & manufacturing hub" },
-  { icon: "🌆", name: "Nottingham", desc: "East Midlands business centre" },
-  { icon: "🏘️", name: "Leicester", desc: "Growing city & retail hub" },
-  { icon: "🏗️", name: "Stoke-on-Trent", desc: "Staffordshire industrial centre" },
+  { icon: "🏛️", name: "Shrewsbury", desc: "County town & commercial hub" },
+  { icon: "🏭", name: "Telford", desc: "Growing industrial & business centre" },
+  { icon: "🌿", name: "Oswestry", desc: "Border town & market economy" },
+  { icon: "🌉", name: "Bridgnorth", desc: "Historic market town" },
+  { icon: "🏘️", name: "Ludlow & Beyond", desc: "Rural towns & market communities" },
 ]
 
 const processSteps = [
   {
-    title: "Free Audit",
+    title: "Discovery Call",
     description:
-      "We review your current online presence and pinpoint the quick wins costing you leads right now.",
+      "We learn about your business, your goals, and where your online presence stands today.",
   },
   {
-    title: "Strategy",
+    title: "Strategy Build",
     description:
-      "We build a tailored online marketing services Midland plan around your goals, competitors, and customers.",
+      "A tailored plan combining SEO, ads, and web improvements based on what your business actually needs.",
   },
   {
-    title: "Execution",
+    title: "Implementation",
     description:
-      "SEO, ads, and web work are rolled out with clear milestones, so you always know what's happening.",
+      "Campaigns go live, your site gets optimised, and tracking is set up from day one.",
   },
   {
-    title: "Reporting & Growth",
+    title: "Reporting & Optimisation",
     description:
-      "We report monthly and keep optimising, so results compound rather than plateau.",
+      "Monthly reviews to refine what's working and scale results further.",
   },
 ]
 
 const testimonials = [
   {
-    name: "Trades Business Owner",
+    name: "James Hargreaves",
+    role: "Managing Director",
+    company: "Hargreaves Engineering Solutions",
+    location: "Telford, Shropshire",
+    rating: 5,
+    text: "Linkedo transformed our online presence completely. Our enquiries doubled within three months of launching our new SEO strategy.",
+  },
+  {
+    name: "Sarah Mitchell",
+    role: "Marketing Manager",
+    company: "Mitchell Property Group",
+    location: "Shrewsbury, Shropshire",
+    rating: 5,
+    text: "Professional, transparent, and results-driven. Our Google Ads campaigns have delivered the best ROI we've ever seen.",
+  },
+  {
+    name: "David Thornton",
     role: "Director",
-    company: "Local Trades Business",
-    location: "West Midlands",
+    company: "Thornton Legal Consultants",
+    location: "Oswestry, Shropshire",
     rating: 5,
-    text: "We went from page three to page one in weeks. I couldn't believe the difference it made to our phone ringing.",
-  },
-  {
-    name: "Retail Manager",
-    role: "Manager",
-    company: "East Midlands Retail",
-    location: "East Midlands",
-    rating: 5,
-    text: "Our Google Ads were burning budget before Linkedo took over. Now every pound actually brings in customers.",
-  },
-  {
-    name: "Professional Services Owner",
-    role: "Business Owner",
-    company: "Midlands Professional Services",
-    location: "Midlands",
-    rating: 5,
-    text: "First agency that's ever properly explained what they're doing and why. No jargon, just results.",
+    text: "Linkedo understood our local market instantly. Our website traffic and leads have grown consistently month on month.",
   },
 ]
 
-export default function MidlandPage() {
+export default function ShropshirePage() {
   return (
     <div className="min-h-screen bg-background">
-      <SchemaMarkup schema={midlandLocalBusinessSchema} />
-      <SchemaMarkup schema={midlandBreadcrumbSchema} />
+      <SchemaMarkup schema={shropshireLocalBusinessSchema} />
+      <SchemaMarkup schema={shropshireBreadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
       <main className="pt-24">
         {/* Hero */}
@@ -408,16 +398,16 @@ export default function MidlandPage() {
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">🇬🇧</span>
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">Midlands, England</span>
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">Shropshire, England</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4">
-              Midland <span className="text-gradient-primary">Digital Marketing Agency</span>
+              Digital Marketing Agency in <span className="text-gradient-primary">Shropshire</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-3 max-w-3xl">
-              SEO &amp; Google Ads Experts – Linkedo
+              Helping Shropshire businesses get found, get leads, and grow online.
             </p>
             <p className="text-base text-muted-foreground mb-8 max-w-3xl">
-              Helping businesses across the Midlands get found online and turn clicks into customers.
+              From Shrewsbury to Telford, we build online marketing strategies that turn local searches into real enquiries.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
               {trustBadges.map((badge) => (
@@ -434,13 +424,13 @@ export default function MidlandPage() {
               <Link href="/contact">
                 <AnimatedButton size="lg">
                   <Phone className="w-4 h-4" />
-                  Get My Free Audit
+                  Book Your Free Consultation
                   <ArrowRight className="w-4 h-4" />
                 </AnimatedButton>
               </Link>
               <Link href="#services">
                 <AnimatedButton variant="secondary" size="lg">
-                  View Midlands Services
+                  View Shropshire Services
                 </AnimatedButton>
               </Link>
             </div>
@@ -448,24 +438,22 @@ export default function MidlandPage() {
         </Section>
 
         {/* About + Stats */}
-        <Section eyebrow="About Online Marketing in the Midlands" title="UK-Registered Digital Marketing Agency for the Midlands">
+        <Section eyebrow="About Linkedo in Shropshire" title="UK-Registered Digital Marketing Agency in Shropshire">
           <div className="max-w-4xl mx-auto text-muted-foreground mb-12 space-y-4 text-center">
             <p>
-              If your business isn&apos;t showing up when Midlands customers search for what you offer, you&apos;re
-              losing work to competitors who do. Whether you&apos;re in Birmingham, Coventry, Leicester, Nottingham,
-              or anywhere across the region, visibility online is what turns searches into sales.
+              Running a business in Shropshire means competing with companies who show up first on Google — even when
+              you&apos;re better at what you do. Without the right online presence, great local businesses stay invisible
+              to the customers searching for them right now.
             </p>
             <p>
-              The Midlands is one of the UK&apos;s most competitive business regions — spanning major cities,
-              industrial towns, and everything in between. Midland customers increasingly search with intent —
-              &ldquo;near me,&rdquo; specific towns, and service-led terms — before they ever pick up the phone.
-              If you&apos;re not appearing in those searches, a competitor is.
+              Linkedo is a UK-registered digital marketing agency helping businesses grow through SEO, Google Ads, Meta
+              Ads, and web development. We know Shropshire isn&apos;t London or Manchester — it needs a different
+              playbook, built around local search behaviour and real community trust.
             </p>
             <p>
-              At Linkedo, we don&apos;t run generic, one-size-fits-all campaigns. Every Midland client gets a
-              strategy built around their specific towns, industry, and customer search behaviour. We combine organic
-              SEO with paid Google Ads, so you get faster visibility now while building long-term rankings that keep
-              paying off.
+              Whether you&apos;re in Shrewsbury, Telford, or a smaller market town nearby, visibility online is what
+              drives calls, bookings, and sales. For local business owners, this isn&apos;t optional anymore — it&apos;s
+              how customers find you first.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -487,9 +475,9 @@ export default function MidlandPage() {
         {/* Services */}
         <Section
           id="services"
-          eyebrow="Midlands Services"
-          title="Our Digital Marketing Services for Midland Businesses"
-          description="We provide fully managed digital marketing services tailored to businesses across the Midlands, helping you attract more leads, rank higher, and convert better online."
+          eyebrow="Shropshire Services"
+          title="Our Digital Marketing Services in Shropshire"
+          description="We provide fully managed digital marketing services tailored to Shropshire businesses, helping you attract more leads, rank higher, and convert better online."
           gradient
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -500,10 +488,10 @@ export default function MidlandPage() {
         </Section>
 
         {/* Why Choose Us */}
-        <Section eyebrow="Why Choose Us" title="Why Midland Businesses Choose Linkedo">
+        <Section eyebrow="Why Choose Us" title="Why Shropshire Businesses Choose Linkedo">
           <p className="text-muted-foreground max-w-3xl mb-12 mx-auto text-center">
-            The Midlands is one of the UK&apos;s most competitive business regions. Standing out here means more than
-            just having a website — it means being visible exactly when local customers are searching.
+            Shropshire&apos;s business landscape is unique — a mix of established market towns, growing hubs like Telford
+            and Shrewsbury, and rural areas where trust and reputation matter. We build strategies around that reality.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {benefits.map((b) => (
@@ -518,9 +506,9 @@ export default function MidlandPage() {
             ))}
           </div>
 
-          {/* Midlands Presence card */}
+          {/* Shropshire Presence card */}
           <div className="max-w-4xl mx-auto bg-card/50 border border-border/50 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">Our Midlands Presence</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">Our Shropshire Presence</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -528,7 +516,7 @@ export default function MidlandPage() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Service Area</p>
-                  <p className="text-sm text-muted-foreground">Serving the Midlands &amp; surrounding areas</p>
+                  <p className="text-sm text-muted-foreground">Serving Shropshire &amp; surrounding areas</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -556,8 +544,8 @@ export default function MidlandPage() {
         {/* Coverage */}
         <Section
           eyebrow="Our Coverage"
-          title="Areas We Cover Across the Midlands"
-          description="We work with businesses throughout the region — wherever you're based in the Midlands, our approach is the same: local insight backed by proven digital marketing strategy."
+          title="Areas We Cover Across Shropshire"
+          description="We support businesses across Shropshire's towns, industries, and service areas — delivering localised digital strategies that connect with your target audience right where they are."
           gradient
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -589,8 +577,8 @@ export default function MidlandPage() {
         {/* Industries */}
         <Section
           eyebrow="Our Expertise"
-          title="Midlands Industries We Work With"
-          description="We work with Midlands businesses across a range of sectors, delivering industry-specific digital strategies that generate real, measurable growth."
+          title="Shropshire Industries We Work With"
+          description="We work with Shropshire businesses across a range of sectors, delivering industry-specific digital strategies that generate real, measurable growth."
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {industries.map((industry) => (
@@ -618,8 +606,8 @@ export default function MidlandPage() {
         {/* Local Insight */}
         <Section
           eyebrow="Local Insight"
-          title="We Understand the Midlands Business Landscape"
-          description="Local competition is fierce across the Midlands, and the businesses ranking on page one are the ones getting the calls. The right strategy can get you there faster than you'd expect."
+          title="We Understand Shropshire's Business Landscape"
+          description="Shropshire's business landscape is unique — competition online is lower here than in major UK cities, which means the right strategy can get you ranking and generating leads faster than you'd expect. It's an opportunity most Shropshire businesses haven't fully tapped into yet."
           gradient
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -639,8 +627,8 @@ export default function MidlandPage() {
         {/* Process */}
         <Section
           eyebrow="Our Process"
-          title="How We Work With Midlands Businesses"
-          description="We follow a clear four-step process to deliver results-driven digital marketing for every Midlands client."
+          title="How We Work With Shropshire Businesses"
+          description="We follow a clear four-step process to deliver results-driven digital marketing for every Shropshire client."
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, index) => (
@@ -704,11 +692,12 @@ export default function MidlandPage() {
                 Get Started
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Ready to Grow Your Business Across the Midlands?
+                Ready to Grow Your Shropshire Business Online?
               </h2>
               <div className="space-y-4 text-muted-foreground max-w-2xl mx-auto">
                 <p>
-                  Get a free, no-obligation audit and see exactly where you&apos;re missing leads.
+                  Let&apos;s build a strategy that turns local searches into real customers — no long contracts, no
+                  jargon, just results.
                 </p>
               </div>
             </div>
@@ -722,7 +711,7 @@ export default function MidlandPage() {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Get My Free Audit</p>
+                  <p className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Book a Free Consultation</p>
                   <p className="text-sm text-muted-foreground">No obligation</p>
                 </div>
               </Link>
@@ -755,7 +744,7 @@ export default function MidlandPage() {
             <div className="text-center">
               <Link href="/contact">
                 <AnimatedButton size="lg">
-                  Get My Free Audit
+                  Book Your Free Consultation
                   <ArrowRight className="w-4 h-4" />
                 </AnimatedButton>
               </Link>
