@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Linkedo",
     images: [
       {
-        url: "https://linkedo.co.uk/og-shropshire.webp",
+        url: "https://linkedo.co.uk/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Digital Marketing Agency Shropshire – Linkedo",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["https://linkedo.co.uk/og-shropshire.webp"],
+    images: ["https://linkedo.co.uk/og-image.jpg"],
   },
 }
 
