@@ -39,6 +39,7 @@ const cityRoutes = [
   "/nottingham",
   "/locations/shropshire",
   "/locations/devon",
+  "/location/midland",
 ]
 
 // Service top-level routes

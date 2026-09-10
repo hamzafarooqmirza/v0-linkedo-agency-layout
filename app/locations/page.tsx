@@ -191,6 +191,14 @@ const ukCities = [
     description:
       "Helping Devon businesses get found online, win more leads, and grow — from Exeter to Plymouth with tailored SEO, Google Ads, and web development.",
   },
+  {
+    city: "Midlands",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    href: "/location/midland",
+    description:
+      "Helping businesses across the Midlands get found online and turn clicks into customers — with SEO, Google Ads, and web development built around local search behaviour.",
+  },
 ]
 
 const trustBadges = [
