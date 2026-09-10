@@ -183,6 +183,14 @@ const ukCities = [
     description:
       "Helping Shropshire businesses get found, get leads, and grow online — from Shrewsbury to Telford with tailored SEO, Google Ads, and web development.",
   },
+  {
+    city: "Devon",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    href: "/locations/devon",
+    description:
+      "Helping Devon businesses get found online, win more leads, and grow — from Exeter to Plymouth with tailored SEO, Google Ads, and web development.",
+  },
 ]
 
 const trustBadges = [
