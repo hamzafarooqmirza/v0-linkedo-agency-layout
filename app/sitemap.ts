@@ -21,6 +21,7 @@ const topLevelRoutes = [
   "/utm-builder",
   "/privacy",
   "/terms",
+  "/cookie-policy",
 ]
 
 // City/location nested routes
