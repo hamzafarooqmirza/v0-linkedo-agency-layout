@@ -59,7 +59,7 @@ export function CookieBanner() {
       <div
         role="region"
         aria-label="Cookie consent"
-        className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 sm:px-6 sm:pb-6 pointer-events-none"
+        className="fixed bottom-0 left-0 right-0 z-[100] px-4 pb-4 sm:px-6 sm:pb-6 pointer-events-none"
       >
         <div className="pointer-events-auto mx-auto max-w-screen-xl">
           <div className="rounded-2xl border border-white/10 bg-[oklch(0.13_0.02_260)]/95 backdrop-blur-md shadow-2xl shadow-black/40 px-5 py-4 sm:px-6">
