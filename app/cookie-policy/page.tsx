@@ -63,7 +63,7 @@ export default function CookiePolicyPage() {
     <Section
       titleAs="h1"
       title="Cookie Policy"
-      subtitle="Last updated: September 2026"
+      description="Last updated: September 2026"
       className="py-16 sm:py-20"
     >
       <MainShell>
