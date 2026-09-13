@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { FloatingQuoteButton } from "@/components/ui/floating-quote-button"
+import { CookieBanner } from "@/components/cookie-consent/cookie-banner"
 
 export function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -25,6 +26,7 @@ export function ConditionalLayout({ children }: { children: React.ReactNode }) {
       {children}
       <Footer />
       <FloatingQuoteButton />
+      <CookieBanner />
     </>
   )
 }

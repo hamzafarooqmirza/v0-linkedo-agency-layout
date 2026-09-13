@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { MainShell } from "./main-shell"
 import { MapPin, Mail, Phone } from "lucide-react"
@@ -124,6 +126,15 @@ export function Footer() {
             <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Terms of Service
             </Link>
+            <button
+              onClick={() => {
+                const fn = (window as unknown as Record<string, unknown>).__openCookieSettings
+                if (typeof fn === "function") fn()
+              }}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
       </MainShell>
