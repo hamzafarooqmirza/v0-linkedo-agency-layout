@@ -63,7 +63,7 @@ export function CookiePreferences({ preferences, onChange, onSave, onClose }: Pr
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[110] flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-prefs-title"
